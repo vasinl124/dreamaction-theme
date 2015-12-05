@@ -1,0 +1,33 @@
+
+
+.main-logo, .page-description {
+	color: white !important;
+	background-color: black;
+}
+
+
+
+.main-tag-container, .main-recent-container {
+	text-align: center;
+}
+.main-tag {
+	display: inline-block;
+}
+
+.recent {
+	background-color: black;
+	padding: 15px;
+}
+
+.recent > h4 {
+	color: white;	
+}
+
+
+.nav-current{
+	background-color: red;
+}
+
+.nav-current > a { 
+	color: green !important;
+}
