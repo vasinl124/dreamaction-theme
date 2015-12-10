@@ -25,11 +25,12 @@
         {{#get "tags"}}
             {{#foreach tags}}
                 <a href='{{url}}' title="{{name}}" class="tag-{{id}}" class='main-tag'>
-                    <div>
-                        <img class='tag-image' src="{{image}}" alt="">
+                    <div background={{image}}>
+                        <!-- <img class='tag-image' src="{{image}}" alt=""> -->
+                        <h4>{{name}}</h4>   
+                        <p>{{description}}</p>    
                     </div>
-                    <h4>{{name}}</h4>   
-                    <p>{{description}}</p>         
+                         
                 </a>
             {{/foreach}}
         {{/get}}
