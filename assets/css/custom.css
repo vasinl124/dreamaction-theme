@@ -1,23 +1,22 @@
-
-
+.main-header {
+	margin: 0px;
+}
 .main-logo, .page-description {
 	color: white !important;
-	background-color: black;
 }
 
+.main-tag-container, .main-recent-container {
+	text-align: center;
+}
+.main-tag {
+	display: inline-block;
+}
 
 a {
 	text-decoration: none;
 }
 .tag-image {
 	width: 100%;
-	/*background-color: red;*/
-}
-.main-tag-container, .main-recent-container {
-	text-align: center;
-}
-.main-tag {
-	display: inline-block;
 }
 
 .recent {
