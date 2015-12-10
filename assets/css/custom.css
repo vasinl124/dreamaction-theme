@@ -7,7 +7,7 @@
 
 
 
-.main-tag-container, .main-recent-container {
+.main-tag-container, .main-recent-container, .text-center {
 	text-align: center;
 }
 .main-tag {
