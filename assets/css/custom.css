@@ -7,7 +7,7 @@
 
 
 
-.main-tag-container, .main-recent-container, .text-center {
+.main-tag-container, .main-recent-container {
 	text-align: center;
 }
 .main-tag {
@@ -30,4 +30,9 @@
 
 .nav-current > a { 
 	color: green !important;
+}
+
+
+.fb-comments, .fb-comments iframe[style] {
+	width: 100% !important;
 }
