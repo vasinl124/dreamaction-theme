@@ -6,7 +6,13 @@
 }
 
 
-
+a {
+	text-decoration: none;
+}
+.tag-image {
+	width: 100%;
+	/*background-color: red;*/
+}
 .main-tag-container, .main-recent-container {
 	text-align: center;
 }
