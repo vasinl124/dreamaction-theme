@@ -36,6 +36,23 @@
               js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=214316472233662";
               fjs.parentNode.insertBefore(js, fjs);
             }(document, 'script', 'facebook-jssdk'));</script>
+
+            <div id="fb-root"></div>
+        </section>
+
+        <section>
+            <div class="fb-like" 
+                data-href="http://dreamaction.kurotatsu.co{{url}}" 
+                data-layout="button_count" 
+                data-action="like" 
+                data-show-faces="true" 
+                data-share="true">
+            </div>
+
+            <div class='twitter-share-container'>
+            <a href="https://twitter.com/share" class="twitter-share-button"{count}>Tweet</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+            </div>
         </section>
         
         <footer class="post-footer">
@@ -48,7 +65,7 @@
             </figure>
             {{/if}}
 
-            <section class="author">
+            <section class="text-center">
                 <h4><a href="{{url}}">{{name}}</a></h4>
 
                 {{#if bio}}
@@ -64,21 +81,24 @@
 
         {{/author}}
 
-            <section class="share">
-                <h4>Share this post</h4>
-                <a class="icon-twitter" href="https://twitter.com/intent/tweet?text={{encode title}}&amp;url={{url absolute="true"}}"
-                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
-                    <span class="hidden">Twitter</span>
-                </a>
-                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
-                    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
-                    <span class="hidden">Facebook</span>
-                </a>
-                <a class="icon-google-plus" href="https://plus.google.com/share?url={{url absolute="true"}}"
-                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
-                    <span class="hidden">Google+</span>
-                </a>
-            </section>
+            <!-- Page like -->
+            <center>
+                <div class="fb-page" 
+                    data-href="https://www.facebook.com/thedreamaction" 
+                    data-tabs="timeline" 
+                    data-small-header="false" 
+                    data-adapt-container-width="true"
+                    data-hide-cover="false" 
+                    data-show-facepile="true">
+                    <div class="fb-xfbml-parse-ignore">
+                        <blockquote cite="https://www.facebook.com/thedreamaction">
+                            <a href="https://www.facebook.com/thedreamaction">DreamAction</a>
+                        </blockquote>
+                    </div>
+                </div>    
+            </center>
+            
+
             <!-- facebook comment -->
             <div class="fb-comments" data-href="http://dreamaction.kurotatsu.co{{url}}" data-numposts="5"></div>
         </footer>
