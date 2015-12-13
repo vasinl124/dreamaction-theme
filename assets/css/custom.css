@@ -7,10 +7,27 @@
 
 .main-tag-container, .main-recent-container, .text-center{
 	text-align: center;
+
 }
+
 .main-tag {
-	display: inline-block;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	height: 200px;
+	position: relative;
 }
+
+.main-tag > a > h4, .main-tag > a > p {
+	position: relative;
+	bottom: -75px;
+	color: white;
+}
+
+.main-tag:hover {
+	box-shadow: inset 2px 43px 300px 63px rgba(0,0,0,0.3);
+	color: gray !important;
+} 
 
 a {
 	text-decoration: none;
@@ -29,14 +46,6 @@ a {
 }
 
 
-.nav-current{
-	background-color: red;
-}
-
-.nav-current > a { 
-	color: green !important;
-}
-
 .author-image {
 	z-index: 0 !important;
 }
@@ -46,12 +55,39 @@ a {
 }
 
 .fb-page {
-	
-	/*float: none;
-	margin: 0px auto;*/
 	text-align: center;
 }
 
 .fb-comments, .fb-comments iframe[style], .fb-comments span[style] {
 	width: 100% !important;
+}
+
+
+/* LOOP */
+.loop-post-image {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	width: 100%; 
+	height: 200px;
+	margin-bottom: 20px;
+}
+
+.loop-post-image:hover {
+	box-shadow: inset 2px 43px 300px 63px rgba(0,0,0,0.3);
+}
+
+.tag-footer-container {
+	padding: 0px;
+	margin: 0px;
+	background-color: gray;
+}
+.tag-footer {
+	font-size: 10px;
+	color:lightgray;
+}
+
+.tag-footer:hover {
+	font-size: 12px;
+	color: white;
 }

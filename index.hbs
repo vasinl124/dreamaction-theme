@@ -17,31 +17,30 @@
             <h2 class="page-description">{{@blog.description}}</h2>
         </div>
     </div>
-    <a class="scroll-down icon-arrow-left" href="#content" data-offset="-45"><span class="hidden">Scroll Down</span></a>
+    <a class="scroll-down icon-arrow-left" href="#content" data-offset="-10"><span class="hidden">Scroll Down</span></a>
 </header>
 {{! The main content area on the homepage }}
+
 <main id="content" class="content" role="main">
     <div class='main-tag-container'>        
-        {{#get "tags"}}
+        {{#get "tags" filter='name:ACTION,name:PERSPECTIVES'}}
             {{#foreach tags}}
-                <a href='{{url}}' title="{{name}}" class="tag-{{id}}" class='main-tag'>
-                    <div style="background-image: url({{image}}); height: 400px;">
-                        <!-- <img class='tag-image' src="{{image}}" alt=""> -->
+                <div style="background-image: url({{image}});" class='main-tag'>
+                    <a href='{{url}}'  title="{{name}}" class="tag-{{id}} ">
                         <h4>{{name}}</h4>   
                         <p>{{description}}</p>    
-                    </div>
-                         
-                </a>
+                    </a>    
+                </div>
             {{/foreach}}
         {{/get}}
     </div>
-    <div>
-        <div class='main-recent-container recent'>
-            <h4>ล่าสุด</h4>
-        </div>
-        {{! The tag below includes the post loop - partials/loop.hbs }}
-        {{> "loop"}}    
+
+    <div class='main-recent-container recent'>
+        <h4>ล่าสุด</h4>
     </div>
+    {{! The tag below includes the post loop - partials/loop.hbs }}
+    {{> "loop"}}    
+    
     
 
 </main>
