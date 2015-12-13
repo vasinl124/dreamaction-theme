@@ -91,3 +91,8 @@ a {
 	font-size: 11px;
 	color: white;
 }
+
+/* Post.hbs */
+.post-content {
+	padding-top: 15px;
+}
