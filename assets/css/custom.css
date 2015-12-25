@@ -1,16 +1,16 @@
-/*.main-header {
+.main-header {
 	margin: 0px;
 }
 .main-logo, .page-description {
 	color: white !important;
 }
 
-.blog-logo, img {
+/*.blog-logo, img {
 	height: 75px !important;
 	position: relative;
 	top: -19px;
 	padding: 5px;
-}
+}*/
 
 .main-tag-container, .main-recent-container, .text-center{
 	text-align: center;
@@ -103,4 +103,3 @@ a {
 .post-content {
 	padding-top: 15px;
 }
-*/
