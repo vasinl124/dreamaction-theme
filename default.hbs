@@ -54,18 +54,6 @@
 
             <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a></section>
         </footer>
-
-        <div class='text-center tag-footer-container'>
-            {{#get "tags"}}
-            
-            {{#foreach tags}}
-                <a href='{{url}}'  title="{{name}}" class="tag-{{id}}  tag-footer">
-                    | {{name}} |
-                </a>    
-            {{/foreach}}
-        {{/get}}
-        </div>
-
     </div>
 
     {{!-- jQuery needs to come before `{{ghost_foot}}` so that jQuery can be used in code injection --}}
