@@ -5,7 +5,7 @@
 
 {{! Everything inside the #post tags pulls data from the post }}
 {{#post}}
-<div class='post-container'>
+<div class='post-container container-fluid'>
   <header class="post-head {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}">
     <div class='title'>
       <h2>
@@ -29,7 +29,7 @@
     </div>
   </header>
 
-  <div class="container-fluid post-content" role="main">
+  <div class="post-content" role="main">
       <article class="row {{post_class}}">
         <div class='col col-md-9'>
           <section class="post-content">
