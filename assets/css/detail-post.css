@@ -1,5 +1,6 @@
 .post-container {
 	background-color: #F5F8FB;
+	overflow: hidden;
 }
 .post-head {
 	height: 300px;
