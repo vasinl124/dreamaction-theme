@@ -6,6 +6,7 @@
 {{! The main content area on the homepage }}
 
 <div class='container-fluid'>
+  {{#is "home"}}
   <div class='row head-container' style='background: url({{@blog.cover}})'>
     <div class='col text-center'>
       <h2>
@@ -16,10 +17,15 @@
       </h4>
     </div>
   </div>  
+  {{/is}}
+  
+  {{#is "paged"}}
+    
+  {{/is}}
   
   {{! The tag below includes the post loop - partials/loop.hbs }}
   {{> "feature"}}    
-  
+
   {{> "loop"}}    
 
   {{> "main-tag"}}
