@@ -1,0 +1,12 @@
+<div class='row row-eq-height main-tag-container'>
+    {{#get "tags" filter='name:ACTION,name:PERSPECTIVES'}}
+        {{#foreach tags}}
+            <div style="background-image: url({{image}});" class='col col-xs-12 col-sm-6 tag'>
+                <a href='{{url}}'  title="{{name}}" class="tag-{{id}} ">
+                    <h4>{{name}}</h4>   
+                    <p>{{description}}</p>  
+                </a>
+            </div>
+        {{/foreach}}
+    {{/get}}
+</div>

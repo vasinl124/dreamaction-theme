@@ -5,28 +5,66 @@
 
 {{! Everything inside the #post tags pulls data from the page }}
 {{#post}}
-
+<div class='post-container'>
 <header class="main-header post-head {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}">
-    <nav class="main-nav {{#if image}}overlay{{/if}} clearfix">
-        {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>{{/if}}
-        <a class="blog-logo" href="{{@blog.url}}"><h4 class='main-logo'>{{@blog.title}}</h4></a>
-        {{#if @blog.navigation}}
-            <a class="menu-button icon-menu" href="#"><span class="word">Menu</span></a>
-        {{/if}}
-    </nav>
+    <div class='title'>
+      <h2>
+        {{title}}
+      </h2>
+      <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}"><p><span class='fa fa-calendar'></span> &nbsp&nbsp{{date format="MMMM D, YYYY"}}</p></time>
+    </div>
+    {{#author}}
+      <div class='author'>
+        <a href="{{url}}">
+          {{#if image}}
+            <img class='img-circle' src="{{image}}" alt="">
+          {{/if}}
+          <span>{{name}}</span>  
+        </a>
+      </div>
+    {{/author}}  
+
+    <div class='tags text-right'>
+      <p>{{tags}}</p>
+    </div>
 </header>
 
-<main class="content" role="main">
+<!-- <main class="content" role="main">
     <article class="{{post_class}}">
-
-        <header class="post-header">
-            <h1 class="post-title">{{title}}</h1>
-        </header>
-
         <section class="post-content">
             {{content}}
         </section>
-
     </article>
 </main>
+ -->
+
+<main class="container content post-content" role="main">
+      <article class="row {{post_class}}">
+        <div class='col col-md-9'>
+          <section class="post-content">
+              {{content}}
+                
+              <p class='text-center visible-xs-block'>
+                _____________________
+              </p>
+              <div id="fb-root"></div>
+              <script>(function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=214316472233662";
+                fjs.parentNode.insertBefore(js, fjs);
+              }(document, 'script', 'facebook-jssdk'));</script>
+
+              <div id="fb-root"></div>
+          </section>
+        </div>
+        
+        <div class='col col-md-3'>
+          {{> "sidebar"}}
+        </div>  
+        
+      </article>
+  </main>
+</div>
 {{/post}}

@@ -1,0 +1,141 @@
+.post-container {
+	background-color: #F5F8FB;
+}
+.post-head {
+	height: 300px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.post-head .title {
+	color: white;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;	
+	position: absolute;
+	bottom: 90px;
+	padding-left: 15px;
+	word-wrap: break-word;
+}
+
+.post-head .title time {
+	font-size: 12px;
+	font-style: italic;
+}
+
+.post-head .title a {
+	text-decoration: none;
+	color: white;
+}
+
+.post-head .title a:hover {
+	color: #EF660A;
+}
+
+.post-head .img-circle {
+	height: 50px;
+	margin-right: 5px;
+}
+
+.post-head .author {
+	color: white;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;		
+	padding-right: 10px;
+	position: absolute;
+	bottom: 90px;
+	right: 5px;
+}
+
+.post-head .author a {
+	text-decoration: none;
+	color: white;
+}
+
+.post-head .author a:hover {
+	color: #EF660A;
+}
+
+
+.post-head .tags {
+	padding-top: 4px;	
+}
+
+.post-head .tags a {
+	background-color: #EF660A;
+	padding: 6px;
+	font-size: 12px;
+	text-decoration: none;
+	color: white;
+}
+
+.post-head .tags a:hover {
+	color: black;
+}
+
+
+.post-content {
+	background-color: #F5F8FB;
+	padding-top: 15px;
+}
+
+.post-content {
+	font-size: 18px;
+	/*line-height:2em;*/
+}
+
+.post-content p {
+	padding-bottom: 5px;
+}
+
+.fb-comments, .fb-comments iframe[style], .fb-comments span[style] {
+	width: 100% !important;
+}
+
+.read-next-story {
+	position: relative;
+	color: white;
+	text-decoration: none;
+}
+
+.read-next-story:hover, .read-next-story:hover h2 {
+	position: relative;
+	color: #EF660A;
+	text-decoration: none;
+	transition: all 0.2s ease;
+}
+
+
+.read-next-story div {
+	padding: 30px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	box-shadow: inset 2px 43px 300px 63px rgba(0,0,0,0.7);
+}
+
+.read-next-story div:hover {
+    box-shadow: inset 2px 43px 300px 63px rgba(0,0,0,1);
+    transition: all 0.2s ease;
+}
+
+.read-next-story:hover .post:before {
+    color: #222;
+    background: #EF660A;
+    transition: all 0.2s ease;
+}
+
+.read-next-story .post:before {
+    content: "อ่านอันนี้ต่อ";
+    padding: 4px 10px 5px;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-family: "Open Sans", sans-serif;
+    color: rgba(255,255,255,0.8);
+    border: rgba(255,255,255,0.5) 1px solid;
+    border-radius: 4px;
+    transition: all 0.5s ease;
+}
+
+.read-next-story h2 {
+    margin-top: 1rem;
+    color: #fff;
+}

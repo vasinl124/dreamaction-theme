@@ -1,0 +1,106 @@
+.main-post {
+	/*background-color: red;*/
+ /* position: relative;
+  width: 80%;
+  max-width: 710px;
+  margin: 4rem auto;
+  padding-bottom: 4rem;
+  border-bottom: #EBF2F6 1px solid;
+  word-wrap: break-word;*/
+  /*border: black 1px solid;*/
+}
+
+.main-post .post-container {
+	height: 250px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	box-shadow: inset 2px 43px 300px 63px rgba(0,0,0,0.3);
+}
+
+.main-post .post-container:hover  {
+	box-shadow: inset 2px 43px 300px 63px rgba(0,0,0,0.7);
+}
+.main-post .post-container .title {
+	color: white;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;	
+	position: absolute;
+	bottom: 10px;
+	word-wrap: break-word;
+}
+
+.main-post .post-container .title time {
+	font-size: 12px;
+	font-style: italic;
+}
+
+.main-post .post-container .title a {
+	text-decoration: none;
+	color: white;
+}
+
+.main-post .post-container .title a:hover {
+	color: #EF660A;
+}
+
+.main-post .post-container .img-circle {
+	height: 50px;
+	margin-right: 5px;
+}
+
+.main-post .post-container .author {
+	color: white;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;		
+	padding-right: 10px;
+	position: absolute;
+	bottom: 10px;
+	right: 5px;
+}
+
+.main-post .post-container .author a {
+	text-decoration: none;
+	color: white;
+}
+
+.main-post .post-container .author a:hover {
+	color: #EF660A;
+}
+
+
+.main-post .post-container .tags {
+	padding-top: 4px;	
+}
+
+.main-post .post-container .tags a {
+	background-color: #EF660A;
+
+	padding: 6px;
+	font-size: 12px;
+	text-decoration: none;
+	color: white;
+}
+
+.main-post .post-container .tags a:hover {
+	color: black;
+}
+
+.main-post .excerpt {	
+	background-color: #F5F8FB;
+	padding: 20px;
+	padding-left: 50px;
+	padding-right: 50px;
+}
+
+.main-post .readmore {
+	padding-top: 20px;
+}
+
+.main-post .readmore a {
+	color: black;
+	text-decoration: underline;
+	font-size: bold;
+}
+
+.main-post .readmore a:hover {
+	color: #EF660A;
+}

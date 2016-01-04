@@ -1,0 +1,35 @@
+.main-footer {
+	background-color: black;
+}
+
+.main-footer .footer-menu {
+	padding-top: 15px;
+	color: white;
+}
+
+.main-footer .footer-menu a {
+	color: white;
+}
+
+.main-footer .footer-menu a:hover {
+	color: #EF660A;
+}
+
+.main-footer .footer-logo {
+	margin-top: 15px;
+}
+.main-footer .footer-logo img{
+	height: 75px;
+}
+
+.main-footer .copyright {
+	padding-bottom: 15px;
+}
+.main-footer .copyright, .main-footer .copyright a {
+	color: white;
+	font-size: 10px;
+}
+
+.main-footer .copyright a:hover {
+	color: #EF660A;
+}

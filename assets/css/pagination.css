@@ -1,0 +1,32 @@
+.pagination {
+	width: 100%;
+}
+
+.pagination span {
+	background-color: black;
+	border: white double 3px;
+	color: white;
+	padding: 10px;
+}
+
+.pagination .fa:hover {
+	background-color: #EF660A;
+}
+
+.pagination .fa {
+ font-size: 18px;
+ margin-left: 20px;
+ margin-right: 20px;
+}
+
+.pagination .disable {
+ background-color: gray;
+}
+
+.pagination .disable:hover {
+ background-color: gray;
+}
+
+.pagination .page {
+	font-size: 12px;
+}

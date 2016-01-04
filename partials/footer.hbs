@@ -1,0 +1,28 @@
+<div class='container-fluid'>
+	<div class='row main-footer' style='background: url({{@blog.cover}})'>
+		<div class='col col-xs-12 text-center'>
+			<section class='footer-menu'>
+				<a href="mailto:jom@dreamaction.co" target="_top"><small>e-mail</small></a>  
+	      |
+	      <a href="http://facebook.com/thedreamaction" target="_top"><small>facebook</small></a>  
+	      |
+	      <a href="https://twitter.com/godreamaction" target="_top"><small>twitter</small></a>  
+	      |
+	      <a href="http://dreamaction.co/aboutme/" target="_top"><small>about</small></a>  
+			</section>
+			<section class='footer-logo'>
+				{{#if @blog.logo}}
+				<a href="{{@blog.url}}">
+					<img src="{{@blog.logo}}" alt="{{@blog.title}}" />
+				</a>
+				{{/if}}
+			</section>
+			<section class="copyright">
+				<a href="{{@blog.url}}">
+					{{@blog.title}}
+				</a> 
+				&copy; {{date format="YYYY"}}
+			</section>
+		</div>
+	</div>
+</div>

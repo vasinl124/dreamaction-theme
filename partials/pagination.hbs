@@ -1,0 +1,22 @@
+<div class='row pagination'>
+	<div class='col col-xs-12 text-center'>
+		{{#if prev}}
+		<a href="{{page_url prev}}">
+			<span class='fa fa-caret-left'></span> 
+		</a>
+		{{else}}
+			<span class='fa fa-caret-left disable'></span>	
+		{{/if}}
+
+		<span class='page'>Page {{page}} of {{pages}}</span>
+		
+		{{#if next}}
+		<a href="{{page_url next}}">
+			<span class='fa fa-caret-right'></span>	
+		</a>
+		{{else}}
+			<span class='fa fa-caret-right disable'></span>	
+		{{/if}}
+		
+	</div>
+</div>
