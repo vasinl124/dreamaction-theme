@@ -1,6 +1,5 @@
 .post-container {
 	background-color: #F5F8FB;
-	overflow: hidden;
 }
 .post-head {
 	height: 300px;
@@ -80,6 +79,7 @@
 }
 
 .post-content {
+	overflow: hidden;
 	font-size: 18px;
 	/*line-height:2em;*/
 }
