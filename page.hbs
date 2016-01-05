@@ -5,7 +5,7 @@
 
 {{! Everything inside the #post tags pulls data from the page }}
 {{#post}}
-<div class='post-container'>
+<div class='container-fluid post-container'>
 <header class="post-head {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}">
     <div class='title'>
       <h2>
@@ -18,33 +18,35 @@
     </div>
 </header>
 
-<main class="container content post-content" role="main">
-      <article class="row {{post_class}}">
-        <div class='col col-md-9'>
-          <section class="post-content">
-              {{content}}
-                
-              <p class='text-center visible-xs-block'>
-                _____________________
-              </p>
-              <div id="fb-root"></div>
-              <script>(function(d, s, id) {
-                var js, fjs = d.getElementsByTagName(s)[0];
-                if (d.getElementById(id)) return;
-                js = d.createElement(s); js.id = id;
-                js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=214316472233662";
-                fjs.parentNode.insertBefore(js, fjs);
-              }(document, 'script', 'facebook-jssdk'));</script>
+<div class="row post-content" role="main">
+  <div class='col col-md-12'>
+    <article class="{{post_class}}">
+      <div class='col col-md-9'>
+        <section class="post-content">
+            {{content}}
+              
+            <p class='text-center visible-xs-block'>
+              _____________________
+            </p>
+            <div id="fb-root"></div>
+            <script>(function(d, s, id) {
+              var js, fjs = d.getElementsByTagName(s)[0];
+              if (d.getElementById(id)) return;
+              js = d.createElement(s); js.id = id;
+              js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=214316472233662";
+              fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));</script>
 
-              <div id="fb-root"></div>
-          </section>
-        </div>
-        
-        <div class='col col-md-3'>
-          {{> "sidebar"}}
-        </div>  
-        
-      </article>
-  </main>
+            <div id="fb-root"></div>
+        </section>
+      </div>
+      
+      <div class='col col-md-3'>
+        {{> "sidebar"}}
+      </div>  
+      
+    </article>
+  </div>      
+</div>
 </div>
 {{/post}}
