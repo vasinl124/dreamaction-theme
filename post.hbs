@@ -6,7 +6,7 @@
 {{! Everything inside the #post tags pulls data from the post }}
 {{#post}}
 <div class='post-container container-fluid'>
-  <header class="row post-head {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}">
+  <header class="row post-head" style="{{#if image}}background-image: url({{image}}){{else}}background-image:url({{@blog.cover}}){{/if}}"> 
     <div class='title'>
       <h2>
         {{title}}
