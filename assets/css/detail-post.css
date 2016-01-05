@@ -96,6 +96,7 @@
 	position: relative;
 	color: white;
 	text-decoration: none;
+	border: red solid 1px;
 }
 
 .read-next-story:hover, .read-next-story:hover h2 {

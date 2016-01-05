@@ -68,9 +68,11 @@
 <div class='post-container container-fluid'>
   
   <aside class="row read-next">
+
       {{#next_post}}
-      
-      <a class="col read-next-story text-center  "  href="{{url}}">
+      {{title}}
+      1
+      <a class="read-next-story text-center"  href="{{url}}">
         <div class='{{#if image}}' style="background-image: url({{image}}){{else}}no-cover{{/if}}">
           <section class="post">
             <h2>{{title}}</h2>
@@ -81,8 +83,9 @@
       </a>
       {{/next_post}}
       {{#prev_post}}
-      <a class="col read-next-story text-center prev {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}" href="{{url}}">
-        <div class='{{#if image}}' style="background-image: url({{image}}){{else}}no-cover{{/if}}">  
+      {{title}}
+      <a class="read-next-story text-center" href="{{url}}">
+        <div class='{{#if image}}' style="background-image: url({{image}}){{else}}background-image: url(/content/images/2016/01/stairs.gif{{/if}}">  
           <section class="post">
             <h2>{{title}}</h2>
             <p>{{excerpt words="19"}}&hellip;</p>
