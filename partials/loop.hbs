@@ -9,17 +9,34 @@
 
 <div class='row main-post {{post_class}}'>
   <div class='col col-md-12 post-container' style="{{#if image}}background-image: url({{image}}){{else}}background-image:url({{@blog.cover}}){{/if}}"> 
+    {{#if featured}}
+    <div class='featured'>
+      <span class='fa fa-star'></span>
+    </div>
+      
+    {{/if}}
     <div class='title'>
+      
       <a href="{{url}}">
         <h2>
           {{title}}
         </h2>
       </a>
+      {{#author}}
+      <div class='visible-sm-block visible-xs-block'>
+        <a href="{{url}}">
+          {{#if image}}
+            <img class='img-circle' src="{{image}}" alt="">
+          {{/if}}
+          <span>{{name}}</span>  
+        </a>
+      </div>
+    {{/author}} 
       <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}"><p><span class='fa fa-calendar'></span> &nbsp&nbsp{{date format="MMMM D, YYYY"}}</p></time>
     </div>
 
     {{#author}}
-      <div class='author'>
+      <div class='author visible-md-block'>
         <a href="{{url}}">
           {{#if image}}
             <img class='img-circle' src="{{image}}" alt="">

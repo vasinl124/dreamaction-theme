@@ -21,6 +21,13 @@
 .main-post .post-container:hover  {
 	box-shadow: inset 2px 43px 300px 63px rgba(0,0,0,0.7);
 }
+
+.main-post .post-container .featured {	
+	color: gold;
+	position: absolute;
+	top: 4px;
+	font-size: 18px;
+}
 .main-post .post-container .title {
 	color: white;
 	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;	
@@ -42,11 +49,15 @@
 .main-post .post-container .title a:hover {
 	color: #EF660A;
 }
+.main-post .post-container .title div {
+	margin-bottom: 20px;
+}
 
 .main-post .post-container .img-circle {
 	height: 50px;
 	margin-right: 5px;
 }
+
 
 .main-post .post-container .author {
 	color: white;
