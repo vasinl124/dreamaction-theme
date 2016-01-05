@@ -13,17 +13,6 @@
       </h2>
       <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}"><p><span class='fa fa-calendar'></span> &nbsp&nbsp{{date format="MMMM D, YYYY"}}</p></time>
     </div>
-    {{#author}}
-      <div class='author'>
-        <a href="{{url}}">
-          {{#if image}}
-            <img class='img-circle' src="{{image}}" alt="">
-          {{/if}}
-          <span>{{name}}</span>  
-        </a>
-      </div>
-    {{/author}}  
-
     <div class='tags text-right'>
       <p>{{tags}}</p>
     </div>
