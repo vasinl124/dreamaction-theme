@@ -71,7 +71,7 @@
 
       {{#next_post}}
       <a class="read-next-story text-center"  href="{{url}}">
-        <div class='{{#if image}}' style="background-image: url({{image}}){{else}}no-cover{{/if}}">
+        <div class='' style="{{#if image}}background-image: url({{image}}){{else}}background-image:url({{@blog.cover}}){{/if}}">  
           <section class="post">
             <h2>{{title}}</h2>
             <p>{{excerpt words="19"}}&hellip;</p>
