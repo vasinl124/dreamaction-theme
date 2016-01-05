@@ -12,7 +12,7 @@
 	box-shadow: inset 2px 43px 300px 63px rgba(0,0,0,0.3);
 }
 
-.main-tag-container .col a {
+.main-tag-container .col section {
 	position: absolute;
 	bottom: 0px;
 	text-decoration: none;
@@ -20,7 +20,7 @@
 	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;	
 }
 
-.main-tag-container .col a:hover {
+.main-tag-container .col section:hover {
 	color: lightgray;
 }
 
