@@ -81,18 +81,15 @@
 }
 
 
-.post-content {
+.post-content-row {
 	background-color: white;
 	padding-top: 15px;
-}
-
-.post-content {
 	overflow: hidden;
 	font-size: 18px;
 	/*line-height:2em;*/
 }
 
-.post-content p {
+.post-content-row p {
 	padding-bottom: 5px;
 }
 
@@ -153,7 +150,7 @@
 
 /* Keep images centered, and allow images wider than the main
    text column to break out. */
-.post-content .col img {
+.post-content img {
     display: block;
     max-width: 100%;
     height: auto;
