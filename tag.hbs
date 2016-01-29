@@ -4,7 +4,7 @@
 {{! If we have a tag cover, display that - else blog cover - else nothing }}
 
 <div class='container-fluid'>
-  <div class='row head-container' style="{{#if tag.image}}background-image: url({{tag.image}}){{else}}{{#if @blog.cover}}" style="background-image: url({{@blog.cover}}){{/if}}{{/if}}">
+  <div class='row head-container' style="{{#if tag.image}}background-image: url({{tag.image}}){{else}}{{#if @blog.cover}} background-image: url({{@blog.cover}}){{else}}no-cover{{/if}}{{/if}}">
     <div class='col text-center'>
       <h2>
         {{tag.name}}
