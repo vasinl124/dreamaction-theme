@@ -81,14 +81,14 @@
   
 
   {{!-- jQuery needs to come before `{{ghost_foot}}` so that jQuery can be used in code injection --}}
-  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js" async></script>
   {{! Ghost outputs important scripts and data with this tag }}
   {{ghost_foot}}
   
 
-  <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
+  <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}" async></script>
   {{! The main JavaScript file for Casper }}
-  <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="{{asset "js/index.js"}}" async></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js" async></script>
 </body>
 </html>
