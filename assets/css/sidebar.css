@@ -120,6 +120,9 @@
 }
 
 /* Tags Side*/
+.tags-side-container {
+	padding-bottom: 10px;
+}
 .tags-side-container h4 {
 	font-size: 18px;
 	color: white;
