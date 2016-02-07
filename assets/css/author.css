@@ -124,6 +124,11 @@
 }
 
 
+/* post content*/
+.embedded-container div {
+    background-color: transparent;
+}
+
 
 /*website link custom jom*/
 .website-link {

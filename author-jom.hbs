@@ -24,16 +24,24 @@
                 
             {{/if}}
         <!-- </div> -->
-        <div class='container'>
+        <div class='embedded-container container post-container'>
         {{#get "posts" filter="page:true+slug:aboutme"}}
             {{#foreach posts}}
-                <div class='text-center'>
-                    {{content}}    
-                </div>
+                <div class="row post-content-row" role="main">
+          <div class='col col-md-12'>
+            <article class="{{post_class}}">
+              <section class="post-content">
+                {{content}}
+              </section>
+            </article>
+          </div>      
+        </div>
                 
             {{/foreach}}
         {{/get}}    
         </div>
+
+
 
       <!--   <div class='row'>
             <div class='col col-md-offset-2 col-md-8'>
