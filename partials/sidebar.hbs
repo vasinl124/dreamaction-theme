@@ -96,5 +96,15 @@
         {{/if}}
       {{/foreach}}
     {{/get}}
-  
+</div>
+
+<div class='tags-side-container'>
+  <h4>Tags</h4>
+  {{#get "tags"}}
+    {{#foreach tags}}
+        <a href='{{url}}' title="{{name}}">
+          {{name}} 
+        </a>
+    {{/foreach}}
+  {{/get}}  
 </div>

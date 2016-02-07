@@ -99,7 +99,6 @@
 }
 
 .featured-posts-container img {
-	/*border: #EF660A solid 5px;*/
 	margin: 0px 0 10px;
 }
 
@@ -118,5 +117,23 @@
 }
 
 .featured-posts-container .featured {
+	color: #EF660A;
+}
+
+/* Tags Side*/
+.tags-side-container h4 {
+	font-size: 18px;
+	color: white;
+	background-color: #EF660A;
+	padding: 5px;
+}
+.tags-side-container a {
+	text-decoration: none;
+	color: black;
+	font-size: 14px;
+}
+
+.tags-side-container a:hover {
+	text-decoration: none;
 	color: #EF660A;
 }

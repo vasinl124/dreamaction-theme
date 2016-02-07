@@ -2,12 +2,14 @@
 	background-color: black;
 }
 
+/* footer menu*/
 .main-footer .footer-menu {
 	padding-top: 15px;
 	color: white;
 }
 
 .main-footer .footer-menu a {
+	text-decoration: none;
 	color: white;
 }
 
