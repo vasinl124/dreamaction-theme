@@ -15,7 +15,6 @@
     </div>
     {{/if}}
     <div class='title'>
-      
       <a href="{{url}}">
         <h2>
           {{title}}
@@ -25,7 +24,7 @@
       <div class='visible-sm-block visible-xs-block'>
         <a href="{{url}}">
           {{#if image}}
-            <img class='img-circle' src="{{image}}" alt="">
+            <img class='img-circle' src="{{image}}" alt="{{name}}">
           {{/if}}
           <span>{{name}}</span>  
         </a>
@@ -38,7 +37,7 @@
       <div class='author visible-md-block visible-lg-block'>
         <a href="{{url}}">
           {{#if image}}
-            <img class='img-circle' src="{{image}}" alt="">
+            <img class='img-circle' src="{{image}}" alt="{{name}}">
           {{/if}}
           <span>{{name}}</span>  
         </a>

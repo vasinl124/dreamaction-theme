@@ -36,7 +36,7 @@
 }
 
 .author-profile {
-    padding: 0 15px 5rem 15px;
+    padding: 0 15px 0 15px;
     border-bottom: #EBF2F6 1px solid;
     text-align: center;
 }
@@ -111,6 +111,7 @@
     display: inline-block;
     margin: 0 2rem 1rem 0;
     word-wrap: break-word;
+    font-size: 30px;
 }
 .author-meta a {
     text-decoration: none;

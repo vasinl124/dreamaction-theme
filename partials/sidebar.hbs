@@ -1,12 +1,12 @@
 <div id="mlb2-1496821" class="ml-subscribe-form">
-  <div class="ml-vertical-align-center">
+  <div class="ml-vertical-align-center row">
       <form class="ml-block-form" action="//app.mailerlite.com/webforms/submit/e9p3m6" data-code="e9p3m6" method="POST" target="_blank">
-          <div class="subscribe-form">
-              <div class="form-section text-center">
+          <div class="subscribe-form col col-sm-offset-2 col-sm-8 col-md-offset-0 col-md-12">
+              <div class="form-section text-center ">
               	<p class='text-left'>
               		<big>** สมัครวันนี้</big> รับชุดคิท “คว้างาน” (GET A JOB Toolkit : for Architects and Designers)  สำหรับวางแผน เตรียมตัวสมัครงาน ในสายออกแบบ/สถาปัตยกรรม ฟรี!!
               	</p>
-              	<img src="http://subscribe.dreamaction.co/assets/images/kit/kitgraphic.png" alt="" width="150" height="150" >	
+              	<img src="http://subscribe.dreamaction.co/assets/images/kit/kitgraphic.png" alt="portfolio design toolkit" width="150" height="150" >	
                 <div class="form-group ml-field-email ml-validate-required ml-validate-email">
                     <input type="email" name="fields[email]" class="form-control text-center" placeholder="Email address" value="">
                 </div>
@@ -33,9 +33,26 @@
 
 
 <!-- Page like -->
-<center>
-  <div class="fb-page" data-href="https://www.facebook.com/godreamaction" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/godreamaction"><a href="https://www.facebook.com/godreamaction"></a></blockquote></div></div>   
+<center class='facebook-page'>
+  <div class="fb-page" data-href="https://www.facebook.com/godreamaction" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/godreamaction"><a href="https://www.facebook.com/godreamaction">Dream Action - วางแผน เดินทาง ตามหาฝัน</a></blockquote></div></div>
 </center>
+
+<!-- To Jom About Page -->
+<a href="{{url}}">
+<div class='jom-sidebar row'>  
+  <div class='col col-xs-4 col-image'>
+    <img class='img' src="http://dreamaction.co/content/images/2016/01/avatar2.jpg" alt="Jom Naknakorn">
+  </div>
+  <div class='col col-xs-8 col-text'>
+    <h4>Dream Action</h4>
+    <p>จากเด็กสถาปัตย์ธรรมดาๆสู่10ปีในบริษัทแนวหน้าระดับโลก...
+      <br>
+        <span class='fa fa-info-circle'> อ่านต่อ</span>
+      
+  </div>  
+</div>
+</a>
+
 
 <div class='text-center ads-container'>
   <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -48,4 +65,36 @@
   <script>
   (adsbygoogle = window.adsbygoogle || []).push({});
   </script>
+</div>
+
+
+<div class='recent-posts-container'>
+  <h4>Recent Posts</h4>
+  {{#get "posts" limit="10"}}
+    {{! Loop through our posts collection }}
+    {{#foreach posts}}
+      <a href="{{url}}">
+        <p><span class='fa fa-arrow-circle-o-right'></span> {{title}}</p>
+      </a>
+        
+    {{/foreach}}
+  {{/get}}
+</div>
+
+<div class='featured-posts-container'>
+    <h4>Featured Posts</h4>
+    {{#get "posts" filter="featured:true" limit="2"}}
+      {{! Loop through our posts collection }}
+      {{#foreach posts}}
+        {{#if featured}}
+        <div class='featured-post'>
+        <a href="{{url}}">
+          <img class='img img-responsive' src="{{image}}" alt="{{title}}">
+          <p><span class='featured fa fa-star'></span> {{title}}</p>
+        </a>
+        </div>
+        {{/if}}
+      {{/foreach}}
+    {{/get}}
+  
 </div>
