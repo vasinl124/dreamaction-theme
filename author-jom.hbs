@@ -14,7 +14,6 @@
             <div class="img" style="background-image: url({{image}})"><span class="hidden">{{name}}'s Picture</span></div>
         </figure>
         {{/if}}
-        <!-- <div class="author-meta"> -->
             {{#if website}}
             <div class='website-link'>
                 <a href="{{website}}">
@@ -23,21 +22,19 @@
             </div>
                 
             {{/if}}
-        <!-- </div> -->
         <div class='embedded-container container post-container'>
         {{#get "posts" filter="page:true+slug:aboutme"}}
-            {{#foreach posts}}
-                <div class="row post-content-row" role="main">
-          <div class='col col-md-12'>
-            <article class="{{post_class}}">
-              <section class="post-content">
-                {{content}}
-              </section>
-            </article>
-          </div>      
-        </div>
-                
-            {{/foreach}}
+          {{#foreach posts}}
+            <div class="row post-content-row" role="main">
+              <div class='col col-md-12'>
+                <article class="">
+                  <section class="post-content">
+                    {{content}}
+                  </section>
+                </article>
+              </div>      
+            </div>
+          {{/foreach}}
         {{/get}}    
         </div>
 
