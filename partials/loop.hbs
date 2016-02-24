@@ -9,7 +9,7 @@
 {{! This is the post loop - each post will be output using this markup }}
   <div class='row main-post {{post_class}}'>
   {{#foreach posts}}
-    <div class='col col-sm-4 post-container'>
+    <div class='col col-md-4 post-container'>
       <div class='image-container' style="{{#if image}}background-image: url({{image}}){{else}}background-image:url({{@blog.cover}}){{/if}}">
         <!-- <div class='tags text-right'>
           <p>{{tags}}</p>
