@@ -11,80 +11,78 @@
 }
 
 .main-post .post-container {
-	height: 250px;
+	padding: 0px;
+}
+
+.main-post .link-spanner{
+  position:absolute; 
+  width:100%;
+  height:100%;
+  top:0;
+  left: 0;
+  z-index: 1;
+}
+
+
+.main-post .image-container {
+	height: 300px;
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;
 	box-shadow: inset 2px 43px 300px 63px rgba(0,0,0,0.3);
 }
 
-.main-post .post-container:hover  {
+.main-post .post-container:hover .image-container {
 	box-shadow: inset 2px 43px 300px 63px rgba(0,0,0,0.7);
 }
 
-.main-post .post-container .featured {	
-	color: #EF660A;
-	position: absolute;
-	top: 4px;
-	font-size: 18px;
-}
-.main-post .post-container .title {
-	color: white;
-	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;	
-	position: absolute;
-	bottom: 0px;
-	word-wrap: break-word;
+.main-post .post-container:hover .readmore-text {
+	color: #EF660A !important;
 }
 
-.main-post .post-container .title time {
+.main-post .post-container .text-container {
+	height: 280px;
+	background-color: white;
+	border: #F0F0F0 1px solid;
+}
+
+
+.main-post .post-container .text-container .title {
+	padding: 0px 20px;
+}
+
+.main-post .post-container .text-container time {
+	color: gray;
 	font-size: 12px;
-	font-style: italic;
+}
+.main-post .post-container .text-container .excerpt {	
+	padding: 20px;
+	padding-left: 50px;
+	padding-right: 50px;
 }
 
-.main-post .post-container .title a {
-	text-decoration: none;
-	color: white;
+.main-post .post-container .text-container .excerpt span {
+	color: lightgray;
+	font-size: 20px;
 }
 
-.main-post .post-container .title a:hover {
-	color: #EF660A;
-}
-.main-post .post-container .title div {
-	margin-bottom: 20px;
+.main-post .post-container .text-container  .readmore {
+	padding-top: 20px;
 }
 
-.main-post .post-container .img-circle {
-	height: 50px;
-	margin-right: 5px;
+.main-post .post-container .text-container  .readmore a {
+	color: black;
+	text-decoration: underline;
+	font-size: bold;
 }
-
-
-.main-post .post-container .author {
-	color: white;
-	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;		
-	padding-right: 10px;
-	position: absolute;
-	bottom: 10px;
-	right: 5px;
-}
-
-.main-post .post-container .author a {
-	text-decoration: none;
-	color: white;
-}
-
-.main-post .post-container .author a:hover {
-	color: #EF660A;
-}
-
 
 .main-post .post-container .tags {
+	z-index: 400;
 	padding-top: 4px;
 }
 
 .main-post .post-container .tags a {
 	background-color: #EF660A;
-
 	padding: 6px;
 	font-size: 12px;
 	text-decoration: none;
@@ -95,23 +93,4 @@
 	color: black;
 }
 
-.main-post .excerpt {	
-	background-color: #F5F8FB;
-	padding: 20px;
-	padding-left: 50px;
-	padding-right: 50px;
-}
 
-.main-post .readmore {
-	padding-top: 20px;
-}
-
-.main-post .readmore a {
-	color: black;
-	text-decoration: underline;
-	font-size: bold;
-}
-
-.main-post .readmore a:hover {
-	color: #EF660A;
-}
