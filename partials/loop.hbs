@@ -9,24 +9,28 @@
 {{! This is the post loop - each post will be output using this markup }}
   <div class='row main-post {{post_class}}'>
   {{#foreach posts}}
-    <div class='col col-md-4 post-container'>
+    <div class='col col-xs-12 col-sm-6 col-md-4 post-container'>
       <div class='image-container' style="{{#if image}}background-image: url({{image}}){{else}}background-image:url({{@blog.cover}}){{/if}}">
         <!-- <div class='tags text-right'>
           <p>{{tags}}</p>
         </div> -->
       </div>
-        <a href="{{url}}"> 
-          <span class='link-spanner'></span>
-        </a>
+    
+      <div class='col col-xs-12 time-container text-center'>
+        <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}"><p><span class='fa fa-calendar'></span> &nbsp&nbsp{{date format="MMMM D, YYYY"}}</p></time>  
+      </div>
+    
+      <a href="{{url}}"> 
+        <span class='link-spanner'></span>
+      </a>
       <div class='text-container'>
         <div class='title text-center'>
           <h3>
             {{title}}
           </h3>
-          <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}"><p><span class='fa fa-calendar'></span> &nbsp&nbsp{{date format="MMMM D, YYYY"}}</p></time>
         </div>
-        <div class='row excerpt text-center'>
-          <div class='col col-xs-12'>
+        <div class='excerpt text-center'>
+          <div class='col col-xs-12 excerpt-text'>
             <p>{{excerpt}}</p>
           </div>
           <div class='col col-xs-12 text-center readmore'>
@@ -35,6 +39,7 @@
             </a>    
           </div>
         </div>
+        
       </div>  
     </div>
 
