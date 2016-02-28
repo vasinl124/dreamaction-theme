@@ -1,0 +1,119 @@
+.jumbotron {
+	background-image: url(http://www.planwallpaper.com/static/images/colorful-triangles-background_yB0qTG6.jpg);
+	border-radius: 0px !important;
+	color: white;
+	margin: 0px !important;
+}
+
+.port-menu {
+
+	padding: 20px;
+	padding-bottom: 50px;
+	text-decoration: none;
+	background-color: black;
+	color: white;
+}
+
+.port-menu h2 {
+	/*color: #EB5C0C;*/
+	color: white;
+	padding-bottom: 10px;
+}
+
+.port-menu p {
+	font-size: 17px;
+	line-height: 25px;
+}
+.port-menu a {
+	color:gray;
+}
+
+.row {
+	overflow: hidden;
+}
+
+.service-choice {
+
+	border-radius: 0px;
+	padding: 15px;
+	/*margin: 20px 0px;*/
+	background-color: #F0F0F0;
+	border: black 1px solid;
+	margin-bottom: -99999px;
+  padding-bottom: 99999px;
+
+  -webkit-transition: background-color 0.5s, color 0.5s;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.service-choice h3 {
+	background-color: #F0F0F0;
+	text-transform: uppercase;
+	padding: 10px;
+}
+
+.service-choice:hover {
+	color: white !important;
+	background-color: #EB5C0C;
+}
+
+.service-choice h3 {
+	color: black;
+}
+
+
+.detail-container {
+	padding: 30px;
+}
+.detail-container h2 {
+	color: #EB5C0C;
+	font-size: 45px;
+}
+
+.detail-container p {
+	font-size: 17px;
+	line-height: 25px;
+}
+
+.detail-container li {
+	font-size: 17px;
+}
+
+
+.call-to-action {
+	background-color: #EB5C0C;
+	/*height: 240px;*/
+	padding: 25px;
+	margin-top: 25px;
+	
+}
+
+.call-to-action h2 {
+	color: white !important;
+	font-size: 35px;
+}
+
+#fliptest {
+	background-color: white;
+	color: black;
+	
+}
+
+#port-critique {
+	background-color: black;
+	color: white;
+	
+}
+
+#beginner-port-workshop {
+	background-color: white;
+	color: black;
+	
+
+}
+
+#intermediate-port-workshop {
+	background-color: #D9D9D9;
+	
+
+}
