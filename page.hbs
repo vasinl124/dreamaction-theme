@@ -29,7 +29,7 @@
         <div class='col col-md-8'>
           <section class="post-content">
               {{content}}
-                
+
               <p class='text-center visible-xs-block'>
                 _____________________
               </p>
@@ -47,25 +47,25 @@
         </div>
         <div class='col col-md-4'>
           {{> "sidebar"}}
-        </div>  
+        </div>
       </article>
-    </div>      
+    </div>
   </div>
 </div>
 
 <div class='post-container container-fluid'>
-  
+
   <aside class="row read-next">
 
       {{#next_post}}
       <a class="read-next-story text-center"  href="{{url}}">
-        <div class='' style="{{#if image}}background-image: url({{image}}){{else}}background-image:url({{@blog.cover}}){{/if}}">  
+        <div class='' style="{{#if image}}background-image: url({{image}}){{else}}background-image:url({{@blog.cover}}){{/if}}">
           <section class="post">
             <h2>{{title}}</h2>
             <p>{{excerpt words="19"}}&hellip;</p>
           </section>
         </div>
-          
+
       </a>
       {{/next_post}}
       {{#prev_post}}
