@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <meta name="keywords" content="architect, architecture, portfolio, portfolio design, resume, cover letter, พอร์ตฟอลิโอ, เรซูเม่, จดหมายนำ, สถาปนิก, สถาปัตย์, สถาปัตยกรรม, สมัครงาน, ภูมิสถาปนิก, สัมภาษณ์งาน, นักออกแบบ, designer">
-    
+
     <link rel="shortcut icon" href="{{asset 'favicons/favicon.ico'}}">
     <link rel="apple-touch-icon" sizes="57x57" href="assets/favicons/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="assets/favicons/apple-icon-60x60.png">
@@ -33,13 +33,13 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="assets/favicons/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-    
+
     {{! Styles'n'Scripts }}
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
     <link type="text/css" href="{{asset "css/font-awesome.min.css"}}" rel="stylesheet"/>
     <link type="text/css" href="{{asset "css/custom.css"}}" rel="stylesheet"/>
     <link type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" rel="stylesheet"/>
-    
+
 
     <meta property="fb:app_id" content="214316472233662" />
 
@@ -70,15 +70,15 @@
 
   {{! Everything else gets inserted here }}
   {{{body}}}
-  
+
   {{> "footer"}}
-  
+
 
   {{!-- jQuery needs to come before `{{ghost_foot}}` so that jQuery can be used in code injection --}}
   <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js" async></script>
   {{! Ghost outputs important scripts and data with this tag }}
   {{ghost_foot}}
-  
+
 
   <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}" async></script>
   {{! The main JavaScript file for Casper }}
