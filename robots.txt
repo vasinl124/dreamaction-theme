@@ -1,0 +1,5 @@
+User-agent: *
+Sitemap: https://dreamaction.co/sitemap.xml
+Disallow: /ghost/
+Disallow: /thankyou/
+Disallow: /apply/
