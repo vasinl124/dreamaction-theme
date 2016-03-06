@@ -1,0 +1,84 @@
+<meta property="og:image" content="https://dreamaction.co/content/images/2016/03/poster2016compe760-1.jpg" />
+<link type="text/css" href="{{asset "css/detail-post.css"}}" rel="stylesheet"/>
+
+{{!< default}}
+
+{{! This is a page template. A page outputs content just like any other post, and has all the same
+    attributes by default, but you can also customise it to behave differently if you prefer. }}
+
+{{! Everything inside the #post tags pulls data from the page }}
+{{#post}}
+<div class='container-fluid post-container'>
+  <div class='row'>
+    <header class="col col-md-12 post-head {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}">
+      <div class='title'>
+        <h1>
+          {{title}}
+        </h1>
+        <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}"><p><span class='fa fa-calendar'></span> &nbsp&nbsp{{date format="MMMM D, YYYY"}}</p></time>
+      </div>
+      <div class='tags text-right'>
+        <p>{{tags}}</p>
+      </div>
+    </header>
+  </div>
+</div>
+<div class='post-container container'>
+  <div class="row post-content-row" role="main">
+    <div class='col col-md-12'>
+      <article class="{{post_class}}">
+        <div class='col col-md-8'>
+          <section class="post-content">
+              {{content}}
+
+              <p class='text-center visible-xs-block'>
+                _____________________
+              </p>
+              <div id="fb-root"></div>
+              <script>(function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=214316472233662";
+                fjs.parentNode.insertBefore(js, fjs);
+              }(document, 'script', 'facebook-jssdk'));</script>
+
+              <div id="fb-root"></div>
+          </section>
+        </div>
+        <div class='col col-md-4'>
+          {{> "sidebar"}}
+        </div>
+      </article>
+    </div>
+  </div>
+</div>
+
+<div class='post-container container-fluid'>
+
+  <aside class="row read-next">
+
+      {{#next_post}}
+      <a class="read-next-story text-center"  href="{{url}}">
+        <div class='' style="{{#if image}}background-image: url({{image}}){{else}}background-image:url({{@blog.cover}}){{/if}}">
+          <section class="post">
+            <h2>{{title}}</h2>
+            <p>{{excerpt words="19"}}&hellip;</p>
+          </section>
+        </div>
+
+      </a>
+      {{/next_post}}
+      {{#prev_post}}
+      <a class="read-next-story text-center" href="{{url}}">
+        <div class='' style="{{#if image}}background-image: url({{image}}){{else}}background-image:url({{@blog.cover}}){{/if}}">
+          <section class="post">
+            <h2>{{title}}</h2>
+            <p>{{excerpt words="19"}}&hellip;</p>
+          </section>
+        </div>
+      </a>
+      {{/prev_post}}
+  </aside>
+</div>
+{{/post}}
