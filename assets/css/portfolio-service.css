@@ -5,6 +5,9 @@
 	margin: 0px !important;
 }
 
+.jumbotron .video {
+	padding: 25px;
+}
 
 .port-menu {
 	padding: 15px;
@@ -105,6 +108,10 @@
 .call-to-action h2 {
 	color: white !important;
 	font-size: 35px;
+}
+
+.img-responsive {
+    margin: 0 auto;
 }
 
 #fliptest {
