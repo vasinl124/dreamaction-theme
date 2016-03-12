@@ -35,7 +35,7 @@
 }
 .jom-sidebar h4 {
 	margin: 0px;
-	
+
 	font-size: 16px;
 	color: white;
 	background-color: #EF660A;
@@ -44,14 +44,14 @@
 
 .jom-sidebar p {
 	padding: 10px 10px 3px 10px;
-	font-size: 13px;
+	font-size: 14px !important;
 }
 
 .jom-sidebar span {
 	color:white;
 	margin-top: 5px;
 	padding: 5px;
-	font-size: 15px;
+	font-size: 14px !important;
 	background-color: #EF660A;
 }
 
@@ -65,8 +65,8 @@
 }
 
 .recent-posts-container p {
-	padding: 0 10px 3px 10px; 
-	font-size: 14px;
+	padding: 0 10px 3px 10px;
+	font-size: 16px !important;
 	border-bottom: #EF660A dashed 1px;
 }
 
@@ -102,7 +102,7 @@
 }
 
 .featured-posts-container p {
-	padding: 0 10px 0 10px; 
+	padding: 0 10px 0 10px;
 	font-size: 14px;
 }
 
