@@ -7,19 +7,24 @@
 	background-repeat: no-repeat;
 	background-position: center center;
 	position:relative;
+	padding: 0px;
 }
-.post-head .featured {	
+.post-head .featured {
 	color: #EF660A;
 	position: absolute;
 	top: 4px;
 	font-size: 18px;
 }
 .post-head .title {
+	padding: 10px;
 	color: white;
-	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;	
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 	position: absolute;
 	bottom: 0px;
 	word-wrap: break-word;
+
+	background-color: rgba(0, 0, 0, 0.5);;
+	width: 100%;
 }
 
 .post-head .title time {
@@ -47,7 +52,7 @@
 
 .post-head .author {
 	color: white;
-	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;		
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 	padding-right: 10px;
 	position: absolute;
 	bottom: 10px;
@@ -65,7 +70,7 @@
 
 
 .post-head .tags {
-	padding-top: 4px;	
+	padding-top: 4px;
 }
 
 .post-head .tags a {
@@ -132,7 +137,7 @@
 
 .read-next-story .post:before {
     content: "อ่านอันนี้ต่อ";
-    padding: 4px 10px 5px;    
+    padding: 4px 10px 5px;
     text-transform: uppercase;
     font-size: 1.5rem;
     font-family: "Open Sans", sans-serif;
