@@ -70,6 +70,7 @@
 
 
 .post-head .tags {
+	z-index: 200;
 	padding-top: 4px;
 }
 
