@@ -33,7 +33,7 @@
 
 .main-post .post-container .text-container {
 	padding: 30px 10px;
-	min-height: 430px;
+	min-height: 470px;
 	background-color: white;
 	border: #F0F0F0 1px solid;
 }
@@ -41,7 +41,7 @@
 
 .main-post .post-container .text-container .title {
 	/*padding: 0px 20px;*/
-	height: 100px;
+	height: 140px;
 }
 
 .main-post .post-container .text-container .title h3 {
