@@ -12,25 +12,24 @@
   <div class="row post-content-row" role="main">
     <div class='jumbotron col col-xs-12'>
       <h1>Portfolio Services</h1>
-      <h4>มาสร้างพอร์ตฟอลิโอสุดเจ๋ง ที่จะพาคุณไปได้ไกลยิ่งกว่าเดิม</h4>
-      <br/>
+      <h3>มาสร้างพอร์ตฟอลิโอสุดเจ๋ง ที่จะพาคุณไปได้ไกลยิ่งกว่าเดิม</h3>
 
       <div class="row text-center">
         <div class="col col-xs-12 video">
-          <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='https://www.youtube.com/embed/xVGgHYqVb7w' frameborder='0' allowfullscreen></iframe></div>
+          <div class='embed-container'><iframe width="560" height="315" src="https://www.youtube.com/embed/xVGgHYqVb7w?showinfo=0" frameborder="0" allowfullscreen></iframe></div>
         </div>
         <div class="col col-sm-4">
-          <img class='img img-circle'src="http://placehold.it/150x150">
+          <img class='img img-circle'src="{{asset 'images/create.png'}}">
           <h2>CREATE</h2>
           <p>ทำ Portfolio เทพๆ ในแบบคุณ</p>
         </div>
         <div class="col col-sm-4">
-          <img class='img img-circle'src="http://placehold.it/150x150">
+          <img class='img img-circle'src="{{asset 'images/unleash.png'}}">
           <h2>UNLEASH</h2>
           <p>ดึงพลัง และศักยภาพในตัวคุณ ให้แสดงออกมาทาง Portfolio</p>
         </div>
         <div class="col col-sm-4">
-          <img class='img img-circle'src="http://placehold.it/150x150">
+          <img class='img img-circle'src="{{asset 'images/shuriken.png'}}">
           <h2>TECHNIQUES</h2>
           <p>พบเทคนิค และเคล็ดลับ ที่หาไม่ได้ใน Internet ที่สามารถเอาไปใช้ได้มากกว่าแค่ Portfolio</p>
         </div>
@@ -38,7 +37,7 @@
 
       <div class='row text-center'>
         <a href="/apply">
-          <button type="button" class="btn btn-default" >Free Flip Test !</button>
+          <button type="button" class="btn custom-btn" >Free Flip Test !</button>
         </a>
       </div>
     </div>
@@ -52,7 +51,8 @@
       <div class="col col-sm-6 text-center">
         <a href="#fliptest">
           <div class='col col-xs-12 service-choice'>
-            <img class='img img-circle'src="http://placehold.it/150x150">
+            <img class='img free'src="{{asset 'images/free.png'}}">
+            <img class='img img-circle'src="{{asset 'images/flip-test.png'}}">
             <h3>Flip Test</h3>
             <p>
               ถ้ามีคะแนนจะได้เท่าไหร่?
@@ -67,7 +67,7 @@
       <div class="col col-sm-6 text-center">
         <a href="#port-critique">
           <div class='col col-xs-12 service-choice'>
-            <img class='img img-circle'src="http://placehold.it/150x150">
+            <img class='img img-circle'src="{{asset 'images/portfolio-review.png'}}">
             <h3>Portfolio Review</h3>
             <p>
               พบคําแนะนํา ข้อดี ข้อเสีย ข้อปรับปรุงของ Portfolioของคุณอย่าง
@@ -119,171 +119,249 @@
       </div> -->
     </div>
 </div>
-    <div class='container'>
-      <div id='fliptest' class='row detail-container'>
-        <div class='col col-md-4 col-sm-12 text-center'>
-          <img class='img img-responsive'src="http://placehold.it/500x1000">
-        </div>
+    <div id='fliptest' class="container-fluid">
+      <div class="row">
+        <div class='container'>
+          <div  class='row detail-container'>
+            <div class='col col-md-4 col-sm-12 text-center'>
+              <img class='img img-responsive'src="{{asset 'images/flip-test-banner.png'}}">
+            </div>
 
-        <div class='col col-md-8 col-sm-12'>
-          <h2>FLIP TEST</h2>
-          <hr>
-          <h3>อะไรคือ Flip test? และสำคัญอย่างไร?</h3>
+            <div class='col col-md-8 col-sm-12'>
+              <h2>FLIP TEST <img class='img free'src="{{asset 'images/free.png'}}"></h2>
+              <hr>
+              <h3>Flip Test คืออะไร?</h3>
 
-          <p>
-            Flip test คือ ลักษณะในการดู Portfolio มันคือ ขั้นตอนการกรองจำนวนผู้เข้าสมัครในรอบแรก ส่วนมากจะมาในรูปแบบที่ผู้ดูใช้เวลาน้อยมากในการดู Portfolio ของเราประมาณไม่เกิน 1 นาที
-          </p>
+              <p>
+                Flip test คือ ลักษณะในการดู Portfolio มันคือ ขั้นตอนการกรองจำนวนผู้เข้าสมัครในรอบแรก ส่วนมากจะมาในรูปแบบที่ผู้ดูใช้เวลาน้อยมากในการดู Portfolio ของเราประมาณไม่เกิน 1 นาที
+              </p>
+              <h3>Flip Test สำคัญอย่างไร?</h3>
+              <p>
+                เวลาเราสมัครงานหรือเรียนในที่ที่มีการแข่งขันสูง หรือบริษัทที่ได้รับเอกสารสมัครงานมาเยอะมาก แต่กรรมการผู้คัดเลือกมีเวลาจำกัดไม่สามารถให้เวลากับรายอะเอียดใน Portfolio ของคุณ ประกอบกับเค้าสามารถรับคนมาทำงานหรือเรียนได้จำนวนจำกัด ซึ่งก็คือ กรณีปกติทั่วไป ที่เรียกว่า “ไม่มีเวลา” นั่นแหละค่ะ
+              </p>
 
-          <p>
-            เวลาเราสมัครงานหรือเรียนในที่ที่มีการแข่งขันสูง หรือบริษัทที่ได้รับเอกสารสมัครงานมาเยอะมาก แต่กรรมการผู้คัดเลือกมีเวลาจำกัดไม่สามารถให้เวลากับรายอะเอียดใน Portfolio ของคุณ ประกอบกับเค้าสามารถรับคนมาทำงานได้จำนวนจำกัด ซึ่งก็คือ กรณีปกติทั่วไป ที่เรียกว่า “ไม่มีเวลา” นั่นแหละค่ะ
-          </p>
+              <p>
+              ถ้าไม่มีระบบการคัดเลือกซับซ้อนมาก ก็แค่ ผ่าน แล้วเอาไปดูรายละเอียดต่อ ในด่านต่อไป ถ้าไม่ผ่าน ก็..บายยยยย~~
+              </p>
+              <p>
+              แต่ถ้าบางที่ ที่มีระบบซับซ้อน เช่น ที่ที่รับฝึกงานจากทั่วโลก จะมีการคัดและแยกตามกลุ่มของคะแนนค่ะ เช่น ดีมาก ปานกลาง น้อย เพื่อให้กรรมการผู้คัดเลือกในด่านต่อไป เรียงลำดับความสำคัญว่า ควรเริ่มดูจากกลุ่มไหนก่อน เพื่อจะได้ค้นหาคนได้ทัน ในเวลาที่จำกัด
+              </p>
 
-          <p>
-          ถ้าไม่มีระบบการคัดเลือกซับซ้อนมาก ก็แค่ ผ่าน แล้วเอาไปดูรายละเอียดต่อ ในด่านต่อไป ถ้าไม่ผ่าน ก็..<strong>บายยยยย~~</strong>
-          </p>
-          <p>
-          แต่ถ้าบางที่ ที่มีระบบซับซ้อน เช่น ที่ที่รับฝึกงานจากทั่วโลก จะมีการคัดและแยกตามกลุ่มของคะแนนค่ะ เช่น ดีมาก ปานกลาง น้อย เพื่อให้กรรมการผู้คัดเลือกในด่านต่อไป เรียงลำดับความสำคัญว่า ควรเริ่มดูจากกลุ่มไหนก่อน เพื่อจะได้ค้นหาคนได้ทัน ในเวลาที่จำกัด
-          </p>
+              <p>
+              การออกแบบ Portfolio ให้ดูดี และประทับใจตั้งแต่ในการดู 1 นาทีแรก หรือใน Flip Test จึงเป็นสิ่งที่สำคัญมาก โดยเฉพาะการส่งไปในที่ที่การแข่งขันสูงค่ะ
+              หรือ แม้แต่บริษัทที่การแข่งขันไม่สูง ที่เค้าตั้งใจดูงานเราตั้งแต่แรก การที่ออกแบบ Portfolio ที่สวย อ่านง่าย และสื่อสารได้ดี ตั้งแต่ Flip Test นั้น มีแต่ได้กับได้ คือ มีแต่ข้อดีค่ะ
+              </p>
+            </div>
 
-          <p>
-          การออกแบบ Portfolio ให้ดูดี และประทับใจตั้งแต่ในการดู 1 นาทีแรก หรือใน Flip Test จึงเป็นสิ่งที่สำคัญมาก โดยเฉพาะการส่งไปในที่ที่การแข่งขันสูงค่ะ
-          หรือ แม้แต่บริษัทที่การแข่งขันไม่สูง ที่เค้าตั้งใจดูงานเราตั้งแต่แรก การที่ออกแบบ Portfolio ที่สวย อ่านง่าย และสื่อสารได้ดี ตั้งแต่ Flip Test นั้น มีแต่ได้กับได้ คือ มีแต่ข้อดีค่ะ
-          </p>
-        </div>
+            <div class='col col-xs-12'>
+              <h3>ผลลัพธ์จาก Flip Test Score</h3>
+              <h4>
+              Dream Action แบ่งคะแนนออกเป็นแบบนี้ค่ะ เพื่อความเข้าใจง่าย ว่าต้องปรับอีกมากน้อย แค่ไหนค่ะ
+            </h4>
+            </div>
 
-        <div class='col col-xs-12'>
-          <h3>ผลลัพธ์จาก Flip Test Score</h3>
-          <p>
-          Dream Action จะแบ่งตามคะแนนออกเป็นแบบนี้ค่ะ เพื่อความเข้าใจง่าย ว่าต้องปรับอีกเยอะน้อย แค่ไหนค่ะ
-          </p>
-        </div>
-
-        <div class='col col-md-2 col-sm-6 col-xs-12 text-center'>
-          <img class='img img-responsive'src="http://placehold.it/150x25">
-          <p>
-          0 : No
-          </p>
-        </div>
-        <div class='col col-md-2 col-sm-6 col-xs-12 text-center'>
-          <img class='img img-responsive'src="http://placehold.it/150x25">
-          <p>
-          1 : Not right now
-          </p>
-        </div>
-        <div class='col col-md-2 col-sm-6 col-xs-12 text-center'>
-          <img class='img img-responsive'src="http://placehold.it/150x25">
-          <p>
-          2 : Almost there
-          </p>
-        </div>
-        <div class='col col-md-2 col-sm-6 col-xs-12 text-center'>
-          <img class='img img-responsive'src="http://placehold.it/150x25">
-          <p>
-          3 : Maybe, see some potential
-          </p>
-        </div>
-        <div class='col col-md-2 col-sm-6 col-xs-12 text-center'>
-          <img class='img img-responsive'src="http://placehold.it/150x25">
-          <p>
-          4 : Yes, need to look closer
-          </p>
-        </div>
-        <div class='col col-md-2 col-sm-6 col-xs-12 text-center'>
-          <img class='img img-responsive'src="http://placehold.it/150x25">
-          <p>
-          5 : Absolutely Yes
-          </p>
-        </div>
+            <div class='col col-md-2 col-sm-6 col-xs-12 text-center'>
+              <img class='img img-responsive'src="{{asset 'images/rating-0.png'}}">
+              <p>
+              0 : No
+              </p>
+            </div>
+            <div class='col col-md-2 col-sm-6 col-xs-12 text-center'>
+              <img class='img img-responsive'src="{{asset 'images/rating-1.png'}}">
+              <p>
+              1 : Not right now
+              </p>
+            </div>
+            <div class='col col-md-2 col-sm-6 col-xs-12 text-center'>
+              <img class='img img-responsive'src="{{asset 'images/rating-2.png'}}">
+              <p>
+              2 : Almost there
+              </p>
+            </div>
+            <div class='col col-md-2 col-sm-6 col-xs-12 text-center'>
+              <img class='img img-responsive'src="{{asset 'images/rating-3.png'}}">
+              <p>
+              3 : Maybe, see some potential
+              </p>
+            </div>
+            <div class='col col-md-2 col-sm-6 col-xs-12 text-center'>
+              <img class='img img-responsive'src="{{asset 'images/rating-4.png'}}">
+              <p>
+              4 : Yes, need to look closer
+              </p>
+            </div>
+            <div class='col col-md-2 col-sm-6 col-xs-12 text-center'>
+              <img class='img img-responsive'src="{{asset 'images/rating-5.png'}}">
+              <p>
+              5 : Absolutely Yes
+              </p>
+            </div>
 
 
-        <div class='col col-md-12'>
-          <h4>ทีนี้ เลเวลไหนที่จะได้งาน ? </h4>
-          อันนี้ขึ้นอยู่กับว่าคู่แข่งเยอะแค่ไหน และตอนนั้นเค้าเร่งหาคนแค่ไหน นึกออกไหม เอางี้นะ
+            <div class='col col-md-8'>
+              <h3>ทีนี้ เลเวลไหนที่จะได้งาน ? </h3>
 
-          <p>
-          <strong>Lucky Scenario :</strong> ถ้าจะเอาคนพรุ่งนี้แล้ว แต่มีคนส่งมาคนเดียว และเป็น 2 เค้าก็อาจจะรับก็ได้นะ อันนี้เป็น
-          </p>
+              <p>
+                อันนี้ขึ้นอยู่กับว่าคู่แข่งเยอะแค่ไหน และตอนนั้นเค้าเร่งหาคนแค่ไหน นึกออกไหม เอางี้นะ
+              </p>
 
-          <p>
-          <strong>General Scenario :</strong> คนสมัครกลางๆ มีเวลาดูเยอะ ช่วง 5-3 เอาอยู่
-          </p>
 
-          <p>
-          <strong>Worst Case Scenario :</strong> คนสมัครเยอะมาก เวลาดูน้อยมาก เค้าจะเน้นดูแค่  5-4
-          </p>
-        </div>
+              <p>
+              Lucky Scenario : ถ้าจะเอาคนพรุ่งนี้แล้ว แต่มีคนส่งมาคนเดียว และเป็น 2 เค้าก็อาจจะรับก็ได้นะ
+              </p>
 
-       <!--  <h4>ขั้นตอนการส่ง  Flip Test Request</h4>
-        <p>
-        1.ส่งไฟล์ PDF ขนาดไม่เกิน 10Mb ขึ้นต้นหัวข้อว่า : Flip Test Request : “ชื่อของคุณ” มาที่ jom@dreamaction.co
-        </p>
-        <p>
-        2. รอสัก 1-2 วัน เราจะส่ง DreamAction Flip Test Score result ไปให้ทางอีเมลของคุณ
-        </p>
-        <p>
-        **หากไม่ต้องการให้คนเห็นชื่อจริงของคุณ ตั้งชื่อหัวข้อ ที่เป็นชื่อของคุณ ให้เป็นนามปากกาก็ได้นะคะ เพราะว่าพอครบจำนวนหนึ่งอาจจะเอาใบคะแนนหลายๆอัน มา feature เป็นภาพประกอบ
-        </p> -->
+              <p>
+              General Scenario : คนสมัครกลางๆ มีเวลาดูเยอะ ช่วง 3-5 เอาอยู่
+              </p>
 
-        <div class='col col-md-12 call-to-action'>
-          <div class='col col-md-3'>
-            <img class='img img-responsive'src="http://placehold.it/300x250">
-          </div>
-          <div class='col col-md-9'>
-            <h2>อยากลอง Flip Test ดูไหม ถ้าสนใจ สามารถลองส่งมา Flip Test ได้ FREE!! ค่ะ</h2>
-            <p>** Portfolio ควรมีความยาวไม่เกิน 50 หน้า</p>
-            <a href="/apply">
-              <button type="button" class="btn btn-default" >Free Flip Test !</button>
-            </a>
+              <p>
+              Worst Case Scenario : คนสมัครเยอะมาก เวลาดูน้อยมาก เค้าจะเน้นดูแค่  4-5
+              </p>
+
+            </div>
+            <div class="col col-md-4">
+              <img class='img img-responsive'src="{{asset 'images/scenario.png'}}">
+              <!-- <img class='img' src="http://placehold.it/350x200"> -->
+
+            </div>
+
+            <div class="col col-md-12">
+              <p>ระยะเวลารอ : 2~3 วัน</p>
+              <p>
+                CONCLUSION: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+            </div>
+           <!--  <h4>ขั้นตอนการส่ง  Flip Test Request</h4>
+            <p>
+            1.ส่งไฟล์ PDF ขนาดไม่เกิน 10Mb ขึ้นต้นหัวข้อว่า : Flip Test Request : “ชื่อของคุณ” มาที่ jom@dreamaction.co
+            </p>
+            <p>
+            2. รอสัก 1-2 วัน เราจะส่ง DreamAction Flip Test Score result ไปให้ทางอีเมลของคุณ
+            </p>
+            <p>
+            **หากไม่ต้องการให้คนเห็นชื่อจริงของคุณ ตั้งชื่อหัวข้อ ที่เป็นชื่อของคุณ ให้เป็นนามปากกาก็ได้นะคะ เพราะว่าพอครบจำนวนหนึ่งอาจจะเอาใบคะแนนหลายๆอัน มา feature เป็นภาพประกอบ
+            </p> -->
+
+            <div class='col col-md-12 call-to-action'>
+              <div class='col col-md-3'>
+                <img class='img img-circle'src="{{asset 'images/flip-test-250.png'}}">
+              </div>
+              <div class='col col-md-9'>
+                <h2>
+                  อยากรู้ว่าจะได้ Flip Test Score เท่าไร ส่ง Portfolio ของคุณมาหาเราได้ที่นี่เลยค่ะ (Free)
+                </h2>
+                <!-- <h2>อยากลอง Flip Test ดูไหม ถ้าสนใจ สามารถลองส่งมา Flip Test ได้ FREE!! ค่ะ</h2> -->
+                <p>** Portfolio ควรมีความยาวไม่เกิน 50 หน้า</p>
+                <a href="/apply">
+                  <button type="button" class="btn custom-btn" >รับ Free Flip Test !</button>
+                </a>
+              </div>
+            </div>
+
           </div>
         </div>
 
       </div>
     </div>
 
-
-
-
     <div class='container-fluid'>
       <div id='port-critique' class='row detail-container'>
         <div class='container'>
           <div class="row">
             <div class='col col-sm-12 col-md-4 col-md-push-8'>
-              <img class='img img-responsive'src="http://placehold.it/500x800">
+              <img class='img img-responsive' src="{{asset 'images/portfolio-review-banner.png'}}">
             </div>
             <div class='col col-sm-12 col-md-8 col-md-pull-4'>
               <h2>Portfolio Review</h2>
               <hr>
-              <h3>รับรีวิว ให้คำแนะนำ ในการทำ Portfolio</h3>
-
-              <h4>ทำไม ควรจะต้องรับ Review ?</h4>
-              <p>ปัญหา เคยไหม เวลาทำพอร์ตฟอลิโอ แล้วไม่รุ้ว่ามันดีพอแล้วหรือยัง</p>
-
-              <h4>สำหรับใคร?</h4>
+              <h3>Portfolio Review คืออะไร?</h3>
               <p>
-              สำหรับ : คนที่มี Portfolio อยู่แล้ว ต้องการคอมเม้นที่เขียนโดยละเอียด แยกเป็นประเด็น เพื่อนำไปปรับต่อแก้ไขเอง
+                Portfolio Review คือการรีวิว ให้คำแนะนำติชม Portfolio บอกจุดแข็งและจุดอ่อนโดยละเอียดรวมไปถึงวิธีการแก้ไขปรับปรุง Portfolio ให้ดูดียิ่งขึ้น
               </p>
 
-              <p><strong>สิ่งที่จะได้จาก Portfolio Review</strong></p>
+              <h3>Portfolio Review สำคัญ อย่างไรและทำไมควรจะต้องรับการ Review ?</h3>
+              <p>
+                เคยไหม? เวลาทำพอร์ตฟอลิโอแล้วไม่รุ้ว่ามันดีพอแล้วหรือยัง เราทำแบบนี้โอเคหรือเปล่า? ใส่อันนี้ก่อนหรือหลังดี? ใส่อะไรดี? งานมีน้อยทำไงดี? สารพัดคำถามที่ถามใครก็ไม่ได้ หาใน Internet ก็ไม่มีใครจะแนะนำได้
+              </p>
+              <p>
+                การReview ทำให้เรามีการพัฒนา มีระบบในการเรียบเรียงข้อมูลที่ดีขึ้น รู้ว่าเราควรเอาอะไรขึ้นก่อนหลัง
+              </p>
+
+              <h3>สำหรับใคร?</h3>
               <ul>
-                <li>
-                  ใบcomment ที่จะใส่ใน DA Portfolio Metrics ที่คอมเม้นตามประเด็นดังนี้ : Interface Design, Experience, Graphic design : Layout, Typography, Storytelling, Content Grouping, Content (Information)…. ดูตัวอย่าง DA Portfolio Metrics ที่นี่
-                </li>
-                <li>
-                  (Optional) Redlines ไปบน PDF ที่ส่งมาให้ เพื่อ comment โดยตรง หรือ อ้างอิงไปยัง DA Portfolio Metrics
-                </li>
+                <li>นักเรียน/นักศึกษาที่กำลังทำ Portfolio เพื่อเรียนต่อปริญญาตรี หรือ ปริญญาโทคณะสถาปัตยกรรมศาสตร์ทั้งในและนอกประเทศ</li>
+                <li>สถาปนิกที่กำลังสมัครงานในฝันทั้งในและนอกประเทศ</li>
+                <li>บริษัทสถาปนิกที่อยากปรับแก้และยกระดับ Portfolio ของบริษัท</li>
               </ul>
 
-              <p>ระยะเวลารอ : 2~3 วัน</p>
+              <h3>สิ่งที่จะได้จาก Portfolio Review</h3>
+              <ul>
+                <li>
+                  Flip Test Score (ก่อน/หลัง)
+                </li>
+                <li>
+                  Comment อย่างละเอียดตามประเด็นดังนี้ :
+                  <ul>
+                    <li>
+                      Graphic Design
+                    </li>
+                    <li>
+                      Experience
+                    </li>
+                    <li>
+                      Layout
+                    </li>
+                    <li>
+                      Typography
+                    </li>
+                    <li>
+                      Storytelling
+                    </li>
+                    <li>
+                      Content Grouping
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  สามารถส่งมา Review เพิ่มเติมได้จนกว่าจะพอใจ
+                </li>
+                <!-- <li>
+                  (Optional) Redlines ไปบน PDF ที่ส่งมาให้ เพื่อ comment โดยตรง หรือ อ้างอิงไปยัง DA Portfolio Metrics
+                </li> -->
+              </ul>
+            </div>
+
+            <div class="col col-md-12">
+              <p>ระยะเวลารอ : 4~5 วัน</p>
+
+              <h3>ตัวอย่างงาน</h3>
+              <div class="col col-md-12 text-center">
+                <div class="col-md-6">
+                  <img class='img img-responsive'src="http://placehold.it/500x500">
+                  <p>TAG: BEFORE Lorem ipsum dolor sit amet, consectetur</p>
+                </div>
+                <div class="col-md-6">
+                  <img class='img img-responsive'src="http://placehold.it/500x500">
+                  <p>TAG: AFTER Lorem ipsum dolor sit amet, consectetur</p>
+                </div>
+
+              </div>
+
+              <p>
+                CONCLUSION: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
             </div>
 
             <div class='col col-sm-12 col-md-12 call-to-action'>
               <div class='col col-md-3'>
-                <img class='img img-responsive'src="http://placehold.it/300x250">
+                <img class='img img-circle'src="{{asset 'images/portfolio-review-250.png'}}">
               </div>
               <div class='col col-md-9'>
-                <h2>อยากลอง Portfolio Critique กันไหม ถ้าสนใจ สามารถลองส่งมา Flip Test ได้ FREE!! ค่ะ</h2>
+                <h2>
+                  สนใจ Portfolio Review สามารถติดต่อสอบถามรายละเอียดเพิ่มเติมได้ที่นี่เลยค่ะ
+                </h2>
                 <a href="/apply">
-                  <button type="button" class="btn btn-default" >Free Flip Test !</button>
+                  <button type="button" class="btn custom-btn" >สอบถามรายละเอียดเพิ่มเติม</button>
                 </a>
               </div>
             </div>
@@ -418,8 +496,8 @@
       </div>
     </div> -->
 
-    <div class='container-fluid'>
-      <div id='faq' class='row detail-container'>
+    <div id='faq' class='container-fluid'>
+      <div  class='row detail-container'>
         <div class='container'>
           <div class="row">
             <div class='col col-md-8'>
@@ -445,15 +523,18 @@
     </div>
 
     <div class="container-fluid">
-      <div class="row">
+      <div class="row final-row">
         <div class='col col-md-12 call-to-action text-center'>
+            <img class='img img-circle'src="{{asset 'images/flip-test-250.png'}}">
           <!-- <div class='col col-md-3'>
             <img class='img img-responsive'src="http://placehold.it/300x250">
           </div> -->
           <!-- <div class='col col-md-9'> -->
-            <h2>อยากลอง Portfolio Critique กันไหม ถ้าสนใจ สามารถลองส่งมา Flip Test ได้ FREE!! ค่ะ</h2>
+            <h2>
+              สนใจและอยากมี Portfolioที่ดูดีขึ้นคลิ๊กด้านล่างเลยค่ะ
+            </h2>
             <a href="/apply">
-              <button type="button" class="btn btn-default" >Free Flip Test !</button>
+              <button type="button" class="btn custom-btn" >สอบถามรายละเอียดเพิ่มเติม</button>
             </a>
           <!-- </div> -->
         </div>

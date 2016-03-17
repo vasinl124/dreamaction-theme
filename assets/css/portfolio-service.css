@@ -1,8 +1,48 @@
-.jumbotron {
-	background-image: url(http://www.planwallpaper.com/static/images/colorful-triangles-background_yB0qTG6.jpg);
-	border-radius: 0px !important;
+/* Background pattern from subtlepatterns.com */
+
+.custom-btn {
+	border-radius:0;
+	border: solid 1px #EB5C0C;
+	background: rgba(255,255,255,0.5);
+	color: #EB5C0C;
+	-webkit-transition: background-color 0.2s, color 0.2s;
+	transition: background-color 0.2s, color 0.2s;
+
+
+	padding: 18px 28px;
+    font-size: 22px; //change this to your desired size
+    line-height: normal;
+}
+
+.custom-btn:hover {
+	background: #EB5C0C;
 	color: white;
+	border: solid 1px white;
+}
+
+.jumbotron {
+	background-image: url(../images/noisy_grid.png);
+
+	border-radius: 0px !important;
+	color: black;
 	margin: 0px !important;
+}
+.jumbotron h1 {
+	text-transform: uppercase;
+}
+
+.jumbotron h3 {
+	color: #EB5C0C;
+	line-height: 35px;
+}
+
+.jumbotron h2 {
+	color: #EB5C0C;
+}
+
+.jumbotron p {
+	/*color: #EB5C0C;*/
+	font-size: 22px !important;
 }
 
 .jumbotron .video {
@@ -13,6 +53,7 @@
 	padding: 15px;
 	text-decoration: none;
 	background-color: black;
+	background-image: url(../images/dark_geometric.png);
 	color: white;
 	/*border: red solid 1px;*/
 }
@@ -64,9 +105,11 @@
 }
 
 .service-choice h3 {
+	color: #EB5C0C !important;
 	background-color: #F0F0F0;
 	text-transform: uppercase;
 	padding: 10px;
+	padding-top: 15px;
 }
 
 .service-choice:hover {
@@ -78,9 +121,22 @@
 	color: black;
 }
 
-
+.service-choice .free {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+}
 .detail-container {
 	padding: 30px;
+}
+
+.detail-container hr {
+	display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #EB5C0C;
+    margin: 1em 0;
+    padding: 0;
 }
 .detail-container h2 {
 	color: #EB5C0C;
@@ -89,14 +145,17 @@
 
 .detail-container p {
 	font-size: 17px;
-	line-height: 25px;
+	line-height: 30px;
 }
 
 .detail-container li {
 	font-size: 17px;
+	line-height: 30px;
 }
 
-
+.detail-container .col {
+	padding: 15px;
+}
 .call-to-action {
 	background-color: #EB5C0C;
 	/*height: 240px;*/
@@ -108,6 +167,15 @@
 .call-to-action h2 {
 	color: white !important;
 	font-size: 35px;
+	line-height: 50px;
+}
+
+.call-to-action p {
+	color: white;
+}
+
+.final-row .call-to-action {
+	margin-top: 0px !important;
 }
 
 .img-responsive {
@@ -115,14 +183,15 @@
 }
 
 #fliptest {
-	background-color: white;
+	background-image: url(../images/cubes.png);
+	/*background-color: white;*/
 	color: black;
-
 }
 
+
 #port-critique {
-	background-color: black;
-	color: white;
+	background-image: url(../images/project_papper.png);
+	color: black;
 
 }
 
@@ -137,10 +206,18 @@
 	background-color: #D9D9D9;
 }
 
+#faq {
+	background-image: url(../images/grey.png);
+}
+
 @media screen and (min-width: 768px) {
 	.service-choice {
 		margin-top: 0px;
 		margin-bottom: -99999px;
 		padding-bottom: 99999px;
 	}
+}
+
+@media screen and (max-width: 767px) {
+	.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 }
