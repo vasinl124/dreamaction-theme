@@ -21,8 +21,6 @@
 }
 
 .jumbotron {
-	/*background-image: url(../images/noisy_grid.png);*/
-	/*background-image: url(../images/pexels-photo-52062.jpeg);*/
 	background-image: url(../images/sss.jpeg);
 	background-size: cover;
 	background-position: center center;
@@ -33,7 +31,7 @@
 }
 
 .jumbotron .row {
-	background: rgba(0, 0, 0, 0.9);;
+	background: rgba(0, 0, 0, 0.8);;
 	padding: 25px;
 }
 .jumbotron h1 {
@@ -65,8 +63,8 @@
 	padding: 15px;
 	text-decoration: none;
 	background-color: black;
-	background-image: url(../images/dark_geometric.png);
-	color: white;
+	/*background-image: url(../images/cubes.png);*/
+	color: black;
 	/*border: red solid 1px;*/
 }
 
@@ -111,7 +109,7 @@
 	padding: 15px;
 	margin-top: 20px;
 	background-color: #F0F0F0;
-	border: black 1px solid;
+	/*border: black 1px solid;*/
   -webkit-transition: background-color 0.2s, color 0.2s;
   transition: background-color 0.2s, color 0.2s;
 }
