@@ -141,11 +141,22 @@
 .detail-container h2 {
 	color: #EB5C0C;
 	font-size: 45px;
+
 }
 
+.detail-container h3 {
+		line-height: 35px;
+}
+.detail-container h4 {
+	line-height: 25px;
+}
 .detail-container p {
 	font-size: 17px;
-	line-height: 30px;
+	line-height: 32px;
+}
+
+.detail-container strong {
+	font-size: 20px;
 }
 
 .detail-container li {
@@ -207,11 +218,19 @@
 }
 
 #coach {
-	background-color: #D9D9D9;
+	background-image: url(../images/dark_geometric.png);
+	color: white;
 }
 
 #big-quote {
-	background-image: url(../images/cubes.png);
+	background: url(../images/12problemscover.jpg);
+	/*background:linear-gradient(
+      rgba(0, 0, 0, 0.45),
+      rgba(0, 0, 0, 0.45)
+    ), url(../images/12problemscover.jpg);*/
+	background-position: center center;
+	background-size: cover;
+	color: white;
 }
 
 #faq {
@@ -228,4 +247,36 @@
 
 @media screen and (max-width: 767px) {
 	.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+	.call-to-action {
+		background-color: #EB5C0C;
+
+	}
+	.call-to-action .img-col {
+		/*display:none;*/
+	}
+
+	.call-to-action img {
+		width: 150px;
+	}
+
+	.call-to-action h2 {
+		color: white !important;
+		font-size: 25px;
+		line-height: 50px;
+	}
+
+	.call-to-action p {
+		color: white;
+	}
+
+	.final-row .call-to-action {
+		margin-top: 0px !important;
+	}
+
+	.final-row .call-to-action img {
+		width: 150px;
+	}
+
+
 }
