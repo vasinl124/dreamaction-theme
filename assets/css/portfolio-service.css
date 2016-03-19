@@ -4,7 +4,7 @@
 	border-radius:0;
 	border: solid 1px #EB5C0C;
 	background: rgba(255,255,255,0.5);
-	color: #EB5C0C;
+	color: white;
 	-webkit-transition: background-color 0.2s, color 0.2s;
 	transition: background-color 0.2s, color 0.2s;
 
@@ -233,7 +233,7 @@
 }
 
 #big-quote {
-	background: url(../images/12problemscover.jpg);
+	background: url(../images/miracle.jpg);
 	/*background:linear-gradient(
       rgba(0, 0, 0, 0.45),
       rgba(0, 0, 0, 0.45)
