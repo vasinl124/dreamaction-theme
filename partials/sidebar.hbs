@@ -8,7 +8,7 @@
               	<p class='text-left'>
               		<big>** สมัครวันนี้</big> รับชุดคิท “คว้างาน” (GET A JOB Toolkit : for Architects and Designers)  สำหรับวางแผน เตรียมตัวสมัครงาน ในสายออกแบบ/สถาปัตยกรรม ฟรี!!
               	</p>
-              	<img src="http://subscribe.dreamaction.co/assets/images/kit/kitgraphic.png" alt="portfolio design toolkit" width="150" height="150" >	
+              	<img src="http://subscribe.dreamaction.co/assets/images/kit/kitgraphic.png" alt="portfolio design toolkit" width="150" height="150" >
                 <div class="form-group ml-field-email ml-validate-required ml-validate-email">
                     <input type="email" name="fields[email]" class="form-control text-center" placeholder="Email address" value="">
                 </div>
@@ -41,7 +41,7 @@
 
 <!-- To Jom About Page -->
 <a href="http://dreamaction.co/author/jom/">
-<div class='jom-sidebar row'>  
+<div class='jom-sidebar row'>
   <div class='col col-xs-4 col-image'>
     <img class='img' src="http://dreamaction.co/content/images/2016/01/avatar2.jpg" alt="Jom Naknakorn">
   </div>
@@ -50,10 +50,15 @@
     <p>จากเด็กสถาปัตย์ธรรมดาๆสู่10ปีในบริษัทแนวหน้าระดับโลก...
       <br>
         <span class='fa fa-info-circle'> อ่านต่อ</span>
-      
-  </div>  
+  </div>
 </div>
 </a>
+
+<div class="row portfolio-services-row">
+  <a href="/portfolio-services/">
+    <img class='img img-responsive' src="{{asset 'images/portfolio-review-sidebar-banner.jpg'}}" alt="พลิกโฉม Portfolio ของคุณให้ดูดีกว่าที่เคย Portfolio Review">
+  </a>
+</div>
 
 
 <div class='text-center ads-container'>
@@ -78,7 +83,7 @@
       <a href="{{url}}">
         <p><span class='fa fa-arrow-circle-o-right'></span> {{title}}</p>
       </a>
-        
+
     {{/foreach}}
   {{/get}}
 </div>
@@ -105,8 +110,8 @@
   {{#get "tags"}}
     {{#foreach tags}}
         <a href='{{url}}' title="{{name}}">
-          {{name}} 
+          {{name}}
         </a>
     {{/foreach}}
-  {{/get}}  
+  {{/get}}
 </div>

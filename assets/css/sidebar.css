@@ -55,6 +55,11 @@
 	background-color: #EF660A;
 }
 
+/* Portfolio Services*/
+.portfolio-services-row {
+	margin: 10px 0px;
+	border: #EF660A solid 1px;
+}
 
 /*Recent Posts*/
 .recent-posts-container h4 {
