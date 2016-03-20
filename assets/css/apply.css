@@ -2,6 +2,22 @@
   /*background-color: red;*/
 }
 
-.col {
-  padding: 20px 0px;
+.apply-form {
+  padding: 0px;
+}
+
+.thankyou-container {
+  background-image: url(../images/sss.jpeg);
+  background-size: cover;
+  background-position: center center;
+}
+
+.thankyou-row {
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+}
+
+.thankyou-col {
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
