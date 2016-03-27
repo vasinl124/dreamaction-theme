@@ -40,6 +40,7 @@
     <link type="text/css" href="{{asset "css/custom.css"}}" rel="stylesheet"/>
     <link type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" rel="stylesheet"/>
 
+    <link type="text/css" href="{{asset "lightbox/css/lightbox.min.css"}}" rel="stylesheet"/>
 
     <meta property="fb:app_id" content="214316472233662" />
     {{! Ghost outputs important style and meta data with this tag }}
@@ -83,5 +84,34 @@
   {{! The main JavaScript file for Casper }}
   <script type="text/javascript" src="{{asset "js/index.js"}}" async></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js" async></script>
+  <!-- Lokesh Dhakar - Lightbox2 http://lokeshdhakar.com/ -->
+  <!-- The MIT License (MIT)
+
+    Copyright (c) 2015 Lokesh Dhakar
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in all
+    copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+    SOFTWARE. -->
+  <script type="text/javascript" src="{{asset "lightbox/js/lightbox-plus-jquery.js"}}"></script>
+  <script>
+    lightbox.option({
+      'fitImagesInViewport' : true,
+      'disableScrolling' : true
+    })
+  </script>
 </body>
 </html>
