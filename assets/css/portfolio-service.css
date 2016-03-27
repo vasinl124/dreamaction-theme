@@ -2,12 +2,12 @@
 
 .custom-btn {
 	border-radius:0;
-	border: solid 1px #EB5C0C;
-	background: rgba(255,255,255,0.5);
-	color: white;
+
 	-webkit-transition: background-color 0.2s, color 0.2s;
 	transition: background-color 0.2s, color 0.2s;
-
+	background: #EB5C0C;
+	color: white;
+	border: solid 1px white;
 
 	padding: 18px 28px;
     font-size: 22px; //change this to your desired size
@@ -15,9 +15,14 @@
 }
 
 .custom-btn:hover {
-	background: #EB5C0C;
+	background: rgba(255,255,255,0.5);
 	color: white;
-	border: solid 1px white;
+	/*border: solid 1px #EB5C0C;*/
+	border: solid 2px #EB6C0C;
+}
+
+.main-btn {
+	font-size: 35px;
 }
 
 .jumbotron {
