@@ -74,20 +74,6 @@
   </script>
 </div>
 
-
-<div class='recent-posts-container'>
-  <h4>Recent Posts</h4>
-  {{#get "posts" limit="10"}}
-    {{! Loop through our posts collection }}
-    {{#foreach posts}}
-      <a href="{{url}}">
-        <p><span class='fa fa-arrow-circle-o-right'></span> {{title}}</p>
-      </a>
-
-    {{/foreach}}
-  {{/get}}
-</div>
-
 <div class='featured-posts-container'>
     <h4>Featured Posts</h4>
     {{#get "posts" filter="featured:true" limit="2"}}
@@ -103,6 +89,19 @@
         {{/if}}
       {{/foreach}}
     {{/get}}
+</div>
+
+<div class='recent-posts-container'>
+  <h4>Recent Posts</h4>
+  {{#get "posts" limit="10"}}
+    {{! Loop through our posts collection }}
+    {{#foreach posts}}
+      <a href="{{url}}">
+        <p><span class='fa fa-arrow-circle-o-right'></span> {{title}}</p>
+      </a>
+
+    {{/foreach}}
+  {{/get}}
 </div>
 
 <div class='tags-side-container'>
