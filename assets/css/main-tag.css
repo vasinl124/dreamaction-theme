@@ -17,10 +17,10 @@
 	bottom: 0px;
 	text-decoration: none;
 	color: white;
-	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;	
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	background-color: rgba(0, 0, 0, 0.5);
 }
 
 .main-tag-container .col section:hover {
 	color: lightgray;
 }
-
