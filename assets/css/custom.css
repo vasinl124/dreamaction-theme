@@ -33,11 +33,13 @@ h1, h2, h3, h4, h5, h6,
 .site-footer,
 [class^="icon-"]:before, [class*=" icon-"]:before {
 	font-family: "bangna";
+  line-height: 1.5;
 }
 
 p, ul, li {
 	font-family: 'cs_prajadregular';
 	font-size: 18px !important;
+  line-height: 1.5;
 }
 
 .main-header {
