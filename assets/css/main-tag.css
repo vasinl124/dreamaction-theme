@@ -40,9 +40,13 @@
 	color: black;
 }
 
-.tag-col a:hover {
+.tag-col:hover a{
 	text-decoration: none;
-	color: #EF660A;
+	color: white;
+
+}
+.tag-col:hover {
+	background-color: #EF660A;
 }
 
 .tag-0 {

@@ -4,11 +4,11 @@
 {{! If we have a tag cover, display that - else blog cover - else nothing }}
 
 <div class='container-fluid'>
-  <div class='row head-container' style="{{#if tag.image}}background-image: url({{tag.image}}){{else}}{{#if @blog.cover}} background-image: url({{@blog.cover}}){{else}}no-cover{{/if}}{{/if}}">
+  <div class='row head-tag-container' style="{{#if tag.image}}background-image: url({{tag.image}}){{else}}{{#if @blog.cover}} background-image: url({{@blog.cover}}){{else}}no-cover{{/if}}{{/if}}">
     <div class='col text-center'>
-      <h2>
+      <h1>
         {{tag.name}}
-      </h2>
+      </h1>
       <h4>
         {{#if tag.description}}
             {{tag.description}}
@@ -17,7 +17,7 @@
         {{/if}}
       </h4>
     </div>
-  </div> 
+  </div>
 
   {{! The main content area on the homepage }}
   <main class="content" role="main">
@@ -25,6 +25,3 @@
     {{> "loop"}}
   </main>
 </div>
-
-
-
