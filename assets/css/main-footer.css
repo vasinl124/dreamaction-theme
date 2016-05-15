@@ -2,6 +2,10 @@
 	background-color: black;
 }
 
+.main-footer .col {
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
 /* footer menu*/
 .main-footer .footer-menu {
 	padding-top: 15px;

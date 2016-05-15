@@ -26,3 +26,41 @@
 .main-tag-container .col section:hover {
 	color: lightgray;
 }
+
+.tag-col {
+	text-transform: uppercase;
+	padding: 10px;
+}
+
+.tag-col a {
+	color: black;
+}
+
+.tag-col a:hover {
+	text-decoration: none;
+	color: #EF660A;
+}
+
+.tag-0 {
+	background-color: #a8a8a8;
+}
+
+.tag-1 {
+	background-color: #b0b0b0;
+}
+
+.tag-2 {
+	background-color: #b8b8b8;
+}
+
+.tag-3 {
+	background-color: #cccccc;
+}
+
+.tag-4 {
+	background-color: #dddddd;
+}
+
+.tag-5 {
+	background-color: #ebebeb;
+}

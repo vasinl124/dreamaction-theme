@@ -6,11 +6,21 @@
             <a href='{{url}}'  title="{{name}}" class="tag-{{id}} ">
             <div style="background-image: url({{image}});" class='col col-sm-12 col-md-6 tag'>
                 <section class='content'>
-                    <h4>{{name}}</h4>   
-                    <p>{{description}}</p>  
+                    <h4>{{name}}</h4>
+                    <p>{{description}}</p>
                 </section>
             </div>
             </a>
         {{/foreach}}
     {{/get}}
+</div>
+
+<div class="row">
+  {{#get "tags" filter='name:Job,name:Portfolio,name:Resume,name:Architecture, name:Education,name:AutoCAD'}}
+    {{#foreach tags}}
+      <div class="col-sm-2 text-center tag-col tag-{{@index}}">
+        <a href='{{url}}'  title="{{name}}" class="tag-{{id}} "><h4>{{name}}</h4></a>
+      </div>
+    {{/foreach}}
+  {{/get}}
 </div>

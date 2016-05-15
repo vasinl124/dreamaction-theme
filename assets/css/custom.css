@@ -21,7 +21,6 @@
 }
 
 
-
 body,
 h1, h2, h3, h4, h5, h6,
 .main-nav a,
@@ -58,16 +57,28 @@ p, ul, li {
 
 .head-container {
 	color: white;
-	padding: 50px;
+	padding: 0px;
 	background-size: cover;
 	background-position: center center;
 	background-repeat: no-repeat;
 }
 
+.head-container .col div {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+}
+
+.recent-head-row {
+  color: white;
+}
 
 .ads-container {
 	padding-top: 5px;
 	padding-bottom: 5px;
 	margin-top: 5px;
 	margin-bottom: 5px;
+}
+
+body {
+  background-color: black;
 }

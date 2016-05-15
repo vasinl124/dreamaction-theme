@@ -1,0 +1,57 @@
+<link type="text/css" href="{{asset "css/feature.css"}}" rel="stylesheet" />
+
+<div class="container-fluid feature-container">
+  <div class="row">
+    <div id="carousel-example" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        {{#get "posts" filter="featured:true" limit="2"}}
+          {{! Loop through our posts collection }}
+          {{#foreach posts}}
+            {{#if featured}}
+
+              {{^if @index}}
+                  <li data-target="#carousel-example" data-slide-to="{{@index}}" class="active"></li>
+              {{else}}
+                  <li data-target="#carousel-example" data-slide-to="{{@index}}"></li>
+              {{/if}}
+
+            {{/if}}
+          {{/foreach}}
+        {{/get}}
+      </ol>
+
+      <div class="carousel-inner">
+        {{#get "posts" filter="featured:true" limit="2"}}
+          {{! Loop through our posts collection }}
+          {{#foreach posts}}
+            {{#if featured}}
+              {{^if @index}}
+                  <div class="item active">
+              {{else}}
+                  <div class="item">
+              {{/if}}
+
+
+                <a href="{{url}}">
+                  <img src="{{image}}" class="img-responsive center-block"/>
+                </a>
+                <div class="carousel-caption">
+                  <h3>{{title}}</h3>
+                </div>
+              </div>
+
+
+            {{/if}}
+          {{/foreach}}
+        {{/get}}
+      </div>
+
+      <a class="left carousel-control" href="#carousel-example" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+      </a>
+      <a class="right carousel-control" href="#carousel-example" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+      </a>
+    </div>
+  </div>
+</div>
