@@ -4,7 +4,7 @@
   <div class="row">
     <div id="carousel-example" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
-        {{#get "posts" filter="featured:true" limit="2"}}
+        {{#get "posts" filter="featured:true" limit="4"}}
           {{! Loop through our posts collection }}
           {{#foreach posts}}
             {{#if featured}}
@@ -21,7 +21,7 @@
       </ol>
 
       <div class="carousel-inner">
-        {{#get "posts" filter="featured:true" limit="2"}}
+        {{#get "posts" filter="featured:true" limit="4"}}
           {{! Loop through our posts collection }}
           {{#foreach posts}}
             {{#if featured}}
