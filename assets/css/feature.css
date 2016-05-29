@@ -1,14 +1,16 @@
 .carousel-row {
   height: 600px;
-  background-position: center center !important;
-  background-size: cover;
+  width: 100%;
+  background-size: cover !important;
+	background-repeat: no-repeat !important;
+	background-position: center center !important;
 }
 
 .carousel-caption {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 736px) {
   .carousel-row {
     height: 370px;
   }
