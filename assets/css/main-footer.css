@@ -23,9 +23,10 @@
 
 .main-footer .footer-logo {
 	margin-top: 15px;
+	margin-bottom: 5px;
 }
 .main-footer .footer-logo img{
-	height: 75px;
+	height: 50px;
 }
 
 .main-footer .copyright {
