@@ -3,3 +3,16 @@
   background-position: center center !important;
   background-size: cover;
 }
+
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+@media screen and (max-width: 480px) {
+  .carousel-row {
+    height: 370px;
+  }
+  .carousel-caption h2 {
+    font-size: 24px;
+  }
+}
