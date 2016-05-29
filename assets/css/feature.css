@@ -1,19 +1,5 @@
-.feature-container {
-  padding: 0px;
-}
-.carousel-inner > .item > img, .carousel-inner > .item > a > img {
-  /*width: 100%;*/
-  min-height: 300px;
-
-  max-height: 350px;
-}
-
-
-.carousel-inner {
-background-color: black;
-}
-
-.carousel-inner h3 {
-background-color: rgba(0, 0, 0, 0.8);
-padding: 20px;
+.carousel-row {
+  height: 600px;
+  background-position: center center !important;
+  background-size: cover;
 }
