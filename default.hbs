@@ -36,11 +36,15 @@
 
     {{! Styles'n'Scripts }}
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+
     <link type="text/css" href="{{asset "css/font-awesome.min.css"}}" rel="stylesheet"/>
     <link type="text/css" href="{{asset "css/custom.css"}}" rel="stylesheet"/>
+    <link type="text/css" href="{{asset "css/feature.css"}}" rel="stylesheet" />
     <link type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" rel="stylesheet"/>
 
     <link type="text/css" href="{{asset "lightbox/css/lightbox.min.css"}}" rel="stylesheet"/>
+    <link type="text/css" href="{{asset "owl/dist/assets/owl.carousel.min.css"}}" rel="stylesheet"/>
 
     <meta property="fb:app_id" content="214316472233662" />
     {{! Ghost outputs important style and meta data with this tag }}
@@ -75,15 +79,15 @@
 
 
   {{!-- jQuery needs to come before `{{ghost_foot}}` so that jQuery can be used in code injection --}}
-  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js" async></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
   {{! Ghost outputs important scripts and data with this tag }}
   {{ghost_foot}}
-
-
+  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}" async></script>
+  <script type="text/javascript" src="{{asset "owl/dist/owl.carousel.min.js"}}"></script>
   {{! The main JavaScript file for Casper }}
-  <script type="text/javascript" src="{{asset "js/index.js"}}" async></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js" async></script>
+  <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
+
   <!-- Lokesh Dhakar - Lightbox2 http://lokeshdhakar.com/ -->
   <!-- The MIT License (MIT)
     Copyright (c) 2015 Lokesh Dhakar
@@ -104,12 +108,12 @@
     LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
     OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
     SOFTWARE. -->
-  <script type="text/javascript" src="{{asset "lightbox/js/lightbox-plus-jquery.js"}}"></script>
+  <!-- <script type="text/javascript" src="{{asset "lightbox/js/lightbox-plus-jquery.js"}}"></script>
   <script>
     lightbox.option({
       'fitImagesInViewport' : true,
       'disableScrolling' : true
     })
-  </script>
+  </script> -->
 </body>
 </html>
