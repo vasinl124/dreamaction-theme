@@ -4,7 +4,6 @@
     {{#get "tags" filter='name:Productivity,name:Inspiration'}}
       {{#foreach tags}}
 
-        <div class="row">
           <div class="col-sm-12 tag text-center">
             <a href='{{url}}' title="{{name}}" class="tag-{{id}} tag-header" style="background-image: url({{image}});">
               <h3 class="tag-header">{{name}}</h3>
@@ -13,9 +12,7 @@
             <span class='cool-line cool-line-right'></span>
             <span class='cool-line cool-line-left'></span>
           </div>
-        </div>
 
-        <div class="row">
           {{#get "posts" filter='tag:{{slug}}' limit='5'}}
             {{#foreach posts }}
               {{#if @first}}
@@ -37,7 +34,6 @@
               {{/if}}
             {{/foreach}}
           {{/get}}
-        </div>
       {{/foreach}}
     {{/get}}
 </div>
@@ -46,7 +42,6 @@
     {{#get "tags" filter='name:Architecture,name:Education'}}
       {{#foreach tags}}
 
-        <div class="row">
           <div class="col-sm-12 tag text-center">
             <a href='{{url}}' title="{{name}}" class="tag-{{id}} tag-header" style="background-image: url({{image}});">
               <h3 class="tag-header">{{name}}</h3>
@@ -55,9 +50,7 @@
             <span class='cool-line cool-line-right'></span>
             <span class='cool-line cool-line-left'></span>
           </div>
-        </div>
 
-        <div class="row">
           {{#get "posts" filter='tag:{{slug}}' limit='3'}}
             {{#foreach posts }}
                 <div class="col col-md-4 tag-post-container">
@@ -69,13 +62,11 @@
                 </div>
             {{/foreach}}
           {{/get}}
-        </div>
       {{/foreach}}
     {{/get}}
 </div>
 
 <div class='row main-tag-container'>
-  <div class="row">
     {{#get "tags" filter='name:Job,name:Portfolio'}}
       {{#foreach tags}}
 
@@ -106,5 +97,4 @@
 
       {{/foreach}}
     {{/get}}
-    </div>
 </div>
