@@ -63,10 +63,10 @@ p, ul, li {
 	background-repeat: no-repeat;
 }
 
-.head-container .col div {
+/*.head-container .col div {
   background-color: rgba(0, 0, 0, 0.7);
   padding: 20px;
-}
+}*/
 
 .head-tag-container {
   color: white;
@@ -90,17 +90,13 @@ p, ul, li {
 }
 
 
-.recent-head-row {
+/*.recent-head-row {
   color: white;
-}
+}*/
 
 .ads-container {
 	padding-top: 5px;
 	padding-bottom: 5px;
 	margin-top: 5px;
 	margin-bottom: 5px;
-}
-
-body {
-  background-color: black;
 }

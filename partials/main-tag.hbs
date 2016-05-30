@@ -1,26 +1,110 @@
 <link type="text/css" href="{{asset "css/main-tag.css"}}" rel="stylesheet"/>
 
-<div class='row row-eq-height main-tag-container'>
+<div class='row main-tag-container'>
     {{#get "tags" filter='name:Productivity,name:Inspiration'}}
-        {{#foreach tags}}
-            <a href='{{url}}'  title="{{name}}" class="tag-{{id}} ">
-            <div style="background-image: url({{image}});" class='col col-sm-12 col-md-6 tag'>
-                <section class='content'>
-                    <h4>{{name}}</h4>
-                    <p>{{description}}</p>
-                </section>
-            </div>
+      {{#foreach tags}}
+
+        <div class="row">
+          <div class="col-sm-12 tag text-center">
+            <a href='{{url}}' title="{{name}}" class="tag-{{id}} tag-header" style="background-image: url({{image}});">
+              <h3 class="tag-header">{{name}}</h3>
             </a>
-        {{/foreach}}
+
+            <span class='cool-line cool-line-right'></span>
+            <span class='cool-line cool-line-left'></span>
+          </div>
+        </div>
+
+        <div class="row">
+          {{#get "posts" filter='tag:{{slug}}' limit='5'}}
+            {{#foreach posts }}
+              {{#if @first}}
+                <div class="col col-md-8 tag-post-container">
+                  <a href='{{url}}'  title="{{title}}">
+                    <div style="background-image: url({{image}});" class="col tag-post">
+                      <h4>{{title}}</h4>
+                    </div>
+                  </a>
+                </div>
+              {{else}}
+                <div class="col col-md-4 tag-post-container">
+                  <a href='{{url}}'  title="{{title}}">
+                    <div style="background-image: url({{image}});" class="col tag-post">
+                      <h4>{{title}}</h4>
+                    </div>
+                  </a>
+                </div>
+              {{/if}}
+            {{/foreach}}
+          {{/get}}
+        </div>
+      {{/foreach}}
     {{/get}}
 </div>
 
-<div class="row">
-  {{#get "tags" filter='name:Job,name:Portfolio,name:Resume,name:Architecture, name:Education,name:AutoCAD'}}
-    {{#foreach tags}}
-      <div class="col-sm-2 text-center tag-col tag-{{@index}}">
-        <a href='{{url}}'  title="{{name}}" class="tag-{{id}} "><h4>{{name}}</h4></a>
-      </div>
-    {{/foreach}}
-  {{/get}}
+<div class='row main-tag-container'>
+    {{#get "tags" filter='name:Architecture,name:Education'}}
+      {{#foreach tags}}
+
+        <div class="row">
+          <div class="col-sm-12 tag text-center">
+            <a href='{{url}}' title="{{name}}" class="tag-{{id}} tag-header" style="background-image: url({{image}});">
+              <h3 class="tag-header">{{name}}</h3>
+            </a>
+
+            <span class='cool-line cool-line-right'></span>
+            <span class='cool-line cool-line-left'></span>
+          </div>
+        </div>
+
+        <div class="row">
+          {{#get "posts" filter='tag:{{slug}}' limit='3'}}
+            {{#foreach posts }}
+                <div class="col col-md-4 tag-post-container">
+                  <a href='{{url}}'  title="{{title}}">
+                    <div style="background-image: url({{image}});" class="col tag-post">
+                      <h4>{{title}}</h4>
+                    </div>
+                  </a>
+                </div>
+            {{/foreach}}
+          {{/get}}
+        </div>
+      {{/foreach}}
+    {{/get}}
+</div>
+
+<div class='row main-tag-container'>
+  <div class="row">
+    {{#get "tags" filter='name:Job,name:Portfolio'}}
+      {{#foreach tags}}
+
+
+          <div class="col col-sm-12 col-md-6 nopadding">
+            <div class="col-sm-12 tag text-center">
+              <a href='{{url}}' title="{{name}}" class="tag-{{id}} tag-header" style="background-image: url({{image}});">
+                <h3 class="tag-header">{{name}}</h3>
+              </a>
+
+              <span class='cool-line cool-line-right'></span>
+              <span class='cool-line cool-line-left'></span>
+            </div>
+
+            {{#get "posts" filter='tag:{{slug}}' limit='3'}}
+              {{#foreach posts }}
+                  <div class="col col-sm-6 col-md-4 tag-post-container">
+                    <a href='{{url}}'  title="{{title}}">
+                      <div style="background-image: url({{image}});" class="col tag-post">
+                        <h4>{{title}}</h4>
+                      </div>
+                    </a>
+                  </div>
+
+              {{/foreach}}
+            {{/get}}
+          </div>
+
+      {{/foreach}}
+    {{/get}}
+    </div>
 </div>

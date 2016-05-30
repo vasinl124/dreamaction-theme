@@ -11,26 +11,19 @@
 {{/is}}
 <div class='container'>
   {{! The tag below includes the post loop - partials/loop.hbs }}
-  <!-- <div class='row recent-head-row'>
-    <div class="col text-center">
-      <h3>VIDEOS</h3>
-    </div>
-  </div>
   {{^is "paged"}}
-    {{> "main-tag"}}
-  {{/is}} -->
-  {{^is "paged"}}
-    <div class='row recent-head-row'>
-      <div class="col text-center">
-        <h3>CATEGORIES</h3>
-      </div>
-    </div>
     {{> "main-tag"}}
   {{/is}}
+</div>
 
+{{^is "paged"}}
+  {{> "quote"}}
+{{/is}}
+
+<div class='container'>
   <div class='row recent-head-row'>
     <div class="col text-center">
-      <h3>RECENT POSTS</h3>
+      <h3><u>RECENT POSTS</u></h3>
     </div>
   </div>
   {{> "loop"}}

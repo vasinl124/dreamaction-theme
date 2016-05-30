@@ -1,0 +1,59 @@
+#big-quote {
+	background: url(../images/miracle.jpg);
+	background-position: center center;
+	background-size: cover;
+	color: white;
+  background-attachment: fixed;
+  height: 350px;
+}
+
+.detail-container {
+  position: relative;
+}
+
+.detail-container h2 {
+  background-color: rgba(0, 0, 0, 0.2);
+	color: #EB5C0C;
+	font-size: 45px;
+  padding:20px;
+}
+
+.detail-container .quote {
+	font-size: 25px;
+	line-height: 32px;
+  color: white;
+}
+
+.detail-child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+@media screen and (max-width: 1025px) {
+  .detail-container h2 {
+  	font-size: 35px;
+    /*padding:10px;*/
+  }
+}
+
+@media screen and (max-width: 480px) {
+
+  .detail-container h2 {
+  	font-size: 25px;
+    padding:10px;
+  }
+
+  .detail-container .quote {
+  	font-size: 20px;
+  }
+
+  .detail-child {
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(0%, -50%);
+  }
+}
