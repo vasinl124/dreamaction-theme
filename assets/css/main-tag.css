@@ -92,7 +92,9 @@
 		width: 5%;
 		height: 25px;
 		top: 15px;
+	}
 
-
+	.nested-tag .cool-line {
+		top: 35px;
 	}
 }

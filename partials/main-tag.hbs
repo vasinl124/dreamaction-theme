@@ -72,7 +72,7 @@
 
 
           <div class="col col-sm-12 col-md-6 nopadding">
-            <div class="col-sm-12 tag text-center">
+            <div class="col-sm-12 tag nested-tag text-center">
               <a href='{{url}}' title="{{name}}" class="tag-{{id}} tag-header" style="background-image: url({{image}});">
                 <h3 class="tag-header">{{name}}</h3>
               </a>
@@ -83,7 +83,7 @@
 
             {{#get "posts" filter='tag:{{slug}}' limit='3'}}
               {{#foreach posts }}
-                  <div class="col col-sm-6 col-md-4 tag-post-container">
+                  <div class="col col-sm-12 col-md-4 tag-post-container">
                     <a href='{{url}}'  title="{{title}}">
                       <div style="background-image: url({{image}});" class="col tag-post">
                         <h4>{{title}}</h4>
