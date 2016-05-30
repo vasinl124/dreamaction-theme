@@ -29,10 +29,16 @@
 	color: black;
 	font-size: 40px;
 	text-decoration: none;
+
+	-webkit-transition: color 200ms ease-out;
+    -moz-transition: color 200ms ease-out;
+    -o-transition: color 200ms ease-out;
+    transition: color 200ms ease-out;
 }
 
 .main-tag-container .tag-header:hover {
 	text-decoration: none;
+	color: #EB5C0C;
 }
 
 .cool-line {
