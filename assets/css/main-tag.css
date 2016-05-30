@@ -99,7 +99,7 @@
 	}
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 737px) {
 	.nested-tag .cool-line {
 		top: 15px;
 	}
