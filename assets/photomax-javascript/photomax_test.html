@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta name="viewport" content="width=device-width">
+    <title>PhotoMax 2.0 - Photos & Albums on your Website - Jquery plugin</title>
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	
+	<!--jquery-->
+	<script src="jquery/jquery-1.9.1.min.js"></script>
+	
+	
+	<!--photomax-->
+	<script src="js/source_unpacked/imagesloaded.pkgd.js"></script>
+	<script src="js/source_unpacked/masonry.pkgd.js"></script>
+	<script src="js/source_unpacked/magnific_popup_complete.js"></script>
+	<script src="js/source_unpacked/jquery.photomax.js"></script>
+	<script src="js/source_unpacked/share.js"></script>
+	
+	
+	
+	<link rel="stylesheet" href="css/src/photomax_trend.css"/>
+	
+
+
+	
+	<style>
+
+      body {
+        font-family: Calibri;
+        font-size: 14px;
+		text-align:center;
+      }	  
+	  
+
+	  
+	  
+		
+	</style>
+
+	</head>
+  <body>
+		<a href="">
+		<h1>PhotoMax</h1>
+		</a>
+		
+		
+<br><br>		
+
+
+	
+<div id="photomax" class="photomax">
+</div>
+
+<div id="photomax2" class="photomax">
+</div>
+
+
+
+<br/><br/>
+
+<a href="">See how to use this plugin - at codehandling</a>
+
+
+
+<br/><br/><br/>
+<br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/>
+
+
+
+
+	<script>
+	
+	
+	
+	
+	
+	$("#photomax").photomax({
+
+		instagramAccessToken:"260796206.0efbe26.89a76a9668934089a2d00d928486fd26",
+		//instagramAccessToken:"2201847796.0efbe26.cc43c47c451440fab9d1ba79c1833bb5",
+
+
+		//facebookAccessToken:"CAAKZBphEFkNwBAB7rP64PYq6D3Q07e5gdPS3aHg5fLSTSiNFFo1nlMFGclkdSQAacPRR2Pnah1E3infD4NQaFUJJRVzDA3ZCp4BFsNQBQCU6NCoSZAShqUfpMpMp2hQO22PVV6rE14981t6Plk3LUVjUPHU7ROXkjSbIQut4y2tlV5SZCHmqmcrZBolhnMBGUGt0OiZAZAOBxvg0ak8Bamz",
+
+		//facebookAccessToken:"654463901330581|5e81e0fdc28a6421c653c600d2ce402b",
+
+		facebookAccessToken:"CAAVwZBofdmmwBAEzAZBu8mEqn9YjnTqzbm07KBDkSjX6cZAYN1WE0H6z451iXA660qq7xwhFdZBxoFEFRDlsRcyVb4FfZBR9ZC48cI64hV5mBOHhUoKsDTrOKBNd0kkZBJMZBqduEVaw8OZB98uXE26u4A749OPsxLrobfTKBlcILq3hX4zB5XplsR8bjND18ZCyIWdhQszefFYwZDZD",
+
+		googleApiKey:'AIzaSyDEm5wGLsWi2G3WG40re-DAJcWioQSpJ6o',
+		//googleApiKey:'AIzaSyDwQ2HJsxPGQQDAKPjb0Uujl7HfDSWEqag',
+		
+		
+		instagram_user_photos:[
+			{
+				//url:"https://instagram.com/muradosmann",
+				url:"https://www.instagram.com/smarthomesounds",
+				name:"Instagram Photos",
+				selected:true
+			}
+		],
+		
+		/*
+		instagram_user_tagged_photos:[
+			{
+				url:"https://instagram.com/muradosmann",
+				name:"Instagram Tagged Photos",
+				hashtag:"#singaporeinvites",
+				selected:false
+			}
+		],
+		
+		instagram_global_tagged_photos:[
+			{
+				name:"Instagram Global",
+				hashtag:"#newyork",
+				selected:false
+			}
+		],
+		*/
+		google_album_photos:[
+			{
+				//url:"https://picasaweb.google.com/data/feed/base/user/104945011440675361336/albumid/6252198007318196817?alt=rss&kind=photo&hl=en_US",
+				//url:"https://picasaweb.google.com/data/feed/base/user/103171017309991514221/albumid/6263078519414311281?alt=rss&kind=photo&hl=en_US",
+				url:"https://picasaweb.google.com/data/feed/base/user/jazzconti/albumid/6074274510036717649?alt=rss&kind=photo&hl=en_US",
+				name:"Google Album Photos",
+				selected:false
+			}
+		],
+		
+		/*
+		google_user_photos:[
+			{
+				//url:"https://plus.google.com/+ColebyNicholson",
+				url:"https://plus.google.com/115903745545816833607",
+				
+				
+				name:"Google User Photos",
+				selected:false
+			}
+		],
+			*/
+		google_user_albums:[
+			{
+				//url:"https://plus.google.com/+ColebyNicholson",
+				//url:"https://plus.google.com/115903745545816833607",
+				//url:"https://picasaweb.google.com/102413893177424734935",
+				//url:"https://plus.google.com/u/0/+Lara-go",
+				url:"https://plus.google.com/+jazzguitarconti",
+				
+				name:"Google Albums",
+				selected:false
+			}
+		],		
+		
+		facebook_album_photos:[
+			{
+				//url:"https://www.facebook.com/media/set/?set=a.10150401507099812.382431.613814811&type=3",
+				url:"https://www.facebook.com/media/set/?set=a.10153495891665541.1073741843.76810820540&type=3",
+				name:"Facebook Album Photos",
+				selected:false
+			}
+		],
+
+		/*
+		facebook_page_photos:[
+			{
+				url:"https://www.facebook.com/175229285996531",
+				//url:"http://www.facebook.com/adidas",
+				name:"Facebook Photos",
+				selected:false
+			}
+		],*/
+
+		facebook_page_albums:[
+			{
+				//url:"https://www.facebook.com/115012335256825",
+				url:"http://www.facebook.com/adidas",
+				name:"Facebook Albums",
+				selected:false
+			}
+		],
+		
+		overlayType:'view',
+		displayType:"popup",
+		
+		alwaysUseDropdown:false,
+		skin:"trend2",
+		maxResults:15,
+		maxResultsToLoad:100,
+		maxContainerWidth:950,
+		photoProtocol:"https:",
+		alignPopupToTop: true,
+		
+		shareLink:"photo",
+		
+		
+		viewCountType:"comma",
+		likeCommentCountType:"abbr",
+		loadMode:"loadmore", //paginate-sides, paginate-bottom
+		hideHeader:false,
+		hideNavigation:false,
+
+		showTextInsteadOfIcons:true,
+		loadButtonSize:"small",
+		
+		//hidePhotoDetails:true,
+		
+		translatorFile:"./json/translation.json",
+		advertisementFile:"./json/advertisement.json",
+		
+		//updateLayoutDelay:1000,		
+		
+		thumbnailHeight:"200px", //200px or auto
+		thumbnailDescription:"max-2",
+
+		
+		 
+		tabStyle:"block",
+
+		//For Block Tabs
+		tabBackgroundColor:"#f5f5f5",
+		tabTextColor:"#929090",
+		tabHoverBackgroundColor:"rgba(106, 106, 106, 0.09)",
+		tabActiveBackgroundColor:"#ACACAC",
+		tabActiveTextColor:"white",
+		
+
+		/*
+		//For Wire Tabs
+		tabBackgroundColor:"green",
+		tabTextColor:"#929090",
+		tabHoverColor:"#4E4E4E",
+		tabActiveBackgroundColor:"green",
+		tabActiveTextColor:"green",
+		*/
+
+		//Photomax Background Color
+		photomaxBackgroundColor:"#EAEAEA",
+
+		//Load More Buttons
+		loadmoreButtonBackgroundColor:"rgb(212, 212, 212)",
+		loadmoreButtonTextColor:"#666",
+		loadmoreButtonHoverBackgroundColor:"#383838",
+		loadmoreButtonHoverTextColor:"white",	
+
+
+		gridItemBackgroundColor:"white",
+		gridItemSeparatorColor:"#e2e2e2",
+		gridItemTextColor:"#666",
+		gridItemLinkColor:"#5781dc",
+		gridItemIconColor:"#b0b0af",
+
+		gridItemSecondaryTextColor:"#c9c9c9",
+		gridItemSecondaryIconColor:"#7d7a7a",
+
+
+	});
+
+
+
+
+
+/*
+$("#photomax").photomax({ 
+	googleApiKey:'AIzaSyDEm5wGLsWi2G3WG40re-DAJcWioQSpJ6o',
+
+	google_album_photos:[
+			{
+				url:"https://picasaweb.google.com/data/feed/base/user/117025004352700187679/albumid/6083843622870226785?alt=rss&kind=photo&hl=en_US",
+				name:"Google Album Photos",
+				selected:false
+			}
+		],
+
+		google_user_albums:[
+			{
+
+				url:"https://plus.google.com/102345814458517124698",				
+				name:"Google Albums",
+				selected:true
+			}
+		],		
+
+		maxResults:10,
+		thumbnailDescription:"max-2",
+});
+*/
+
+
+	
+
+
+	</script>
+	
+
+  </body>
+</html>
+
+
+

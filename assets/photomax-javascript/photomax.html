@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta name="viewport" content="width=device-width">
+    <title>PhotoMax 2.0 - Photos & Albums on your Website - Jquery plugin</title>
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	
+	<!--jquery-->
+	<script src="./jquery/jquery-1.9.1.min.js"></script>
+	
+	
+	<!--photomax-->
+	
+	<script src="./js/jquery.photomax.min.js"></script>
+	<link rel="stylesheet" href="./css/photomax_trend.min.css"/>
+	
+
+
+	
+	<style>
+
+      body {
+        font-family: Calibri;
+        font-size: 14px;
+		text-align:center;
+      }
+	  
+
+	  
+	  
+
+	  
+	  
+		
+	</style>
+
+	</head>
+  <body>
+		<a href="">
+		<h1>PhotoMax</h1>
+		</a>
+		
+		
+<br><br>		
+
+	
+<div id="photomax" class="photomax">
+</div>
+
+
+
+<br/><br/>
+
+
+
+<br/><br/><br/>
+<br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/>
+
+
+
+
+	<script>
+	
+	
+	
+	
+
+	
+	$("#photomax").photomax({
+
+		instagramAccessToken:"260796206.0efbe26.89a76a9668934089a2d00d928486fd26",
+
+		//facebookAccessToken:"CAAMHbZBctZCZBsBABM1DPlzrSoL35MxjfKCkI3TvDhmsJM5LmZCA0ZCZAxhYu150Wmh4mQiv0zR2sFP0RlV8NeUrG3Ux13G0ZA2T8cZAUVt8u9eki7qUTZAggn2WZCXZANVykpBADU7UAmurq3JH7wwl8FiHzHWBQhZAvScyci7y2R0RH8X7o4ZBSVT3mPfl45yzcfAIZD",
+
+		facebookAccessToken:"CAACZAlihKZBUMBAMM1J5AXBrXAfYvcZCgfrxrjCMzNV2pCVYh2ZALhM51BC0yKQSEZByCxIL5y7QpKfpNUjM91zWIxFgFYMae48L6YryWa3DODlU4ZAkVjZCWW0l1MP4v032gxlX0JyCROgV8EbvuFAtlYMxpGJXqERUuoaZAJdLZCEDNJpC6D4rr",
+
+		googleApiKey:'AIzaSyDEm5wGLsWi2G3WG40re-DAJcWioQSpJ6o',
+		
+		
+		instagram_user_photos:[
+			{
+				//url:"https://instagram.com/muradosmann",
+				url:"https://instagram.com/skip_kitchen_bar",
+				name:"Instagram Photos",
+				selected:false
+			}
+		],
+		
+		instagram_user_tagged_photos:[
+			{
+				url:"https://instagram.com/muradosmann",
+				name:"Instagram Tagged Photos",
+				hashtag:"#singaporeinvites",
+				selected:false
+			}
+		],
+		
+		instagram_global_tagged_photos:[
+			{
+				name:"Instagram Global",
+				hashtag:"#newyork",
+				selected:false
+			}
+		],
+		
+		google_album_photos:[
+			{
+				//url:"https://plus.google.com/photos/104945011440675361336/albums/6134523442426299681",
+				url:"https://picasaweb.google.com/data/feed/base/user/101452378031695714338/albumid/5880367010353968929?alt=rss&kind=photo&hl=en_US",
+				name:"Google Album Photos",
+				selected:false
+			}
+		],
+		
+		google_user_photos:[
+			{
+				//url:"https://plus.google.com/+maxxmistrydesignstudio",
+				url:"https://plus.google.com/+JanKoncewicz",
+				
+				
+				name:"Google User Photos",
+				selected:true
+			}
+		],
+		
+		facebook_album_photos:[
+			{
+				//url:"https://www.facebook.com/media/set/?set=a.10150401507099812.382431.613814811&type=3",
+				url:"https://www.facebook.com/media/set/?set=a.10153495891665541.1073741843.76810820540&type=3",
+				name:"Facebook Album Photos",
+				selected:false
+			}
+		],
+
+		facebook_page_photos:[
+			{
+				url:"http://www.facebook.com/llbean",
+				url:"http://www.facebook.com/adidas",
+				name:"Facebook Page Photos",
+				selected:false
+			}
+		],
+		
+		overlayType:'view',
+		displayType:"popup",
+		
+		alwaysUseDropdown:false,
+		skin:"trend",
+		maxResults:3,
+		maxContainerWidth:950,
+		photoProtocol:"https:",
+		alignPopupToTop: true,
+		
+		shareLink:"photo",
+		
+		
+		viewCountType:"comma",
+		likeCommentCountType:"abbr",
+		loadMode:"loadmore", //paginate-sides, paginate-bottom
+		hideHeader:false,
+		hideNavigation:false,
+
+		showTextInsteadOfIcons:true,
+		loadButtonSize:"small",
+		
+		
+		
+		translatorFile:"http://www.localhost/youmax_envato_v8_3_masonry/youmax-javascript/json/translation.json",
+		
+		
+		//updateLayoutDelay:1000,		
+		
+		thumbnailHeight:"auto", //200px or auto
+		thumbnailDescription:"fixed-2",
+
+	});
+
+
+
+
+
+	</script>
+	
+
+  </body>
+</html>
+
+
+

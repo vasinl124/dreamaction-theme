@@ -1,0 +1,2034 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta name="viewport" content="width=device-width">
+    <title>PhotoMax 3.0 - Generator</title>
+	
+	<link type="text/css" rel="stylesheet" href="./css/photomax-admin.css" />
+	
+	<!--jquery-->
+	<script src="./js/jquery-1.9.1.min.js"></script>
+	<script src="./js/jquery-ui.min.js"></script>
+	
+	<!--syntax highlighter-->
+	<link rel="stylesheet" href="./css/default.css">
+	<script src="./js/highlight.pack.js"></script>
+
+	<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css' type='text/css' />
+	
+	<!--<script type="text/javascript" src="./js/shCore.js"></script>
+	<script type="text/javascript" src="./js/shBrushJScript.js"></script>	
+	<link href="./css/shCore.css" rel="stylesheet" type="text/css" />
+	<link href="./css/shCoreDefault.css" rel="stylesheet" type="text/css" />
+	<link href="./css/shThemeDefault.css" rel="stylesheet" type="text/css" />	-->
+	
+	<style>
+	
+	body{
+	font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	font-size:14px;
+	}
+
+.title-image {
+  background-image: url('https://lh3.googleusercontent.com/-mkoexmT31gE/VjnbQyXNvRI/AAAAAAAAB5g/6c8fWDMiFJE/s800-Ic42/photomax_logo.png');
+  width: 400px;
+  height: 60px;
+  max-width: 100%;
+  margin: auto;
+  background-position: center center;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  background-repeat: no-repeat;
+}		
+
+
+.title-text {
+  font-size: 18px;
+  color: black;
+  text-decoration: none;
+  font-family: Calibri;
+    margin-bottom: 15px;
+	    text-align: center;
+}
+
+#photomax-save-shortcode {
+
+background: #0091cd;
+    border-color: #0073aa;
+    -webkit-box-shadow: inset 0 1px 0 rgba( 120, 200, 230, 0.6 );
+    box-shadow: inset 0 1px 0 rgba( 120, 200, 230, 0.6 );
+    color: #fff;
+	    cursor: pointer;
+    border-width: 1px;
+}
+	
+.photomax-admin {
+    padding: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    max-width: 1100px;
+    margin: auto;
+}	
+
+code#generated_output_highlighted {
+    padding: 20px;
+}
+
+.remove_tab {
+    padding-top: 1px;
+}
+
+.control_holder input {
+    padding-left: 10px;
+}
+
+.fa-instagram {
+	color:rgb(106,69,59);
+}
+
+.fa-google-plus-square {
+	color:rgb(221,77,64);
+}
+
+.fa-facebook-square {
+	color:rgb(72,98,163);	
+}
+
+
+	</style>
+
+	</head>
+  <body>
+			<div class="title-image"></div>
+			<div class="title-text">CODE GENERATOR</div>
+		
+		<div class="separator"></div>
+<br><br>	
+
+
+
+
+
+
+
+<div class="photomax-admin">
+
+	
+	<div id="tabs">
+	  <ul>
+		<li><a href="#tabs-1">Keys</a></li>
+		<li><a href="#tabs-2">Photo Sources</a></li>
+		<li><a href="#tabs-3">Display Modes</a></li>
+		<li><a href="#tabs-4">Header</a></li>
+		<!--<li><a href="#tabs-5">Likes & Comments</a></li>-->
+		<li><a href="#tabs-6">Hiding</a></li>
+		<li><a href="#tabs-7">Miscellaneous</a></li>
+		<li><a href="#tabs-8">Grid</a></li>
+		<li><a href="#tabs-9">Styles</a></li>
+	  </ul>
+	  <div id="tabs-1">
+		<p>
+		
+		
+			<div class="control_holder">
+			<span class="photomax-field-title">Instagram Access Token</span> 
+			<input type="text" id="instagram_access_token" value="260796206.0efbe26.89a76a9668934089a2d00d928486fd26"/>
+			<span class="photomax-field-description">The Access Token that you recieve from our Instagram Access Token Generator. Refer documentation for details.</span>
+			</div>
+			<br>
+
+			<div class="control_holder">
+			<span class="photomax-field-title">Facebook Access Token</span> 
+			<input type="text" id="facebook_access_token" value="CAAWvIAe5CcIBAI1XyGM8zaTjT10ZAWPXYxPFPVhuZCqSpel6VpKOo2jH6t4pr7TJ7EfZBMRfd8ztQjKjXz2q5mefzkKvCerlE2hmlhA0N7errjmpEQ7QAsrsp3aQDUR0Fn8ANDsvDZB0Hm89O7BthmfvBsorUEnJx3YOR5oiRtHDajJ9mZBrorY7q9HKjNJAZD"/>
+			<span class="photomax-field-description">The Access Token that you can generate from our Facebook Token Generator. Refer documentation for details.</span>		
+			</div>
+			<br>
+
+			<div class="control_holder">
+			<span class="photomax-field-title">Google API Key</span> 
+			<input type="text" id="google_api_key" value="c289d754a132ca07051aaf931ef0de33"/>
+			<span class="photomax-field-description">The Google API Key that you recieve from the Google Developer Console. Refer documentation for details.</span>
+			</div>
+			<br>
+		
+		
+		
+		</p>
+	  </div>
+	  <div id="tabs-2">
+		<p>
+		
+			<!--
+			<div class="control_holder">
+			<span class="photomax-field-title">YouTube Channel URL to display <strong>Header</strong></span>
+			<input type="text" id="channel_url" value="https://www.youtube.com/channel/UC_IRYSp4auq7hKLvziWVH6w"/>
+			<span class="photomax-field-description">Only the PhotoMax Header will be displayed from this Channel URL. To display videos, add videos source below.</span>		
+			</div>
+			<br>
+			-->
+				
+		
+			<div class="control_holder">
+			<span class="photomax-field-title">Add Photos from any of the below Sources</span>
+			<div class="control_holder" style="margin-top: 5px; margin-bottom: 7px;">
+				<button class="tab-button" id="photomax_add_instagram_user_photos"> <i class="fa fa-instagram"></i> Instagram User Photos</button> 
+				<button class="tab-button" id="photomax_add_instagram_user_tagged_photos"> <i class="fa fa-instagram"></i> Instagram User HashTag/Search Photos</button>
+				<button class="tab-button" id="photomax_add_instagram_global_tagged_photos"> <i class="fa fa-instagram"></i> Instagram Global HashTag</button>
+				<button class="tab-button" id="photomax_add_facebook_page_photos"> <i class="fa fa-facebook-square"></i> Facebook FanPage Photo Stream</button>
+				<button class="tab-button" id="photomax_add_facebook_page_albums"> <i class="fa fa-facebook-square"></i> Facebook FanPage Album Grid</button>
+				<button class="tab-button" id="photomax_add_facebook_album_photos"> <i class="fa fa-facebook-square"></i> Facebook Page Album Photos</button>
+				<button class="tab-button" id="photomax_add_google_album_photos"> <i class="fa fa-google-plus-square"></i> Google+ Album Photos</button>
+				<button class="tab-button" id="photomax_add_google_user_photos"> <i class="fa fa-google-plus-square"></i> Google+ User/Page Photos</button>	
+				<button class="tab-button" id="photomax_add_google_user_albums"> <i class="fa fa-google-plus-square"></i> Google+ User/Page Album Grid</button>	
+			</div>
+			<span class="photomax-field-description">Add Photos from any of the above Sources into PhotoMax. Each Source will be displayed as a Tab or a dropdown item in PhotoMax.</span>
+			</div>
+		
+			<br>
+			<div id="tab_holder">
+
+			</div>
+			<br>
+		
+		
+		
+		</p>
+	  </div>
+	  <div id="tabs-3">
+		<p>
+		
+		
+			<div class="control_holder">
+			<span class="photomax-field-title">Thumbnail Layout / Skin</span>
+			<select id="skin_type">
+				<option value="trend" selected="selected" >Trend = photo + desc + trend tags + link + views + likes + comments</option>
+				<option value="trend1"  >Trend 1 = photo + desc + trend tags + link</option>
+				<option value="trend2" >Trend 2 = photo + desc + views + likes + comments</option>
+				<option value="trend3" >Trend 3 = photo + desc</option>
+				<option value="trend4" >Trend 4 = only photos</option>
+			</select>
+			<span class="photomax-field-description">PhotoMax skin or layout.</span>
+			<br>
+			</div>
+			<br>
+
+			<div class="control_holder">
+			<span class="photomax-field-title">Overlay Type</span>
+			<select id="overlay_type">
+				<option value="view" selected="selected" >View Icon</option>
+				<option value="link"  >Link Icon</option>
+				<option value="view-link" >View & Link Icons</option>
+				<option value="stat-1" >Like Count</option>
+				<option value="stat-2" >Like & Comment Count</option>
+				<option value="desc"  >Description</option>
+				<option value="stat-1-desc"  >Like Count & Description</option>
+				<option value="stat-2-desc"  >Like & Comment Count with Description</option>
+				<option value="date"  >Date</option>
+				<option value="desc-date"  >Description & Date</option>
+				<option value="none"  >No Overlay</option>
+			</select>
+			<span class="photomax-field-description">Overlay that will be displayed on the Thumbnails.</span>
+			<br>
+			</div>
+			<br>
+
+			<div class="control_holder">
+			<span class="photomax-field-title">Photo Display Mode</span>
+			<select id="display_type">
+				<option value="popup">Popup</option>
+				<option value="link" >Link to Photo</option>				
+			</select>
+			<span class="photomax-field-description"><span class="photomax-opening-description">Photo Display Mode - </span><br>1. Popup - show photos in a popup <br>2. Link to Photos - show photos on Instagram/Facebook/Google+ in a new Tab</span>
+			<br>
+			</div>
+			<br>
+			
+			
+			<div class="control_holder">
+			<span class="photomax-field-title">Thumbnail Height</span> 
+			<input type="text" id="thumbnail_height" value="auto"/>
+			<span class="photomax-field-description">Values can be <br/>1. Automatic Thumbnail Height (Example: auto) <br/>2. Fixed Pixel Height (Example: 200px).</span>
+			</div>
+			<br>
+
+			<div class="control_holder">
+			<span class="photomax-field-title">Thumbnail Description</span>
+			<select id="thumbnail_description">
+				fixed-1 | fixed-2 | fixed-3 | max-1 | max-2 | max-3
+				<option value="fixed-1">Fixed 1 Line Description</option>
+				<option value="fixed-2" >Fixed 2 Line Description</option>				
+				<option value="fixed-3" >Fixed 3 Line Description</option>				
+				<option value="max-1" >Maximum 1 Line Description</option>				
+				<option value="max-2" >Maximum 2 Line Description</option>				
+				<option value="max-3" >Maximum 3 Line Description</option>				
+			</select>
+			<span class="photomax-field-description"><span class="photomax-opening-description">Thumbnail Description can have a fixed number of lines or can have a variable number of lines</span>
+			<br>
+			</div>
+			<br>
+			
+			
+			<div class="control_holder">
+			<span class="photomax-field-title">Show Packed Thumbnails (no spaces between thumbnails)</span>
+			<input type="checkbox" id="packed_thumbnails" checked />
+			<span class="photomax-field-description">Useful when showing only photos with no margin or gutter in between thumbnails.</span>
+			<br>
+			</div>
+			<br>
+			
+			
+			
+			<!--
+			<div class="control_holder">
+			<span class="photomax-field-title">Widget Mode</span>
+			<input type="checkbox" id="widget_mode" />
+			<span class="photomax-field-description">Enable widget mode for showing PhotoMax in a sidebar - single column view</span>
+			<br>
+			</div>
+			<br>
+			-->
+			
+			<div class="control_holder">
+			<span class="photomax-field-title">Loading Mode</span>
+			<select id="load_mode">
+				<option value="loadmore" selected="selected">Load More</option>
+				<option value="paginate-sides">Paginate Side</option>
+				<option value="paginate-bottom">Paginate Bottom</option>
+			</select>
+			<span class="photomax-field-description"><span class="photomax-opening-description">Load Button Mode</span> - <br>1. Load More button <br>2. Left Right Pagination on Sides - Carousel Mode <br>3. Left Right Pagination at bottom</span>		
+			</div>
+			<br>
+
+			<div class="control_holder">
+			<span class="photomax-field-title">Always use Dropdown instead of Tabs</span>
+			<input type="checkbox" id="always_use_dropdown" checked />
+			<span class="photomax-field-description">Show Search-Select Combo instead of Tabs</span>
+			<br>
+			</div>
+			<br>
+
+			<div class="control_holder">
+			<span class="photomax-field-title">Loading Button's Size</span>
+			<select id="load_button_size">
+				<option value="large" selected="selected">Large</option>
+				<option value="small">Small</option>
+			</select>
+			<span class="photomax-field-description"><span class="photomax-opening-description">Size of Load More Button / Pagination Buttons - </span><br>1. Small <br>2. Large</span>		
+			</div>
+			<br>
+
+			
+			<div class="control_holder">
+			<span class="photomax-field-title">Show Text instead of Icons</span>
+			<input type="checkbox" id="show_text_instead_of_icons" />
+			<span class="photomax-field-description">All buttons where icons are displayed will show text messages. This affects Load More button, Pagination button, Show Comments button and Load More Comments button</span>
+			</div>
+			<br>			
+
+		
+		
+		
+		</p>
+	  </div>
+	  <div id="tabs-4">
+		<p>
+			
+			
+			<div class="control_holder">
+			<span class="photomax-field-title">Header Title</span> 
+			<input type="text" id="header_title" value="Envato Pictures"/>
+			<span class="photomax-field-description">Title that will be displayed in the PhotoMax Header</span>
+			</div>
+			<br>
+
+			<div class="control_holder">
+			<span class="photomax-field-title">Header Sub Title</span> 
+			<input type="text" id="header_sub_title" value="powered by PhotoMax"/>
+			<span class="photomax-field-description">Sub - Title that will be displayed in the PhotoMax Header</span>
+			</div>
+			<br>
+			
+			<div class="control_holder">
+			<span class="photomax-field-title">Header Image Link</span> 
+			<input type="text" id="header_image" value="https://yt3.ggpht.com/-FqG6biYgK3Q/AAAAAAAAAAI/AAAAAAAAAAA/v9oefAdz-4Y/s100-c-k-no/photo.jpg"/>
+			<span class="photomax-field-description">User / Thumbnail Image in the Header</span>
+			</div>
+			<br>
+			
+			<div class="control_holder">
+			<span class="photomax-field-title">Header Background Image Link</span> 
+			<input type="text" id="header_background_image" value="https://yt3.ggpht.com/-f6BSwYMnD04/U6ozNE2mUiI/AAAAAAAAAXU/maYUcQFqcOE/w1060-fcrop64=1,00005a57ffffa5a8-nd/yt2.jpg"/>
+			<span class="photomax-field-description">Background Image in the Header</span>
+			</div>
+			<br>
+			
+			<div class="control_holder">
+			<span class="photomax-field-title">Header Website Link</span> 
+			<input type="text" id="header_link" value="http://codecanyon.net/item/youmax-youtube-channel-on-your-website/9989505"/>
+			<span class="photomax-field-description">This is the link that users will go to when they click on your main Header Icon / Thumbnail</span>
+			</div>
+			<br>
+			
+			<div class="control_holder">
+			<span class="photomax-field-title">Google+ Link</span> 
+			<input type="text" id="google_plus_link" value="http://plus.google.com"/>
+			<span class="photomax-field-description">Link to your Google+ Profile</span>
+			</div>
+			<br>
+			
+			<div class="control_holder">
+			<span class="photomax-field-title">Twitter Link</span> 
+			<input type="text" id="twitter_link" value="http://twitter.com"/>
+			<span class="photomax-field-description">Link to your Twitter Profile</span>
+			</div>
+			<br>
+			
+			<div class="control_holder">
+			<span class="photomax-field-title">Facebook Link</span> 
+			<input type="text" id="facebook_link" value="http://facebook.com"/>
+			<span class="photomax-field-description">Link to your Facebook Profile</span>
+			</div>
+			<br>
+			
+
+			<!--
+			<div class="control_holder">
+			<span class="photomax-field-title">Featured Video </span>
+			<input type="text" id="featured_video" value=""/>
+			<span class="photomax-field-description">Link to a YouTube video that will be displayed in the player when the PhotoMax widget loads. Works only for 'Inline' display mode.</span>		
+			<br>
+			</div>
+			<br>
+
+			
+			<div class="control_holder">
+			<span class="photomax-field-title">Use separate links for videos </span>
+			<input type="checkbox" id="link_new_pages"/>
+			<span class="photomax-field-description">Shows separate links for each video. Works only for 'New Page' display mode.</span>		
+			<br>
+			</div>
+			<br>
+			
+			<div class="control_holder">
+			<span class="photomax-field-title">Video Size</span>
+			<select id="video_mode">
+				<option value="wide" selected="selected">Wide</option>
+				<option value="narrow">Narrow</option>
+			</select>
+			<span class="photomax-field-description">For very wide displays, video player width can be set to wide or narrow. Works only for 'Inline' or 'New Page' display mode.</span>		
+			</div>
+			<br>
+
+			<div class="control_holder">
+			<span class="photomax-field-title">AutoPlay video when thumbnail is clicked</span>
+			<input type="checkbox" id="auto_play_video"/>
+			<span class="photomax-field-description">Normally user will need to click on the big Play button on the Video player. With this option, video will start playing automatically when a thumbnail is clicked. </span>				
+			<br>
+			</div>
+			<br>
+
+			<div class="control_holder">
+			<span class="photomax-field-title">Display first video on page load </span>
+			<input type="checkbox" id="display_first_video_on_load"/>
+			<span class="photomax-field-description">Displays the first video automatically in the Video player when PhotoMax loads or a new Tab is clicked. Works only for 'Inline' display mode.</span>				
+			<br>
+			</div>
+			<br>
+
+			<div class="control_holder">
+			<span class="photomax-field-title">Playlist Action</span>
+			<select id="playlist_action">
+				<option value="showvideos" selected="selected">Show Videos</option>
+				<option value="playall">Play All</option>
+			</select>
+			<span class="photomax-field-description"><span class="photomax-opening-description">When a playlist thumbnail is clicked - </span><br>1. Show all Video Thumbnails in PhotoMax <br>2. Play the complete playlist in the Video player</span>				
+			</div>
+			<br>
+
+			<div class="control_holder">
+			<span class="photomax-field-title">Video Player Theme</span>
+			<select id="video_player_theme">
+				<option value="dark" selected="selected">Dark</option>
+				<option value="light">Light</option>
+			</select>
+			<span class="photomax-field-description">Video player theme can be 'dark' or 'light'. Works only for YouTube player.</span>				
+			</div>
+			<br>
+
+			<div class="control_holder">
+			<span class="photomax-field-title">Show Title above (with) Video Player</span>
+			<input type="checkbox" id="show_title_in_video_player" checked />
+			<span class="photomax-field-description">Video player will display title at the top. Works only for YouTube player.</span>
+			<br>
+			</div>
+			<br>
+			-->
+					
+			
+			
+			
+			
+		</p>
+	  </div>
+	  <!--
+	  <div id="tabs-5">
+		<p>
+
+			
+			<div class="control_holder">
+			<span class="photomax-field-title">Display comments automatically</span>
+			<input type="checkbox" id="auto_load_comments" />
+			<span class="photomax-field-description">Normally a user will have to click on 'Show Comments' button to display comments under the Video player. Setting this option will display comments automatically below the video player.</span>		
+			<br>
+			</div>
+			<br>
+
+			<div class="control_holder">
+			<span class="photomax-field-title">Comment Order</span>
+			<select id="comment_order">
+				<option value="time" selected="selected">Latest First</option>
+				<option value="relevance">Relevant First</option>
+			</select>
+			<span class="photomax-field-description"><span class="photomax-opening-description">Order of Comments (only for YouTube) -</span><br>1. Recent First <br>2. Most Relevant First</span>		
+			</div>
+			<br>
+			-->
+			
+
+			<!--
+			<div class="control_holder">
+			<span class="photomax-field-title">Header Counts displayed as </span>
+			<select id="header_count_type">
+				<option value="abbr" selected="selected" >Abbreviation</option>
+				<option value="comma" >With Comma</option>
+			</select>
+			<span class="photomax-field-description"><span class="photomax-opening-description">This controls the Views & Subscriber counts in the PhotoMax Header -</span><br>1. Abbreviation - Example: 104K <br>2. With Comma - Example: 104,000</span>		
+			</div>
+			<br>						
+			
+			<div class="control_holder">
+			<span class="photomax-field-title">Show Vimeo Likes Instead Of Views</span>
+			<input type="checkbox" id="show_vimeo_likes_instead_of_views" />
+			<span class="photomax-field-description">Some Vimeo users hide their 'views' statistics for public. You can display 'likes' instead of 'views' with this option</span>		
+			</div>
+			<br>
+			
+
+		</p>
+	  </div>
+	  -->
+	  <div id="tabs-6">
+		<p>
+
+		
+		
+			<div class="control_holder">
+			<span class="photomax-field-title">Hide Header</span>
+			<input type="checkbox" id="hide_header" />
+			<span class="photomax-field-description">Hide the PhotoMax Header</span>		
+			</div>
+			<br>
+
+			<div class="control_holder">
+			<span class="photomax-field-title">Hide Navigation</span>
+			<input type="checkbox" id="hide_navigation" />
+			<span class="photomax-field-description">Hide the PhotoMax Navigation - Tabs and Dropdown below the header</span>		
+			</div>
+			<br>
+
+			<!--
+			<div class="control_holder">
+			<span class="photomax-field-title">Hide Comments</span>
+			<input type="checkbox" id="hide_comments" />
+			<span class="photomax-field-description">Hide Video Comments</span>		
+			</div>
+			<br>
+			-->
+			
+			<div class="control_holder">
+			<span class="photomax-field-title">Hide Photo Thumbnails</span>
+			<input type="checkbox" id="hide_photo_thumbnails" />
+			<span class="photomax-field-description">Hide all photo thumbnails in the grid</span>		
+			</div>
+			<br>
+
+			<div class="control_holder">
+			<span class="photomax-field-title">Hide Loading Buttons</span>
+			<input type="checkbox" id="hide_load_more" />
+			<span class="photomax-field-description">Hide the Loading button - Load More & Left Right Pagination</span>		
+			</div>
+			<br>
+
+			<div class="control_holder">
+			<span class="photomax-field-title">Hide Photo Detail (in popup, below image)</span>
+			<input type="checkbox" id="hide_photo_details" />
+			<span class="photomax-field-description">Hide Photo Details that are displayed below the Image - Description, Stats etc.</span>
+			</div>
+			<br>
+
+			<!--
+			<div class="control_holder">
+			<span class="photomax-field-title">Hide Video Definition</span>
+			<input type="checkbox" id="hide_definition" />
+			<span class="photomax-field-description">Hide the HD Tags that are displayed at the top left of Video Thumbnails</span>
+			</div>
+			<br>
+			
+			<div class="control_holder">
+			<span class="photomax-field-title">Video Thumbnail's Play Icon Type</span>
+			<select id="play_icon_type">
+				<option value="default" selected="selected" >Default - Show Play Icon on Hover</option>
+				<option value="white_grey_combo" >Fixed Play Icon - Grey White Style</option>
+				<option value="white_black_combo" >Fixed Play Icon - White Black Style</option>
+				<option value="no_icon" >No Play Icon</option>
+			</select>
+			<span class="photomax-field-description"><span class="photomax-opening-description">The type of play icon that is displayed on video thumbnails. </span>		
+			</div>
+			<br>			
+			-->
+
+		
+
+		</p>
+	  </div>
+	  <div id="tabs-7">
+		<p>
+
+
+			<!--
+			<div class="control_holder">
+			<span class="photomax-field-title">Search Box scope</span>
+			<select id="search_box_scope">
+				<option value="channel">Channel</option>
+				<option value="global">Global</option>
+			</select>
+			<span class="photomax-field-description"><span class="photomax-opening-description">Scope of the Search box (only for YouTube) - </span><br>1. Channel - will search only in the channel <br>2. Global - will search complete YouTube</span>
+			</div>
+			<br>
+			-->
+			
+			<div class="control_holder">
+			<span class="photomax-field-title">Align Popup to Top</span>
+			<input type="checkbox" id="align_popup_to_top" checked />
+			<span class="photomax-field-description">Popup will be aligned to top with this option. Normally it is vertically aligned at the center.</span>
+			</div>
+			<br>
+
+
+			<!--
+			<div class="control_holder">
+			<span class="photomax-field-title">User Website Link</span>
+			<input type="text" id="user_website" value=""/>
+			<span class="photomax-field-description">Link to a User website - Displayed with the Clean Skin Header.</span>
+			</div>
+			<br>
+			-->
+			
+			<div class="control_holder">
+			<span class="photomax-field-title">Sharing Link</span>
+			<select id="share_link">
+				<option value="photo" selected="selected">Photo</option>
+				<option value="website">Website</option>
+			</select>
+			<span class="photomax-field-description"><span class="photomax-opening-description">The link to share with the Sharing buttons -</span><br>1. Photo - will share the link to the photo<br>2. Website - will share the link to your website</span>		
+			</div>
+			<br>
+
+
+			<div class="control_holder">
+			<span class="photomax-field-title">View Count displayed as </span>
+			<select id="view_count_type">
+				<option value="abbr" selected="selected">Abbreviation</option>
+				<option value="comma">With Comma</option>
+			</select>
+			<span class="photomax-field-description"><span class="photomax-opening-description">Video count display mode -</span><br>1. Abbreviation - Example: 104K <br>2. With Comma - Example: 104,000</span>		
+			</div>
+			<br>
+
+			<div class="control_holder">
+			<span class="photomax-field-title">Like & Comment Count displayed as </span>
+			<select id="like_comment_count_type">
+				<option value="abbr" selected="selected">Abbreviation</option>
+				<option value="comma">With Comma</option>
+			</select>
+			<span class="photomax-field-description"><span class="photomax-opening-description">Like & Comment count display mode -</span><br>1. Abbreviation - Example: 104K <br>2. With Comma - Example: 104,000</span>		
+			</div>
+			<br>
+			
+
+			<div class="control_holder">
+			<span class="photomax-field-title">Photo Protocol</span>
+			<select id="photo_protocol">
+				<option value="http:" selected="selected">HTTP</option>
+				<option value="https:">HTTPS</option>
+			</select>
+			<span class="photomax-field-description"><span class="photomax-opening-description">Protocol under which videos will be displayed - </span><br>1. HTTP <br>2. HTTPS - for SSL websites</span>
+			</div>
+			<br>
+
+
+			<!-- added for 11.0 -->
+			<div class="control_holder">
+			<span class="photomax-field-title">Hot Threshold</span>
+			<input type="text" id="hot_threshold" value="300"/>
+			<span class="photomax-field-description">A numeric threshold value - controld the number of videos that will be listed as "Hot" in the Trend Skin.</span>
+			</div>
+			<br>
+
+			<!-- added for 11.0 -->
+			<div class="control_holder">
+			<span class="photomax-field-title">Trending Threshold</span>
+			<input type="text" id="trending_threshold" value="100"/>
+			<span class="photomax-field-description">A numeric threshold value - controld the number of videos that will be listed as "Trending" in the Trend Skin.</span>
+			</div>
+			<br>
+
+				
+		
+		
+		</p>
+	  </div>
+	  <div id="tabs-8">
+		<p>
+
+		
+		
+			<div class="control_holder">
+			<span class="photomax-field-title">Maximum Results to Display</span>
+			<input type="text" id="max_results" value="18"/>
+			<span class="photomax-field-description">Maximum Items to be displayed in a Single Load.</span>
+			</div>
+			<br>
+
+			<!-- added for 11.0 -->
+			<div class="control_holder">
+			<span class="photomax-field-title">Maximum Results to Cache</span>
+			<input type="text" id="max_results_to_load" value="30"/>
+			<span class="photomax-field-description">Maximum Items to be cached in a Single Load.</span>
+			</div>
+			<br>
+
+			<!--
+			<div class="control_holder">
+			<span class="photomax-field-title">Maximum Comments in one Load</span>
+			<input type="text" id="max_comments" value="7"/>
+			<span class="photomax-field-description">Maximum Comments to be displayed in a Single Load.</span>
+			</div>
+			<br>
+			-->
+			
+			<div class="little-separator">Responsive Options</div>
+
+
+
+			<div class="control_holder">
+			<span class="photomax-field-title">Minimum PhotoMax width under which you will see a 4-column layout</span>
+			<input type="text" id="four_column_container_width" value="1150px"/>
+			<span class="photomax-field-description">Minimum PhotoMax width under which you will see a 4-column layout. When PhotoMax width is above this value, you will get a 5-column layout. <br>Must be in multiples of 50. Example: 1200px</span>
+			</div>
+			<br>
+
+			<div class="control_holder">
+			<span class="photomax-field-title">Minimum PhotoMax width under which you will see a 3-column layout</span>
+			<input type="text" id="three_column_container_width" value="1000px"/>
+			<span class="photomax-field-description">Minimum PhotoMax width under which you will see a 3-column layout. When PhotoMax width is above this value, you will get a 4-column layout. <br>Must be in multiples of 50. Example: 1050px</span>
+			</div>
+			<br>
+
+			<div class="control_holder">
+			<span class="photomax-field-title">Minimum PhotoMax width under which you will see a 2-column layout</span>
+			<input type="text" id="two_column_container_width" value="750px"/>
+			<span class="photomax-field-description">Minimum PhotoMax width under which you will see a 2-column layout. When PhotoMax width is above this value, you will get a 3-column layout. <br>Must be in multiples of 50. Example: 800px</span>
+			</div>
+			<br>
+
+			<div class="control_holder">
+			<span class="photomax-field-title">Minimum PhotoMax width under which you will see a 1-column layout</span>
+			<input type="text" id="one_column_container_width" value="500px"/>
+			<span class="photomax-field-description">Minimum PhotoMax width under which you will see a 1-column layout. When PhotoMax width is above this value, you will get a 2-column layout. <br>Must be in multiples of 50. Example: 450px</span>
+			</div>
+			<br>
+
+			<div class="little-separator">5 Column Grid</div>
+
+			<div class="control_holder">
+			<span class="photomax-field-title">Width of video thumbnails in 5-column layout</span>
+			<input type="text" id="five_column_thumbnail_width" value="18%"/>
+			<span class="photomax-field-description">Width of video thumbnails in 5-column layout.</span>
+			</div>
+			<br>
+
+			<div class="control_holder">
+			<span class="photomax-field-title">Left & Right Margins of video thumbnails in 5-column layout</span>
+			<input type="text" id="five_column_thumbnail_left_right_margin" value="1%"/>
+			<span class="photomax-field-description">Left & Right Margins of video thumbnails in 5-column layout.</span>
+			</div>
+			<br>
+
+			<div class="little-separator">4 Column Grid</div>
+
+			<div class="control_holder">
+			<span class="photomax-field-title">Width of video thumbnails in 4-column layout</span>
+			<input type="text" id="four_column_thumbnail_width" value="23%"/>
+			<span class="photomax-field-description">Width of video thumbnails in 4-column layout.</span>
+			</div>
+			<br>
+
+			<div class="control_holder">
+			<span class="photomax-field-title">Left & Right Margins of video thumbnails in 4-column layout</span>
+			<input type="text" id="four_column_thumbnail_left_right_margin" value="1%"/>
+			<span class="photomax-field-description">Left & Right Margins of video thumbnails in 4-column layout.</span>
+			</div>
+			<br>
+
+
+			<div class="little-separator">3 Column Grid</div>
+
+			<div class="control_holder">
+			<span class="photomax-field-title">Width of video thumbnails in 3-column layout</span>
+			<input type="text" id="three_column_thumbnail_width" value="30.3%"/>
+			<span class="photomax-field-description">Width of video thumbnails in 3-column layout.</span>
+			</div>
+			<br>
+
+			<div class="control_holder">
+			<span class="photomax-field-title">Left & Right Margins of video thumbnails in 3-column layout</span>
+			<input type="text" id="three_column_thumbnail_left_right_margin" value="1.5%"/>
+			<span class="photomax-field-description">Left & Right Margins of video thumbnails in 3-column layout.</span>
+			</div>
+			<br>
+
+
+			<div class="little-separator">2 Column Grid</div>
+
+			<div class="control_holder">
+			<span class="photomax-field-title">Width of video thumbnails in 2-column layout</span>
+			<input type="text" id="two_column_thumbnail_width" value="46%"/>
+			<span class="photomax-field-description">Width of video thumbnails in 2-column layout.</span>
+			</div>
+			<br>
+
+			<div class="control_holder">
+			<span class="photomax-field-title">Left & Right Margins of video thumbnails in 2-column layout</span>
+			<input type="text" id="two_column_thumbnail_left_right_margin" value="2%"/>
+			<span class="photomax-field-description">Left & Right Margins of video thumbnails in 2-column layout.</span>
+			</div>
+			<br>
+
+
+			<div class="little-separator">1 Column Grid</div>
+
+			<div class="control_holder">
+			<span class="photomax-field-title">Width of video thumbnails in 1-column layout</span>
+			<input type="text" id="one_column_thumbnail_width" value="95%"/>
+			<span class="photomax-field-description">Width of video thumbnails in 1-column layout</span>
+			</div>
+			<br>
+
+			<div class="control_holder">
+			<span class="photomax-field-title">Left & Right Margins of video thumbnails in 1-column layout</span>
+			<input type="text" id="one_column_thumbnail_left_right_margin" value="2.5%"/>
+			<span class="photomax-field-description">Left & Right Margins of video thumbnails in 1-column layout</span>
+			</div>
+			<br>
+
+
+			<div class="little-separator">More Grid Options</div>
+
+			<div class="control_holder">
+			<span class="photomax-field-title">Bottom margin of Thumbnails in any Layout</span>
+			<input type="text" id="thumbnail_bottom_margin" value="25px"/>
+			<span class="photomax-field-description">Bottom margin of Thumbnails in any Layout.</span>
+			</div>
+			<br>
+
+			<div class="control_holder">
+			<span class="photomax-field-title">Left & Right Margins of Video Container</span>
+			<input type="text" id="container_left_right_margin" value="2%"/>
+			<span class="photomax-field-description">Left & Right Margins of Video Container.</span>
+			</div>
+			<br>
+
+
+			<div class="control_holder">
+			<span class="photomax-field-title">Maximum width of PhotoMax </span>
+			<input type="text" id="max_container_width" value="1080"/>
+			<span class="photomax-field-description">Maximum width of PhotoMax container. Normally PhotoMax is at 100% width. You can use this option to limit the maximum width PhotoMax can achieve.</span>
+			</div>
+			<br>
+				
+
+
+		</p>
+	  </div>
+
+	  <div id="tabs-9">
+		<p>
+
+			<!-- added for 11.0 -->
+			<div class="control_holder">
+			<span class="photomax-field-title">Photomax Background Color</span>
+			<input type="text" id="photomax_background_color" value="#e2e2e2"/>
+			<span class="photomax-field-description">Background Color of photomax widget.</span>
+			</div>
+			<br>
+		
+			<div class="little-separator">Tab Styles</div>
+
+
+			<!-- added for 11.0 -->
+			<div class="control_holder">
+			<span class="photomax-field-title">Tab Style</span>
+			<select id="tab_style">
+				<option value="block" selected="selected">Block</option>
+				<option value="wire">Wire</option>
+			</select>
+			<span class="photomax-field-description"><span class="photomax-opening-description">Type of Tabs - </span><br>1. Block - will display box like Tabs with a background color <br>2. Wire - will display open Tabs with just a border</span>
+			</div>
+			<br>
+
+
+			<!-- added for 11.0 -->
+			<div class="control_holder">
+			<span class="photomax-field-title">Tab Background Color</span>
+			<input type="text" id="tab_background_color" value="#f5f5f5"/>
+			<span class="photomax-field-description">Background Color of Tabs.</span>
+			</div>
+			<br>
+
+			<!-- added for 11.0 -->
+			<div class="control_holder">
+			<span class="photomax-field-title">Tab Text Color</span>
+			<input type="text" id="tab_text_color" value="#929090"/>
+			<span class="photomax-field-description">Text Color of Tabs.</span>
+			</div>
+			<br>
+
+			<!-- added for 11.0 -->
+			<div class="control_holder">
+			<span class="photomax-field-title">Tab Hover Color</span>
+			<input type="text" id="tab_hover_color" value="rgba(106, 106, 106, 0.09)"/>
+			<span class="photomax-field-description">Bakcground Color of Tabs when Mouse is Hovered over it.</span>
+			</div>
+			<br>
+
+			<!-- added for 11.0 -->
+			<div class="control_holder">
+			<span class="photomax-field-title">Active Tab Background Color</span>
+			<input type="text" id="tab_active_background_color" value="#ACACAC"/>
+			<span class="photomax-field-description">Background Color of Selected Tab.</span>
+			</div>
+			<br>			
+
+
+			<!-- added for 11.0 -->
+			<div class="control_holder">
+			<span class="photomax-field-title">Active Tab Text Color</span>
+			<input type="text" id="tab_active_text_color" value="white"/>
+			<span class="photomax-field-description">Text Color of Selected Tab.</span>
+			</div>
+			<br>		
+
+			<div class="little-separator">Loading Button Styles</div>	
+
+			<!-- added for 11.0 -->
+			<div class="control_holder">
+			<span class="photomax-field-title">Loading Button Background Color</span>
+			<input type="text" id="loadmore_button_background_color" value="rgb(212, 212, 212)"/>
+			<span class="photomax-field-description">Background Color of Loading Button.</span>
+			</div>
+			<br>
+
+
+			<!-- added for 11.0 -->
+			<div class="control_holder">
+			<span class="photomax-field-title">Loading Button Text Color</span>
+			<input type="text" id="loadmore_button_text_color" value="#666"/>
+			<span class="photomax-field-description">Text Color of Loading Button.</span>
+			</div>
+			<br>
+
+
+			<!-- added for 11.0 -->
+			<div class="control_holder">
+			<span class="photomax-field-title">Loading Button Hover Background Color</span>
+			<input type="text" id="loadmore_button_hover_background_color" value="#383838"/>
+			<span class="photomax-field-description">Background Color of Loading Button when Mouse is Hovered over it.</span>
+			</div>
+			<br>
+
+
+			<!-- added for 11.0 -->
+			<div class="control_holder">
+			<span class="photomax-field-title">Loading Button Hover Text Color</span>
+			<input type="text" id="loadmore_button_hover_text_color" value="white"/>
+			<span class="photomax-field-description">Text Color of Loading Button when Mouse is Hovered over it.</span>
+			</div>
+			<br>
+
+
+			<div class="little-separator">Grid Item Styles</div>	
+
+			<!-- added for 11.0 -->
+			<div class="control_holder">
+			<span class="photomax-field-title">Grid Item Background Color</span>
+			<input type="text" id="grid_item_background_color" value="white"/>
+			<span class="photomax-field-description">Background Color of Grid Items.</span>
+			</div>
+			<br>
+
+			<!-- added for 11.0 -->
+			<div class="control_holder">
+			<span class="photomax-field-title">Grid Item Separator Color</span>
+			<input type="text" id="grid_item_separator_color" value="#e2e2e2"/>
+			<span class="photomax-field-description">Separator Color of Grid Items.</span>
+			</div>
+			<br>
+
+			<!-- added for 11.0 -->
+			<div class="control_holder">
+			<span class="photomax-field-title">Grid Item Text Color</span>
+			<input type="text" id="grid_item_text_color" value="#666"/>
+			<span class="photomax-field-description">Text Color of Grid Items.</span>
+			</div>
+			<br>
+
+			<!-- added for 11.0 -->
+			<div class="control_holder">
+			<span class="photomax-field-title">Grid Item Title Color</span>
+			<input type="text" id="grid_item_title_color" value="#5781d4"/>
+			<span class="photomax-field-description">Title Color of Grid Items.</span>
+			</div>
+			<br>
+
+			<!-- added for 11.0 -->
+			<div class="control_holder">
+			<span class="photomax-field-title">Grid Item Link Color</span>
+			<input type="text" id="grid_item_link_color" value="#5781dc"/>
+			<span class="photomax-field-description">Link Color of Grid Items.</span>
+			</div>
+			<br>
+
+			<!-- added for 11.0 -->
+			<div class="control_holder">
+			<span class="photomax-field-title">Grid Item Icon Color</span>
+			<input type="text" id="grid_item_icon_color" value="#b0b0af"/>
+			<span class="photomax-field-description">Icon Color of Grid Items.</span>
+			</div>
+			<br>
+
+
+			<div class="little-separator">Secondary Styles</div>	
+
+			<!-- added for 11.0 -->
+			<div class="control_holder">
+			<span class="photomax-field-title">Grid Item Secondary Background Color</span>
+			<input type="text" id="grid_item_secondary_background_color" value="#f7f6f6"/>
+			<span class="photomax-field-description">Background Color of Likes & Comment Bar in "Block" Skin.</span>
+			</div>
+			<br>
+
+			<!-- added for 11.0 -->
+			<div class="control_holder">
+			<span class="photomax-field-title">Grid Item Secondary Text Color</span>
+			<input type="text" id="grid_item_secondary_text_color" value="#868686"/>
+			<span class="photomax-field-description">Text Color of Likes & Comment Bar in "Block" Skin.</span>
+			</div>
+			<br>
+
+			<!-- added for 11.0 -->
+			<div class="control_holder">
+			<span class="photomax-field-title">Grid Item Secondary Icon Color</span>
+			<input type="text" id="grid_item_secondary_icon_color" value="#b9b9b9"/>
+			<span class="photomax-field-description">Icon Color of Likes & Comment Bar in "Block" Skin and Link icon in "Trend" Skin.</span>
+			</div>
+			<br>
+
+		</p>
+	  </div>
+
+	</div>
+	
+	
+	<input id="photomax-save-shortcode" type="button" class="button-primary" value="Generate Code" onclick="generateJquery();" />
+	
+	<br><br>
+	<pre ><code class="html" id="generated_output_highlighted">...</code></pre>
+
+
+</div>
+
+
+
+
+
+<br><br>	
+
+
+<br/><br/>
+
+</div>
+
+<!--<a href="http://demos.codehandling.com/photomax_wp_doc/photomax-wordpress-documentation.html">Documentation for PhotoMax WordPress</a>-->
+<a style="text-align: center;display: block;" href="http://demos.codehandling.com/docs/photomax-js/photomax-javascript-documentation.html">Documentation for PhotoMax Javascript</a>
+
+<br/><br/><br/>
+<br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/>
+
+<script>
+var tab_count = 2;
+
+		$instagram_user_photos_defaults = {
+			'name' 		: 'Instagram Photos',
+			'url'  		: 'https://instagram.com/muradosmann',
+			'selected'	: 'false'
+		};
+
+		$instagram_user_tagged_photos_defaults = {
+			'name' 		: 'Instagram User Tag',
+			'url'  		: 'https://instagram.com/muradosmann',
+			'hashtag'	: '#followme',
+			'selected'	: 'false'
+		};
+
+		$instagram_global_tagged_photos_defaults = {
+			'name' 		: 'Instagram Global Tag',
+			'hashtag'	: '#topchef',
+			'selected'	: 'false'
+		};
+
+		$facebook_page_photos_defaults = {
+			'name' 		: 'Facebook Page Photos',
+			'url'  		: 'http://www.facebook.com/adidas',
+			'selected'	: 'false'
+		};
+
+		$facebook_page_albums_defaults = {
+			'name' 		: 'Facebook Page Albums',
+			'url'  		: 'http://www.facebook.com/adidas',
+			'selected'	: 'false'
+		};
+		
+		$facebook_album_photos_defaults = {
+			'name' 		: 'Facebook Album Photos',
+			'url'  		: 'https://www.facebook.com/media/set/?set=a.10153495891665541.1073741843.76810820540&type=3',
+			'selected'	: 'false'
+		};
+		
+		$google_album_photos_defaults = {
+			'name' 		: 'Google Album Photos',
+			'url'  		: 'https://picasaweb.google.com/data/feed/base/user/103171017309991514221/albumid/6263078519414311281?alt=rss&kind=photo&hl=en_US',
+			'selected'	: 'false'
+		};
+		
+		$google_user_photos_defaults = {
+			'name' 		: 'Google User Photos',
+			'url'  		: 'https://plus.google.com/112594651357320637429',
+			'selected'	: 'false'
+		};
+
+		$google_user_albums_defaults = {
+			'name' 		: 'Google User Albums',
+			'url'  		: 'https://plus.google.com/112594651357320637429',
+			'selected'	: 'false'
+		};
+		
+		
+		
+		
+
+
+$('#tab_holder').on('click','.remove_tab',function(){
+	jQuery(this).parents('.photomax_tab').first().remove();
+});
+
+
+function generateJquery() {
+	$('#generated_output_highlighted').text('');
+	
+	var instagram_user_photos_exist=false,instagram_user_tagged_photos_exist=false,instagram_global_tagged_photos_exist=false,google_album_photos_exist=false,google_user_photos_exist=false,facebook_album_photos_exist=false,facebook_page_photos_exist=false,facebook_page_albums_exist=false,google_user_albums_exist=false;
+
+	var jqueryCall = '$("#photomax").photomax({ \n\n';
+	
+	if($('#instagram_access_token').data("changed")) {
+	jqueryCall+='  instagramAccessToken:"'+$('#instagram_access_token').val().trim()+'", \n';
+	}
+
+	if($('#facebook_access_token').data("changed")) {
+	jqueryCall+='  facebookAccessToken:"'+$('#facebook_access_token').val().trim()+'", \n';
+	}
+	
+	if($('#google_api_key').data("changed")) {
+	jqueryCall+='  googleApiKey:"'+$('#google_api_key').val().trim()+'", \n';	
+	}
+	
+	/*if($('#channel_url').data("changed")) {
+	jqueryCall+='channel:"'+$('#channel_url').val().trim()+'", \n';
+	}*/
+	
+	//instagram_user_photos
+	$instagram_user_photos = $('.instagram_user_photos');
+	if(null!=$instagram_user_photos && $instagram_user_photos.length>0) {
+		jqueryCall+='  instagram_user_photos:[ \n'
+		$('.instagram_user_photos').each(function(i,v){
+			$tab = $(this);
+
+			jqueryCall+='    { \n';
+			jqueryCall+='      name:"'+$tab.find('input[id^=tab_name_]').val().trim()+'", \n';
+			jqueryCall+='      url:"'+$tab.find('input[id^=tab_url_]').val().trim()+'", \n';
+			selected = $tab.find('input[id^=selected_tab_]').is(':checked')?'true':'false';
+			jqueryCall+='      selected:'+selected+'\n';
+
+			jqueryCall += '    }, \n\n';
+			instagram_user_photos_exist=true;
+
+		});
+		if(instagram_user_photos_exist) {
+			jqueryCall=jqueryCall.slice(0,-1);
+		}
+		jqueryCall+='  ], \n\n'
+	}
+	
+	//instagram_user_tagged_photos
+	$instagram_user_tagged_photos = $('.instagram_user_tagged_photos');
+	if(null!=$instagram_user_tagged_photos && $instagram_user_tagged_photos.length>0) {	
+		jqueryCall+='  instagram_user_tagged_photos:[ \n'
+		$('.instagram_user_tagged_photos').each(function(i,v){
+			$tab = $(this);
+
+			jqueryCall+='    { \n';			
+			jqueryCall+='      name:"'+$tab.find('input[id^=tab_name_]').val().trim()+'", \n';
+			jqueryCall+='      url:"'+$tab.find('input[id^=tab_url_]').val().trim()+'", \n';
+			jqueryCall+='      hashtag:"'+$tab.find('input[id^=hashtag_]').val().trim()+'", \n';
+			selected = $tab.find('input[id^=selected_tab_]').is(':checked')?'true':'false';
+			jqueryCall+='      selected:'+selected+'\n';
+
+			jqueryCall += '    }, \n\n';
+			instagram_user_tagged_photos_exist=true;
+
+		});
+		if(instagram_user_tagged_photos_exist) {
+			jqueryCall=jqueryCall.slice(0,-1);
+		}
+		jqueryCall+='  ], \n\n'
+	}
+
+	//instagram_global_tagged_photos
+	$instagram_global_tagged_photos = $('.instagram_global_tagged_photos');
+	if(null!=$instagram_global_tagged_photos && $instagram_global_tagged_photos.length>0) {		
+		jqueryCall+='  instagram_global_tagged_photos:[ \n'
+		$('.instagram_global_tagged_photos').each(function(i,v){
+			$tab = $(this);
+			
+			jqueryCall+='    { \n';			
+			jqueryCall+='      name:"'+$tab.find('input[id^=tab_name_]').val().trim()+'", \n';
+			jqueryCall+='      hashtag:"'+$tab.find('input[id^=hashtag_]').val().trim()+'", \n';
+			selected = $tab.find('input[id^=selected_tab_]').is(':checked')?'true':'false';
+			jqueryCall+='      selected:'+selected+' \n';
+
+			jqueryCall += '    }, \n\n';
+			instagram_global_tagged_photos_exist=true;
+
+		});
+		if(instagram_global_tagged_photos_exist) {
+			jqueryCall=jqueryCall.slice(0,-1);
+		}
+		jqueryCall+='  ], \n\n'
+	}
+	
+	
+
+	//google_album_photos
+	$google_album_photos = $('.google_album_photos');
+	if(null!=$google_album_photos && $google_album_photos.length>0) {
+		jqueryCall+='  google_album_photos:[ \n'
+		$('.google_album_photos').each(function(i,v){
+			$tab = $(this);
+			
+			jqueryCall+='    { \n';						
+			jqueryCall+='      name:"'+$tab.find('input[id^=tab_name_]').val().trim()+'", \n';
+			jqueryCall+='      url:"'+$tab.find('input[id^=playlist_url_]').val().trim()+'", \n';
+			selected = $tab.find('input[id^=selected_tab_]').is(':checked')?'true':'false';
+			jqueryCall+='      selected:'+selected+'\n';
+
+			jqueryCall += '    }, \n\n';
+			google_album_photos_exist=true;
+
+		});
+		if(google_album_photos_exist) {
+			jqueryCall=jqueryCall.slice(0,-1);
+		}
+		jqueryCall+='  ], \n\n'
+	}
+	
+	//google_user_photos
+	$google_user_photos = $('.google_user_photos');
+	if(null!=$google_user_photos && $google_user_photos.length>0) {
+		jqueryCall+='  google_user_photos:[ \n'
+		$('.google_user_photos').each(function(i,v){
+			$tab = $(this);
+			
+			jqueryCall+='    { \n';						
+			jqueryCall+='      name:"'+$tab.find('input[id^=tab_name_]').val().trim()+'", \n';
+			jqueryCall+='      url:"'+$tab.find('input[id^=user_url_]').val().trim()+'", \n';
+			selected = $tab.find('input[id^=selected_tab_]').is(':checked')?'true':'false';
+			jqueryCall+='      selected:'+selected+'\n';
+
+			jqueryCall += '    }, \n\n';
+			google_user_photos_exist=true;
+
+		});
+		if(google_user_photos_exist) {
+			jqueryCall=jqueryCall.slice(0,-1);
+		}
+		jqueryCall+='  ], \n\n'
+	}
+
+	//google_user_albums
+	$google_user_albums = $('.google_user_albums');
+	if(null!=$google_user_albums && $google_user_albums.length>0) {
+		jqueryCall+='  google_user_albums:[ \n'
+		$('.google_user_albums').each(function(i,v){
+			$tab = $(this);
+			
+			jqueryCall+='    { \n';						
+			jqueryCall+='      name:"'+$tab.find('input[id^=tab_name_]').val().trim()+'", \n';
+			jqueryCall+='      url:"'+$tab.find('input[id^=user_url_]').val().trim()+'", \n';
+			selected = $tab.find('input[id^=selected_tab_]').is(':checked')?'true':'false';
+			jqueryCall+='      selected:'+selected+'\n';
+
+			jqueryCall += '    }, \n\n';
+			google_user_albums_exist=true;
+
+		});
+		if(google_user_albums_exist) {
+			jqueryCall=jqueryCall.slice(0,-1);
+		}
+		jqueryCall+='  ], \n\n'
+	}	
+	
+	//facebook_album_photos
+	$facebook_album_photos = $('.facebook_album_photos');
+	if(null!=$facebook_album_photos && $facebook_album_photos.length>0) {
+		jqueryCall+='  facebook_album_photos:[ \n'
+		$('.facebook_album_photos').each(function(i,v){
+			$tab = $(this);
+			
+			jqueryCall+='    { \n';						
+			jqueryCall+='      name:"'+$tab.find('input[id^=tab_name_]').val().trim()+'", \n';
+			jqueryCall+='      url:"'+$tab.find('input[id^=tab_url_]').val().trim()+'", \n';
+			selected = $tab.find('input[id^=selected_tab_]').is(':checked')?'true':'false';
+			jqueryCall+='      selected:'+selected+'\n';
+
+			jqueryCall += '    }, \n\n';
+			facebook_album_photos_exist=true;
+
+		});
+		if(facebook_album_photos_exist) {
+			jqueryCall=jqueryCall.slice(0,-1);
+		}
+		jqueryCall+='  ], \n\n'
+	}
+
+	
+	//facebook_page_photos
+	$facebook_page_photos = $('.facebook_page_photos');
+	if(null!=$facebook_page_photos && $facebook_page_photos.length>0) {
+		jqueryCall+='  facebook_page_photos:[ \n'
+		$('.facebook_page_photos').each(function(i,v){
+			$tab = $(this);
+			
+			jqueryCall+='    { \n';						
+			jqueryCall+='      name:"'+$tab.find('input[id^=tab_name_]').val().trim()+'", \n';
+			jqueryCall+='      url:"'+$tab.find('input[id^=tab_url_]').val().trim()+'", \n';
+			selected = $tab.find('input[id^=selected_tab_]').is(':checked')?'true':'false';
+			jqueryCall+='      selected:'+selected+'\n';
+
+			jqueryCall += '    }, \n\n';
+			facebook_page_photos_exist=true;
+
+		});
+		if(facebook_page_photos_exist) {
+			jqueryCall=jqueryCall.slice(0,-1);
+		}
+		jqueryCall+='  ], \n\n'
+	}
+	
+
+	
+	//facebook_page_albums
+	$facebook_page_albums = $('.facebook_page_albums');
+	if(null!=$facebook_page_albums && $facebook_page_albums.length>0) {
+		jqueryCall+='  facebook_page_albums:[ \n'
+		$('.facebook_page_albums').each(function(i,v){
+			$tab = $(this);
+			
+			jqueryCall+='    { \n';						
+			jqueryCall+='      name:"'+$tab.find('input[id^=tab_name_]').val().trim()+'", \n';
+			jqueryCall+='      url:"'+$tab.find('input[id^=tab_url_]').val().trim()+'", \n';
+			selected = $tab.find('input[id^=selected_tab_]').is(':checked')?'true':'false';
+			jqueryCall+='      selected:'+selected+'\n';
+
+			jqueryCall += '    }, \n\n';
+			facebook_page_albums_exist=true;
+
+		});
+		if(facebook_page_albums_exist) {
+			jqueryCall=jqueryCall.slice(0,-1);
+		}
+		jqueryCall+='  ], \n\n'
+	}
+	
+
+	
+	
+	//jqueryCall+='selectedTab:"'+$('#selected_tab').val().trim()+'", \n';
+
+	/*if($('#display_video').data("changed")) {
+	jqueryCall+='  displayVideo:"'+$('#display_video').find(':selected').val()+'", \n';
+	}*/
+
+	if($('#skin_type').data("changed")) {
+	jqueryCall+='  skin:"'+$('#skin_type').find(':selected').val()+'", \n';
+	}
+	
+	if($('#overlay_type').data("changed")) {
+	jqueryCall+='  overlayType:"'+$('#overlay_type').find(':selected').val()+'", \n';
+	}
+	
+	if($('#packed_thumbnails').data("changed")) {
+	packed_thumbnails = $('#packed_thumbnails').is(':checked')?'true':'false';
+	jqueryCall+='  packedThumbnails:'+packed_thumbnails+', \n';
+	}
+	
+	if($('#thumbnail_height').data("changed")) {
+	jqueryCall+='  thumbnailHeight:"'+$('#thumbnail_height').val().trim()+'", \n';
+	}
+	
+
+	if($('#load_mode').data("changed")) {
+	jqueryCall+='  loadMode:"'+$('#load_mode').find(':selected').val()+'", \n';
+	}
+	
+	if($('#load_button_size').data("changed")) {
+	jqueryCall+='  loadButtonSize:"'+$('#load_button_size').find(':selected').val()+'", \n';
+	}
+	
+	if($('#always_use_dropdown').data("changed")) {
+	always_use_dropdown = $('#always_use_dropdown').is(':checked')?'true':'false';
+	jqueryCall+='  alwaysUseDropdown:'+always_use_dropdown+', \n';
+	}
+
+
+	if($('#display_type').data("changed")) {
+	jqueryCall+='  displayType:"'+$('#display_type').find(':selected').val()+'", \n';
+	}
+
+	if($('#thumbnail_description').data("changed")) {
+	jqueryCall+='  displayType:"'+$('#thumbnail_description').find(':selected').val()+'", \n';
+	}
+
+
+	
+	
+	if($('#photo_protocol').data("changed")) {
+	jqueryCall+='  photoProtocol:"'+$('#photo_protocol').find(':selected').val()+'", \n';
+	}
+
+	
+	if($('#view_count_type').data("changed")) {
+	jqueryCall+='  viewCountType:"'+$('#view_count_type').find(':selected').val()+'", \n';
+	}
+	
+	if($('#like_comment_count_type').data("changed")) {
+	jqueryCall+='  likeCommentCountType:"'+$('#like_comment_count_type').find(':selected').val()+'", \n';
+	}
+	
+
+
+	if($('#hide_header').data("changed")) {
+	hide_header = $('#hide_header').is(':checked')?'true':'false';
+	jqueryCall+='  hideHeader:'+hide_header+', \n';
+	}
+	
+	if($('#hide_navigation').data("changed")) {
+	hide_navigation = $('#hide_navigation').is(':checked')?'true':'false';
+	jqueryCall+='  hideNavigation:'+hide_navigation+', \n';
+	}
+	
+	
+	if($('#hide_photo_thumbnails').data("changed")) {
+	hide_photo_thumbnails = $('#hide_photo_thumbnails').is(':checked')?'true':'false';
+	jqueryCall+='  hidePhotoThumbnails:'+hide_photo_thumbnails+', \n';
+	}
+	
+	if($('#hide_load_more').data("changed")) {
+	hide_load_more = $('#hide_load_more').is(':checked')?'true':'false';
+	jqueryCall+='  hideLoadMore:'+hide_load_more+', \n';
+	} 
+	
+	if($('#hide_photo_details').data("changed")) {
+	hide_photo_details = $('#hide_photo_details').is(':checked')?'true':'false';
+	jqueryCall+='  hidePhotoDetails:'+hide_photo_details+', \n';
+	}
+	
+	
+	
+	
+	if($('#show_text_instead_of_icons').data("changed")) {
+	show_text_instead_of_icons = $('#show_text_instead_of_icons').is(':checked')?'true':'false';
+	jqueryCall+='  showTextInsteadOfIcons:'+show_text_instead_of_icons+', \n';
+	}
+
+
+
+	if($('#align_popup_to_top').data("changed")) {
+	align_popup_to_top = $('#align_popup_to_top').is(':checked')?'true':'false';
+	jqueryCall+='  alignPopupToTop:'+align_popup_to_top+', \n';
+	}
+
+	if($('#share_link').data("changed")) {
+	jqueryCall+='  shareLink:"'+$('#share_link').find(':selected').val()+'", \n';
+	}
+	
+	
+	
+	
+	if($('#max_results').data("changed")) {
+	jqueryCall+='  maxResults:'+$('#max_results').val().trim()+', \n';
+	}
+	
+	
+	
+	if($('#header_title').data("changed")) {
+	jqueryCall+='  headerTitle:"'+$('#header_title').val().trim()+'", \n';
+	}
+
+	if($('#header_sub_title').data("changed")) {
+	jqueryCall+='  headerSubTitle:"'+$('#header_sub_title').val().trim()+'", \n';
+	}
+
+	if($('#header_image').data("changed")) {
+	jqueryCall+='  headerImage:"'+$('#header_image').val().trim()+'", \n';
+	}
+	
+	if($('#header_background_image').data("changed")) {
+	jqueryCall+='  headerBackgroundImage:"'+$('#header_background_image').val().trim()+'", \n';
+	}
+	
+	if($('#header_link').data("changed")) {
+	jqueryCall+='  headerLink:"'+$('#header_link').val().trim()+'", \n';
+	}
+
+	if($('#google_plus_link').data("changed")) {
+	jqueryCall+='  googlePlusLink:"'+$('#google_plus_link').val().trim()+'", \n';
+	}
+
+	if($('#twitter_link').data("changed")) {
+	jqueryCall+='  twitterLink:"'+$('#twitter_link').val().trim()+'", \n';
+	}
+
+	if($('#facebook_link').data("changed")) {
+	jqueryCall+='  facebookLink:"'+$('#facebook_link').val().trim()+'", \n';
+	}
+
+
+
+	//added in 11.0
+	if($('#hot_threshold').data("changed")) {
+	jqueryCall+='  hotThreshold:'+$('#hot_threshold').val().trim()+', \n';
+	}
+	if($('#trending_threshold').data("changed")) {
+	jqueryCall+='  trendingThreshold:'+$('#trending_threshold').val().trim()+', \n';
+	}
+	
+	if($('#max_results_to_load').data("changed")) {
+	jqueryCall+='  maxResultsToLoad:'+$('#max_results_to_load').val().trim()+', \n';
+	}
+
+	if($('#tab_style').data("changed")) {
+	jqueryCall+='  tabStyle:"'+$('#tab_style').find(':selected').val()+'", \n';
+	}
+
+	if($('#photomax_background_color').data("changed")) {
+	jqueryCall+='  photomaxBackgroundColor:"'+$('#photomax_background_color').val().trim()+'", \n';
+	}
+	if($('#tab_background_color').data("changed")) {
+	jqueryCall+='  tabBackgroundColor:"'+$('#tab_background_color').val().trim()+'", \n';
+	}
+	if($('#tab_text_color').data("changed")) {
+	jqueryCall+='  tabTextColor:"'+$('#tab_text_color').val().trim()+'", \n';
+	}
+	if($('#tab_hover_color').data("changed")) {
+	jqueryCall+='  tabHoverColor:"'+$('#tab_hover_color').val().trim()+'", \n';
+	}
+	if($('#tab_active_background_color').data("changed")) {
+	jqueryCall+='  tabActiveBackgroundColor:"'+$('#tab_active_background_color').val().trim()+'", \n';
+	}
+	if($('#tab_active_text_color').data("changed")) {
+	jqueryCall+='  tabActiveTextColor:"'+$('#tab_active_text_color').val().trim()+'", \n';
+	}
+	if($('#loadmore_button_background_color').data("changed")) {
+	jqueryCall+='  loadmoreButtonBackgroundColor:"'+$('#loadmore_button_background_color').val().trim()+'", \n';
+	}
+	if($('#loadmore_button_text_color').data("changed")) {
+	jqueryCall+='  loadmoreButtonTextColor:"'+$('#loadmore_button_text_color').val().trim()+'", \n';
+	}
+	if($('#loadmore_button_hover_background_color').data("changed")) {
+	jqueryCall+='  loadmoreButtonHoverBackgroundColor:"'+$('#loadmore_button_hover_background_color').val().trim()+'", \n';
+	}
+	if($('#loadmore_button_hover_text_color').data("changed")) {
+	jqueryCall+='  loadmoreButtonHoverTextColor:"'+$('#loadmore_button_hover_text_color').val().trim()+'", \n';
+	}
+
+	if($('#grid_item_background_color').data("changed")) {
+	jqueryCall+='  gridItemBackgroundColor:"'+$('#grid_item_background_color').val().trim()+'", \n';
+	}
+	if($('#grid_item_separator_color').data("changed")) {
+	jqueryCall+='  gridItemSeparatorColor:"'+$('#grid_item_separator_color').val().trim()+'", \n';
+	}
+	if($('#grid_item_text_color').data("changed")) {
+	jqueryCall+='  gridItemTextColor:"'+$('#grid_item_text_color').val().trim()+'", \n';
+	}
+	if($('#grid_item_title_color').data("changed")) {
+	jqueryCall+='  gridItemTitleColor:"'+$('#grid_item_title_color').val().trim()+'", \n';
+	}
+	if($('#grid_item_link_color').data("changed")) {
+	jqueryCall+='  gridItemLinkColor:"'+$('#grid_item_link_color').val().trim()+'", \n';
+	}
+	if($('#grid_item_icon_color').data("changed")) {
+	jqueryCall+='  gridItemIconColor:"'+$('#grid_item_icon_color').val().trim()+'", \n';
+	}
+
+	if($('#grid_item_secondary_background_color').data("changed")) {
+	jqueryCall+='  gridItemSecondaryBackgroundColor:"'+$('#grid_item_secondary_background_color').val().trim()+'", \n';
+	}
+	if($('#grid_item_secondary_text_color').data("changed")) {
+	jqueryCall+='  gridItemSecondaryTextColor:"'+$('#grid_item_secondary_text_color').val().trim()+'", \n';
+	}
+	if($('#grid_item_secondary_icon_color').data("changed")) {
+	jqueryCall+='  gridItemSecondaryIconColor:"'+$('#grid_item_secondary_icon_color').val().trim()+'", \n';
+	}
+	
+	
+
+
+
+	/*if($('#auto_play_video').data("changed")) {
+	auto_play_video = $('#auto_play_video').is(':checked')?'true':'false';
+	jqueryCall+='  autoPlayVideo:'+auto_play_video+', \n';
+	}
+	
+	if($('#display_first_video_on_load').data("changed")) {
+	display_first_video_on_load = $('#display_first_video_on_load').is(':checked')?'true':'false';
+	jqueryCall+='  displayFirstVideoOnLoad:'+display_first_video_on_load+', \n';
+	}*/
+	
+	
+	//6.0
+
+	/*if($('#search_box_scope').data("changed")) {
+	jqueryCall+='  searchBoxScope:"'+$('#search_box_scope').find(':selected').val()+'", \n';
+	}
+	
+	if($('#play_icon_type').data("changed")) {
+	jqueryCall+='  playIconType:"'+$('#play_icon_type').find(':selected').val()+'", \n';
+	}
+	
+	if($('#link_new_pages').data("changed")) {
+	link_new_pages = $('#link_new_pages').is(':checked')?'true':'false';
+	jqueryCall+='  linkNewPages:'+link_new_pages+', \n';
+	}
+	
+	if($('#auto_load_comments').data("changed")) {
+	auto_load_comments = $('#auto_load_comments').is(':checked')?'true':'false';
+	jqueryCall+='  autoLoadComments:'+auto_load_comments+', \n';
+	}
+	
+	if($('#featured_video').data("changed")) {
+	jqueryCall+='  featuredVideo:"'+$('#featured_video').val().trim()+'", \n';
+	}*/
+	
+
+	
+	
+	/*if($('#comment_order').data("changed")) {
+	jqueryCall+='  commentOrder:"'+$('#comment_order').find(':selected').val()+'", \n';
+	}
+	
+	if($('#playlist_search_file').data("changed")) {
+	jqueryCall+='  playlistSearchFile:"'+$('#playlist_search_file').val().trim()+'", \n';
+	}
+	
+	if($('#user_website').data("changed")) {
+	jqueryCall+='  userWebsite:"'+$('#user_website').val().trim()+'", \n';
+	}
+	
+	if($('#video_mode').data("changed")) {
+	jqueryCall+='  videoMode:"'+$('#video_mode').find(':selected').val()+'", \n';
+	}*/
+	
+	
+	/*if($('#widget_mode').data("changed")) {
+	widget_mode = $('#widget_mode').is(':checked')?'true':'false';
+	jqueryCall+='  widgetMode:'+widget_mode+', \n';
+	}*/
+	
+	
+	/*if($('#header_count_type').data("changed")) {
+	jqueryCall+='  headerCountType:"'+$('#header_count_type').find(':selected').val()+'", \n';
+	}*/
+	
+	
+	
+	
+	
+	/*if($('#playlist_action').data("changed")) {
+	jqueryCall+='  playlistAction:"'+$('#playlist_action').find(':selected').val()+'", \n';
+	}
+	
+	if($('#video_player_theme').data("changed")) {
+	jqueryCall+='  videoPlayerTheme:"'+$('#video_player_theme').find(':selected').val()+'", \n';
+	}*/
+	
+	/*if($('#min_video_container_height').data("changed")) {
+	jqueryCall+='minVideoContainerHeight:"'+$('#min_video_container_height').val().trim()+'", \n';
+	}*/
+	
+	if($('#translator_file').data("changed")) {
+	jqueryCall+='  translatorFile:"'+$('#translator_file').val().trim()+'", \n';	
+	}
+	
+	
+	//show_events = $('#show_events').is(':checked')?'true':'false';
+	//jqueryCall+='showEvents:'+show_events+', \n';
+	
+	/*if($('#hide_definition').data("changed")) {
+	hide_definition = $('#hide_definition').is(':checked')?'true':'false';
+	jqueryCall+='  hideDefinition:'+hide_definition+', \n';
+	}*/
+	
+	
+	/*if($('#show_title_in_video_player').data("changed")) {
+	show_title_in_video_player = $('#show_title_in_video_player').is(':checked')?'true':'false';
+	jqueryCall+='  showTitleInVideoPlayer:'+show_title_in_video_player+', \n';
+	}
+	
+	if($('#show_vimeo_likes_instead_of_views').data("changed")) {
+	show_vimeo_likes_instead_of_views = $('#show_vimeo_likes_instead_of_views').is(':checked')?'true':'false';
+	jqueryCall+='  showVimeoLikesInsteadOfViews:'+show_vimeo_likes_instead_of_views+', \n';
+	}*/
+	
+	//old
+
+
+/*	
+	if($('#inner_offset').data("changed")) {
+	jqueryCall+='innerOffset:'+$('#inner_offset').val().trim()+',';
+	}
+	
+	if($('#outer_offset').data("changed")) {
+	jqueryCall+='outerOffset:'+$('#outer_offset').val().trim()+',';
+	}
+	
+	if($('#min_item_width').data("changed")) {
+	jqueryCall+='minItemWidth:'+$('#min_item_width').val().trim()+',';
+	}
+	
+	if($('#max_item_width').data("changed")) {
+	jqueryCall+='maxItemWidth:'+$('#max_item_width').val().trim()+',';
+	}
+*/
+
+
+
+
+
+	if($('#four_column_container_width').data("changed")) {				
+		jqueryCall+='  fourColumnContainerWidth:"'+$('#four_column_container_width').val().trim()+'", \n';
+	}
+	
+	if($('#three_column_container_width').data("changed")) {				
+		jqueryCall+='  threeColumnContainerWidth:"'+$('#three_column_container_width').val().trim()+'", \n';
+	}
+	
+	if($('#two_column_container_width').data("changed")) {				
+		jqueryCall+='  twoColumnContainerWidth:"'+$('#two_column_container_width').val().trim()+'", \n';
+	}
+	
+	if($('#one_column_container_width').data("changed")) {				
+		jqueryCall+='  oneColumnContainerWidth:"'+$('#one_column_container_width').val().trim()+'", \n';
+	}
+	
+
+	if($('#five_column_thumbnail_width').data("changed")) {				
+		jqueryCall+='  fiveColumnThumbnailWidth=:'+$('#five_column_thumbnail_width').val().trim()+'", \n';
+	}
+
+	if($('#five_column_thumbnail_left_right_margin').data("changed")) {				
+		jqueryCall+='  fiveColumnThumbnailLeftRightMargin:"'+$('#five_column_thumbnail_left_right_margin').val().trim()+'", \n';
+	}
+	
+	
+	if($('#four_column_thumbnail_width').data("changed")) {				
+		jqueryCall+='  fourColumnThumbnailWidth:"'+$('#four_column_thumbnail_width').val().trim()+'", \n';
+	}
+
+	if($('#four_column_thumbnail_left_right_margin').data("changed")) {				
+		jqueryCall+='  fourColumnThumbnailLeftRightMargin:"'+$('#four_column_thumbnail_left_right_margin').val().trim()+'", \n';
+	}
+	
+
+	if($('#three_column_thumbnail_width').data("changed")) {				
+		jqueryCall+='  threeColumnThumbnailWidth:"'+$('#three_column_thumbnail_width').val().trim()+'", \n';
+	}
+
+	if($('#three_column_thumbnail_left_right_margin').data("changed")) {				
+		jqueryCall+='  threeColumnThumbnailLeftRightMargin:"'+$('#three_column_thumbnail_left_right_margin').val().trim()+'", \n';
+	}
+	
+	if($('#two_column_thumbnail_width').data("changed")) {				
+		jqueryCall+='  twoColumnThumbnailWidth:"'+$('#two_column_thumbnail_width').val().trim()+'", \n';
+	}
+
+	if($('#two_column_thumbnail_left_right_margin').data("changed")) {				
+		jqueryCall+='  twoColumnThumbnailLeftRightMargin:"'+$('#two_column_thumbnail_left_right_margin').val().trim()+'", \n';
+	}
+	
+	
+	if($('#one_column_thumbnail_width').data("changed")) {				
+		jqueryCall+='  oneColumnThumbnailWidth:"'+$('#one_column_thumbnail_width').val().trim()+'", \n';
+	}
+
+	if($('#one_column_thumbnail_left_right_margin').data("changed")) {				
+		jqueryCall+='  oneColumnThumbnailLeftRightMargin:"'+$('#one_column_thumbnail_left_right_margin').val().trim()+'", \n';
+	}
+	
+	
+	if($('#thumbnail_bottom_margin').data("changed")) {				
+		jqueryCall+='  thumbnailBottomMargin:"'+$('#thumbnail_bottom_margin').val().trim()+'", \n';
+	}
+
+	if($('#container_left_right_margin').data("changed")) {				
+		jqueryCall+='  containerLeftRightMargin:"'+$('#container_left_right_margin').val().trim()+'", \n';
+	}
+	
+	
+	if($('#max_container_width').data("changed")) {
+	jqueryCall+='  maxContainerWidth:'+$('#max_container_width').val().trim()+' \n';
+	}
+	
+	jqueryCall+='\n});';
+	
+	
+	var skin_type = $('#skin_type').find(':selected').val().replace(/\d+/g, '');
+	
+	scriptLink = '<!-- Include in your head section -->\n<!-- Include jQuery if not present already -->\n<script src="/path/to/jquery-1.9.1.min.js"><\/script>\n\n<!-- Include PhotoMax -->\n<script src="/path/to/jquery.photomax.min.js"><\/script>\n\n<!-- Include PhotoMax Styles -->\n<link rel="stylesheet" href="/path/to/photomax_'+skin_type+'.min.css"/> \n\n . \n . \n\n\n';
+	
+	//$('#generated_output_for_js_header').html(scriptLink);
+	
+	
+
+	jqueryCall = scriptLink + '<!-- Include in your body section -->\n<div id="photomax" class="photomax"><\/div> \n\n . \n . \n\n\n<script type="text/javascript">\n'+jqueryCall+'\n<\/script>';
+	
+	//jqueryCall = jqueryCall.replace(/</g,'&lt;');
+	//jqueryCall = jqueryCall.replace(/>/g,'&gt;');
+	
+	
+	
+	
+	$('#generated_output_highlighted').empty();
+	$('#generated_output_highlighted').text(jqueryCall);
+	//SyntaxHighlighter.highlight();
+	
+	$('#generated_output_highlighted').each(function(i, block) {
+		hljs.highlightBlock(block);
+	});
+
+	
+}
+
+
+$(document).ready(function(){
+	jQuery( "#tabs" ).tabs();
+	
+	jQuery('.photomax-admin').on('click','#photomax_add_instagram_user_photos',function(){
+		addInstagramUserPhotos($instagram_user_photos_defaults);
+		alert("Instagram User Photos Added! \nScroll down and add your User URL");
+	});	
+	
+	jQuery('.photomax-admin').on('click','#photomax_add_instagram_user_tagged_photos',function(){
+		addInstagramUserTaggedPhotos($instagram_user_tagged_photos_defaults);
+		alert("Instagram User Tagged Photos Added! \nScroll down to add your User URL & HashTag");		
+	});	
+	
+	jQuery('.photomax-admin').on('click','#photomax_add_instagram_global_tagged_photos',function(){
+		addInstagramGlobalTaggedPhotos($instagram_global_tagged_photos_defaults);
+		alert("Instagram Global Tagged Photos Added! \nScroll down and add your HashTag");		
+	});	
+	
+	jQuery('.photomax-admin').on('click','#photomax_add_google_album_photos',function(){
+		addGoogleAlbumPhotos($google_album_photos_defaults);
+		alert("Google Album Photos Added! \nScroll down and add your Album URL");		
+	});	
+	
+	jQuery('.photomax-admin').on('click','#photomax_add_google_user_photos',function(){
+		addGoogleUserPhotos($google_user_photos_defaults);
+		alert("Google User Photos Added! \nScroll down and add your User URL");		
+	});	
+
+	jQuery('.photomax-admin').on('click','#photomax_add_google_user_albums',function(){
+		addGoogleUserAlbums($google_user_albums_defaults);
+		alert("Google User Albums Added! \nScroll down and add your User URL");		
+	});	
+	
+	jQuery('.photomax-admin').on('click','#photomax_add_facebook_album_photos',function(){
+		addFacebookAlbumPhotos($facebook_album_photos_defaults);
+		alert("Facebook Album Photos Added! \nScroll down and add your Album URL");		
+	});	
+	
+	jQuery('.photomax-admin').on('click','#photomax_add_facebook_page_photos',function(){
+		addFacebookPagePhotos($facebook_page_photos_defaults);
+		alert("Facebook Page Photos Added! \nScroll down and add your FanPage URL");				
+	});	
+
+	jQuery('.photomax-admin').on('click','#photomax_add_facebook_page_albums',function(){
+		addFacebookPageAlbums($facebook_page_albums_defaults);
+		alert("Facebook Page Albums Added! \nScroll down and add your FanPage URL");				
+	});	
+	
+
+	$(".control_holder select, .control_holder input").change(function(){
+		$(this).data("changed",true);
+	});
+	
+});
+
+
+function addInstagramUserPhotos(defaults) {
+
+	console.log("defaults",defaults);
+	
+	selected_string="";
+	if(defaults.selected=="true") {
+		selected_string="checked";
+	}
+
+	jQuery('#tab_holder').append('<div class="photomax_tab instagram_user_photos"><div class="control_holder"><b>Instagram User Photos</b> <div class="remove_tab">x</div> </div><br><div class="control_holder"><span class="photomax-field-title">Tab Name</span><input type="text" id="tab_name_'+tab_count+'" value="'+defaults.name+'"/></div><br><div class="control_holder"><span class="photomax-field-title">Instagram User URL</span><input type="text" id="tab_url_'+tab_count+'" value="'+defaults.url+'"/></div><br>  <div class="control_holder"><span class="photomax-field-title">Selected by Default</span><input type="checkbox" id="selected_tab_'+tab_count+'" '+selected_string+' /><span class="photomax-field-description">Show videos from this source by default when PhotoMax loads.</span></div></div>');
+	tab_count++;
+
+}
+
+function addInstagramUserTaggedPhotos(defaults) {
+
+	selected_string="";
+	if(defaults.selected=="true") {
+		selected_string="checked";
+	}
+
+	jQuery('#tab_holder').append('<div class="photomax_tab instagram_user_tagged_photos"><div class="control_holder"><b>Instagram HashTag/Search Photos in a User Account</b> <div class="remove_tab">x</div> </div><br><div class="control_holder"><span class="photomax-field-title">Tab Name</span><input type="text" id="tab_name_'+tab_count+'" value="'+defaults.name+'"/></div><br><div class="control_holder"><span class="photomax-field-title">Instagram User URL</span><input type="text" id="tab_url_'+tab_count+'" value="'+defaults.url+'"/></div><br><div class="control_holder"><span class="photomax-field-title">HashTag or Search Query</span><input type="text" id="hashtag_'+tab_count+'" value="'+defaults.hashtag+'"/></div><br>  <div class="control_holder"><span class="photomax-field-title">Selected by Default</span><input type="checkbox" id="selected_tab_'+tab_count+'" '+selected_string+' /><span class="photomax-field-description">Show videos from this source by default when PhotoMax loads.</span></div> </div>');
+	tab_count++;
+
+}
+
+function addInstagramGlobalTaggedPhotos(defaults) {
+
+	selected_string="";
+	if(defaults.selected=="true") {
+		selected_string="checked";
+	}
+
+	jQuery('#tab_holder').append('<div class="photomax_tab instagram_global_tagged_photos"><div class="control_holder"><b>Instagram Global HashTag Photos</b><div class="remove_tab">x</div></div><br><div class="control_holder"><span class="photomax-field-title">Tab Name</span><input type="text" id="tab_name_'+tab_count+'" value="'+defaults.name+'"/></div> <br><div class="control_holder"><span class="photomax-field-title">Instagram HashTag</span><input type="text" id="hashtag_'+tab_count+'" value="'+defaults.hashtag+'"/></div> <br><div class="control_holder"><span class="photomax-field-title">Selected by Default</span><input type="checkbox" id="selected_tab_'+tab_count+'" '+selected_string+' /><span class="photomax-field-description">Show videos from this source by default when PhotoMax loads.</span></div> </div>');
+	tab_count++;
+
+}
+
+
+function addGoogleAlbumPhotos(defaults) {
+
+	selected_string="";
+	if(defaults.selected=="true") {
+		selected_string="checked";
+	}
+
+	jQuery('#tab_holder').append('<div class="photomax_tab google_album_photos"><div class="control_holder"><b>Google+ Album Photos</b> <div class="remove_tab">x</div> </div><br><div class="control_holder"><span class="photomax-field-title">Tab Name</span><input type="text" id="tab_name_'+tab_count+'" value="'+defaults.name+'"/></div><br><div class="control_holder"><span class="photomax-field-title">Google+ Album URL</span><input type="text" id="playlist_url_'+tab_count+'" value="'+defaults.url+'"/></div><br>  <div class="control_holder"><span class="photomax-field-title">Selected by Default</span><input type="checkbox" id="selected_tab_'+tab_count+'" '+selected_string+' /><span class="photomax-field-description">Show videos from this source by default when PhotoMax loads.</span></div> </div>');
+	tab_count++;
+
+}
+
+function addGoogleUserPhotos(defaults) {
+
+	selected_string="";
+	if(defaults.selected=="true") {
+		selected_string="checked";
+	}
+
+	jQuery('#tab_holder').append('<div class="photomax_tab google_user_photos"><div class="control_holder"><b>Google+ User/Page Photos</b> <div class="remove_tab">x</div> </div><br><div class="control_holder"><span class="photomax-field-title">Tab Name</span><input type="text" id="tab_name_'+tab_count+'" value="'+defaults.name+'"/></div><br><div class="control_holder"><span class="photomax-field-title">Google+ User/Page URL</span><input type="text" id="user_url_'+tab_count+'" value="'+defaults.url+'"/></div><br>  <div class="control_holder"><span class="photomax-field-title">Selected by Default</span><input type="checkbox" id="selected_tab_'+tab_count+'" '+selected_string+' /><span class="photomax-field-description">Show photos from this source by default when PhotoMax loads.</span></div> </div>');
+	tab_count++;
+
+}
+
+
+function addGoogleUserAlbums(defaults) {
+
+	selected_string="";
+	if(defaults.selected=="true") {
+		selected_string="checked";
+	}
+
+	jQuery('#tab_holder').append('<div class="photomax_tab google_user_albums"><div class="control_holder"><b>Google+ User/Page Album Grid</b> <div class="remove_tab">x</div> </div><br><div class="control_holder"><span class="photomax-field-title">Tab Name</span><input type="text" id="tab_name_'+tab_count+'" value="'+defaults.name+'"/></div><br><div class="control_holder"><span class="photomax-field-title">Google+ User/Page URL</span><input type="text" id="user_url_'+tab_count+'" value="'+defaults.url+'"/></div><br>  <div class="control_holder"><span class="photomax-field-title">Selected by Default</span><input type="checkbox" id="selected_tab_'+tab_count+'" '+selected_string+' /><span class="photomax-field-description">Show photos from this source by default when PhotoMax loads.</span></div> </div>');
+	tab_count++;
+
+}
+
+function addFacebookAlbumPhotos(defaults) {
+
+	selected_string="";
+	if(defaults.selected=="true") {
+		selected_string="checked";
+	}
+
+	jQuery('#tab_holder').append('<div class="photomax_tab facebook_album_photos"><div class="control_holder"><b>Facebook Album Photos (FanPage Albums only)</b> <div class="remove_tab">x</div> </div><br><div class="control_holder"><span class="photomax-field-title">Tab Name</span><input type="text" id="tab_name_'+tab_count+'" value="'+defaults.name+'"/></div><br><div class="control_holder"><span class="photomax-field-title">Facebook Album URL</span><input type="text" id="tab_url_'+tab_count+'" value="'+defaults.url+'"/></div><br>  <div class="control_holder"><span class="photomax-field-title">Selected by Default</span><input type="checkbox" id="selected_tab_'+tab_count+'" '+selected_string+' /><span class="photomax-field-description">Show videos from this source by default when PhotoMax loads.</span></div> </div>');
+	tab_count++;
+
+}
+
+
+function addFacebookPagePhotos(defaults) {
+
+	selected_string="";
+	if(defaults.selected=="true") {
+		selected_string="checked";
+	}
+
+	jQuery('#tab_holder').append('<div class="photomax_tab facebook_page_photos"><div class="control_holder"><b>Facebook FanPage Photo Stream</b> <div class="remove_tab">x</div> </div><br><div class="control_holder"><span class="photomax-field-title">Tab Name</span><input type="text" id="tab_name_'+tab_count+'" value="'+defaults.name+'"/></div><br><div class="control_holder"><span class="photomax-field-title">Facebook Page URL</span><input type="text" id="tab_url_'+tab_count+'" value="'+defaults.url+'"/></div><br>  <div class="control_holder"><span class="photomax-field-title">Selected by Default</span><input type="checkbox" id="selected_tab_'+tab_count+'" '+selected_string+' /><span class="photomax-field-description">Show videos from this source by default when PhotoMax loads.</span></div> </div>');
+	tab_count++;
+
+}
+
+
+function addFacebookPageAlbums(defaults) {
+
+	selected_string="";
+	if(defaults.selected=="true") {
+		selected_string="checked";
+	}
+
+	jQuery('#tab_holder').append('<div class="photomax_tab facebook_page_albums"><div class="control_holder"><b>Facebook FanPage Photo StreamAlbum Grid</b> <div class="remove_tab">x</div> </div><br><div class="control_holder"><span class="photomax-field-title">Tab Name</span><input type="text" id="tab_name_'+tab_count+'" value="'+defaults.name+'"/></div><br><div class="control_holder"><span class="photomax-field-title">Facebook Page URL</span><input type="text" id="tab_url_'+tab_count+'" value="'+defaults.url+'"/></div><br>  <div class="control_holder"><span class="photomax-field-title">Selected by Default</span><input type="checkbox" id="selected_tab_'+tab_count+'" '+selected_string+' /><span class="photomax-field-description">Show videos from this source by default when PhotoMax loads.</span></div> </div>');
+	tab_count++;
+
+}
+
+
+
+
+
+</script>
+
+
+  </body>
+</html>
+
+
+

@@ -90,13 +90,13 @@ p, ul, li {
 }
 
 
-/*.recent-head-row {
-  color: white;
-}*/
-
 .ads-container {
 	padding-top: 5px;
 	padding-bottom: 5px;
 	margin-top: 5px;
 	margin-bottom: 5px;
+}
+
+#youmax {
+  max-width: 100% !important;
 }

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta name="viewport" content="width=device-width">
+    <title>Youmax 8.0 - Complete Youtube Channel on your Website - Jquery plugin</title>
+	
+	<!--jquery-->
+	<script src="./jquery/jquery-1.9.1.min.js"></script>
+	
+	<!--youmax-->
+	<script src="./js/jquery.youmax.min.js"></script>
+	
+	<link rel="stylesheet" href="./css/youmax_clean.min.css"/>
+
+
+	
+	<style>
+
+      body {
+        font-family: Calibri;
+        font-size: 14px;
+		text-align:center;
+      }
+	  
+
+	  
+		
+	</style>
+
+	</head>
+  <body>
+		<a href="http://demos.codehandling.com/youmax_js_8_gen/generator.html">
+		<h1>Youmax</h1>
+		</a>
+<br><br>		
+<div id="youmax" class="youmax"></div>
+
+<br/><br/>
+
+<a href="http://demos.codehandling.com/youmax_js_doc/youmax-javascript-documentation.html">See how to use this plugin - at codehandling</a>
+
+<br/><br/><br/>
+<br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/>
+
+
+	<script>
+		
+
+	
+	$("#youmax").youmax({
+		apiKey:"AIzaSyDEm5wGLsWi2G3WG40re-DAJcWioQSpJ6o",
+		clientId:"237485577723-lndqepqthdb3lh4gec2skvpfaii9sgh0.apps.googleusercontent.com",
+		
+		
+		youtube_channel_uploads:[
+			{
+				url:"https://www.youtube.com/channel/UCqY0jY6oEM3hqf2TGScd16w",
+				name:"YouTube Uploads",
+				selected:true
+			},
+			{
+				url:"https://www.youtube.com/user/dota2",
+				name:"Dota",
+				
+			}			
+		],
+		
+		youtube_channel_playlists:[
+			{
+				url:"https://www.youtube.com/user/dota2",
+				name:"Dota Playlists",
+				
+				
+			}			
+		],
+		
+		youtube_channel_events:[
+			{
+				url:"https://www.youtube.com/user/dota2",
+				name:"Dota Events",
+				
+			}			
+		],
+		
+		youtube_channel_search:[
+			{
+				"name":"Search - Inside Out",
+				"restrictToChannels":"https://www.youtube.com/channel/UC_IRYSp4auq7hKLvziWVH6w",
+				"searchQuery":"inside out",
+				"searchOrder":"date",
+				eventType:''
+				
+			},	
+			{
+				"name":"Search - Championship",
+				"restrictToChannels":"https://www.youtube.com/user/dota2",
+				"searchQuery":"championship",
+				"searchOrder":"date",
+				
+			}		
+		],
+		
+		youtube_playlist_videos:[
+			{
+				url:"https://www.youtube.com/playlist?list=PL4197273E86798AF8",
+				name:"List videos ",
+				
+			}			
+		],
+		
+		vimeo_user_videos:[
+			{
+				url:"https://vimeo.com/mishkakornai",
+				name:"Vimeo",
+
+			}			
+		],
+		
+		vimeo_channel_videos:[
+			{
+				url:"https://vimeo.com/channels/staffpicks",
+				name:"Vimeo",
+				
+			}			
+		],
+		
+		
+		channel:"https://www.youtube.com/user/DisneyPixar",
+		vimeoAccessToken:"c289d754a132ca07051aaf931ef0de33",
+		
+		selectedTab:"u",
+		displayVideo:"popup",
+		alwaysUseDropdown:true,
+		skin:"clean",
+		maxResults:24,
+		innerOffset:25,
+		outerOffset:35,
+		minItemWidth:250,
+		maxItemWidth:400,
+		maxContainerWidth:1080,
+		autoPlayVideo:false,
+		displayFirstVideoOnLoad:false,
+		linkNewPages:true,
+		searchBoxScope:"channel",
+		videoProtocol:"https:",
+		autoLoadComments: false,
+		alignPopupToTop: true,
+		commentOrder:"relevance", //time|relevance
+		featuredVideo:'https://www.youtube.com/watch?v=nWivGrCKo4Y',
+		playlistSearchFile:'./json/searchlist.json',
+		userWebsite:"http://www.codehandling.com",
+		videoMode:"wide",
+		shareLink:"youtube",
+		facebookAppId:"",
+		widgetMode:false,
+		
+		showTitleInVideoPlayer:true,
+		playlistAction:"showvideos",
+		
+		viewCountType:"abbr",
+		likeCommentCountType:"abbr",
+		showEvents:true,
+		loadMode:"loadmore", //paginate-sides
+		hideHeader:false,
+		hideNavigation:false,
+		loadButtonSize:"large",
+		videoPlayerTheme:"light",
+		//minVideoContainerHeight:300,
+		
+		translatorFile:"./json/translation.json",
+		showVimeoLikesInsteadOfViews:true,
+		
+
+	});
+
+	
+	
+
+		
+
+
+	</script>
+
+  </body>
+</html>
+
+
+

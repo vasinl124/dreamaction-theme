@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta name="viewport" content="width=device-width">
+    <title>Youmax 10.0 - Complete Youtube Channel on your Website - Jquery plugin</title>
+	
+	<!--jquery-->
+	<script src="./jquery/jquery-1.9.1.min.js"></script>
+	
+	<!--youmax-->
+	
+	<!--<script src="./js/source_unpacked/jquery.imagesloaded.js"></script>-->
+	<script src="./js/source_unpacked/imagesloaded.pkgd.js"></script>
+	<script src="./js/source_unpacked/masonry.pkgd.js"></script>
+	<script src="./js/source_unpacked/magnific_popup_iframe_gallery.js"></script>
+	<script src="./js/source_unpacked/jquery.youmax.js"></script>
+	<script src="./js/source_unpacked/share.js"></script>
+	
+	
+	
+	<link rel="stylesheet" href="./css/src/youmax_trend.css"/>
+	<link rel="stylesheet" href="./css/src/youmax_common.css"/>
+
+
+	
+	<style>
+
+      body {
+        font-family: Calibri;
+        font-size: 14px;
+		text-align:center;
+      }
+	  
+
+	  /*.youmax-load-more-div-click {background-color: #F95A5A !important;} */
+	  
+	  
+
+	  
+	  
+		
+	</style>
+
+	</head>
+  <body>
+		<a href="http://demos.codehandling.com/youmax_js_8_gen/generator.html">
+		<h1>Youmax</h1>
+		</a>
+		
+		
+<br><br>		
+
+	<!--
+	<div id="youmax-top-ad">
+	<script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<ins class="adsbygoogle"
+		 style="display:block"
+		 data-ad-client="ca-pub-9832480721999360"
+		 data-ad-slot="8863556846"
+		 data-ad-format="auto"></ins>
+	<script>
+	(adsbygoogle = window.adsbygoogle || []).push({});
+	</script>
+	</div>
+	-->
+
+	
+<div id="youmax" class="youmax">
+</div>
+
+<div id="youmax2" class="youmax">
+</div>
+
+
+<br/><br/>
+
+<a href="http://demos.codehandling.com/youmax_js_doc/youmax-javascript-documentation.html">See how to use this plugin - at codehandling</a>
+
+
+<!--
+<iframe width="560" height="315" src="https://www.youtube.com/embed/O-RgquKVTPE?playsinline=0" frameborder="0" allowfullscreen></iframe>
+-->
+
+
+<br/><br/><br/>
+<br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/>
+
+
+
+
+	<script>
+	
+	
+	//AIzaSyBGea5rDl5YsGa3NGuEASN6XfebuXVJoGo
+	
+	
+	
+
+	
+	$("#youmax").youmax({
+		//apiKey:"AIzaSyAP7T5KX4C028Qd4vZ2Zai3p-A5g7njAzg-DAJcWioQSpJ6o-DAJcWioQSpJ6o",
+		apiKey:"AIzaSyBZ8vdIHcz_UK3Y_UouQ6oJjbkyW15Qbjg",
+		clientId:"237485577723-lndqepqthdb3lh4gec2skvpfaii9sgh0.apps.googleusercontent.com",
+		
+		
+		youtube_channel_uploads:[
+			{
+				url:"https://www.youtube.com/user/neasalamisvideos",
+				name:"ΝΕΑ%20ΣΑΛΑΜΙΝΑ%20TV",
+				selected:true
+			},
+			{
+				url:"https://www.youtube.com/user/WarnerBrosPictures",
+				name:"Warner Bros",
+				
+			}			
+		],
+		
+		youtube_channel_playlists:[
+			{
+				url:"https://www.youtube.com/user/dota2",
+				name:"Dota Playlists",
+				
+				
+			}			
+		],
+		
+		youtube_channel_events:[
+			{
+				url:"https://www.youtube.com/user/dota2",
+				name:"Dota Events",
+				
+			}			
+		],
+		
+		youtube_channel_search:[
+			{
+				"name":"Search%20-%20Inside Out",
+				"restrictToChannels":"https://www.youtube.com/channel/UC_IRYSp4auq7hKLvziWVH6w",
+				"searchQuery":"inside out",
+				"searchOrder":"date",
+				eventType:''
+				
+			},	
+			{
+				"name":"Search - Random",
+				//"restrictToChannels":"",
+				"searchQuery":"",
+				"searchOrder":"date",
+				
+			}		
+		],
+		
+		youtube_playlist_videos:[
+			{
+				url:"https://www.youtube.com/playlist?list=PL4197273E86798AF8",
+				name:"List videos ",
+				
+			}			
+		],
+		
+		vimeo_user_videos:[
+			{
+				url:"https://vimeo.com/alexgrigg",
+				name:"Vimeo",
+			}			
+		],
+		
+		vimeo_channel_videos:[
+			{
+				url:"https://vimeo.com/channels/staffpicks",
+				name:"Vimeo",
+				
+			}
+		],
+		
+		
+		channel:"https://www.youtube.com/channel/UCEKgOGAfN7PcaU43QrynMSg",
+		//channel:"https://www.youtube.com/channel/UCbtluQ_5OvCSvS1D24AlF_A",
+		//channel:"https://www.youtube.com/channel/UCbtluQ_5OvCSvS1D24AlF_A",
+		vimeoAccessToken:"c289d754a132ca07051aaf931ef0de33",
+		
+		displayVideo:"popup",
+		alwaysUseDropdown:false,
+		skin:"trend1",
+		maxResults:6,
+		maxContainerWidth:950,
+		autoPlayVideo:false,
+		displayFirstVideoOnLoad:true,
+		linkNewPages:true,
+		searchBoxScope:"channel",
+		videoProtocol:"https:",
+		autoLoadComments: false,
+		alignPopupToTop: true,
+		commentOrder:"relevance", //time|relevance
+		//featuredVideo:'https://www.youtube.com/watch?v=nWivGrCKo4Y',
+		
+		//featuredVideo:'https://vimeo.com/133396066',
+		
+		playlistSearchFile:'./json/searchlist.json',
+		userWebsite:"http://www.codehandling.com",
+		videoMode:"wide",
+		shareLink:"youtube",
+		facebookAppId:"",
+		widgetMode:false,
+		
+		showTitleInVideoPlayer:true,
+		playlistAction:"showvideos",
+		
+		viewCountType:"abbr",
+		likeCommentCountType:"abbr",
+		showEvents:true,
+		loadMode:"loadmore", //paginate-sides
+		hideHeader:false,
+		hideNavigation:false,
+		loadButtonSize:"large",
+		videoPlayerTheme:"light",
+		
+		//minVideoContainerHeight:310,
+		
+		translatorFile:"http://www.localhost/youmax_envato_v8_3_masonry/youmax-javascript/json/translation.json",
+		showVimeoLikesInsteadOfViews:true,
+		
+		
+		//updateLayoutDelay:1000,
+		
+		oneColumnThumbnailWidth:'90%',
+		oneColumnThumbnailLeftRightMargin:'5%',
+		
+		hideVideoDetails : false,
+		//fixedPlayIcon:true,
+		//hideDefinition:true,
+		
+		//fourColumnWidth:1150,
+		//threeColumnWidth:600,
+		
+		
+		//minItemWidth:250,
+		//maxItemWidth:280,
+
+	});
+	
+/*	
+	$("#youmax2").youmax({
+		//apiKey:"AIzaSyDEm5wGLsWi2G3WG40re-DAJcWioQSpJ6o",
+		apiKey:"AIzaSyBZ8vdIHcz_UK3Y_UouQ6oJjbkyW15Qbjg",
+		clientId:"237485577723-lndqepqthdb3lh4gec2skvpfaii9sgh0.apps.googleusercontent.com",
+		
+		skin:"trend",
+		
+		youtube_channel_uploads:[
+			{
+				url:"https://www.youtube.com/user/dota2",
+				name:"YouTube%20Uploads",
+				selected:true
+			}		
+		],
+		
+		loadMode:"loadmore", //paginate-sides
+		
+	});
+
+
+*/
+
+	</script>
+	
+
+  </body>
+</html>
+
+
+
