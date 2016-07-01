@@ -2,4 +2,4 @@
 [https://dreamaction.co/](https://dreamaction.co/)
 
 ##Screenshot
-[screenshot](/screenshot.jpg)
+![screenshot](/screenshot.jpg)
