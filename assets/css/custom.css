@@ -20,6 +20,30 @@
     font-style: normal;
 }
 
+body {
+    /*filter: grayscale(80%);
+    -webkit-filter: grayscale(80%);*/
+}
+
+body:before {
+    content: '';
+    position: fixed;
+    z-index: 9999;
+    background-image: url(/content/images/2016/10/memorial-ribbon-blk300-01-128-left.png);
+    background-size: 128px 128px;
+    background-repeat: no-repeat;
+    width: 128px;
+    height: 128px;
+}
+
+@media screen and (max-width: 767px){
+	body:before {
+		background-size: 80px 80px;
+   		background-repeat: no-repeat;
+    		width: 80px;
+    		height: 80px;
+	}
+}
 
 body,
 h1, h2, h3, h4, h5, h6,
