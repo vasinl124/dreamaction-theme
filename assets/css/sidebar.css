@@ -56,9 +56,8 @@
 }
 
 /* Portfolio Services*/
-.portfolio-services-row {
-	margin: 10px 0px;
-	border: #EF660A solid 1px;
+.portfolio-services-row img {
+	margin: 0 auto;
 }
 
 /*Recent Posts*/
