@@ -124,3 +124,7 @@ p, ul, li {
 #youmax {
   max-width: 100% !important;
 }
+
+a, a:hover, a:focus, a:active {
+  color: #EF660A;
+}

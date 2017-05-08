@@ -82,10 +82,23 @@
                           <p>Read <a href="{{url}}">more posts</a> by this author.</p>
                       {{/if}}
                       {{#if website}}
-                        <a href="{{website}}">
-                          <span class='facebook-link fa fa-facebook-square'></span>
+                        <a href="{{website}}" class="link">
+                          <span class='fa fa-external-link-square'></span>
                         </a>
                       {{/if}}
+
+                      {{#if facebook}}
+                        <a href="{{facebook_url}}" class="link">
+                          <span class='fa fa-facebook-square'></span>
+                        </a>
+                      {{/if}}
+
+                      {{#if twitter}}
+                        <a href="{{twitter_url}}" class="link">
+                          <span class='fa fa-twitter-square'></span>
+                        </a>                        
+                      {{/if}}
+
                   </div>
                 </div>
               {{/author}}
