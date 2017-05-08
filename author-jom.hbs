@@ -17,13 +17,23 @@
             <div class="img" style="background-image: url({{image}})"><span class="hidden">{{name}}'s Picture</span></div>
         </figure>
         {{/if}}
-            {{#if website}}
             <div class='website-link'>
+                {{#if website}}
                 <a href="{{website}}">
-                    <span class='facebook-link fa fa-facebook-square'></span>
+                    <span class='fa fa-external-link-square'></span>
                 </a>
+                {{/if}}
+                {{#if facebook}}
+                    <a href="{{facebook_url}}">
+                        <span class='fa fa-facebook-square'></span>
+                    </a>
+                {{/if}}
+                {{#if twitter}}
+                    <a href="{{twitter_url}}">
+                        <span class='fa fa-twitter-square'></span>
+                    </a>                        
+                {{/if}}
             </div>
-            {{/if}}
         <div class='embedded-container container post-container'>
         {{#get "posts" filter="page:true+slug:aboutme"}}
           {{#foreach posts}}

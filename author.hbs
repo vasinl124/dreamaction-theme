@@ -30,11 +30,23 @@
         </div>
 
             {{/if}}
-        <div class="author-meta">
+        <div class="author-meta website-link">
             {{#if website}}
                 <a href="{{website}}">
-                    <span class='facebook-link fa fa-facebook-square'></span>
+                    <span class='fa fa-external-link-square'></span>
                 </a>
+            {{/if}}
+
+            {{#if facebook}}
+                <a href="{{facebook_url}}">
+                    <span class='fa fa-facebook-square'></span>
+                </a>
+            {{/if}}
+
+            {{#if twitter}}
+                <a href="{{twitter_url}}">
+                    <span class='fa fa-twitter-square'></span>
+                </a>                        
             {{/if}}
         </div>
     </section>
